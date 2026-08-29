@@ -1,0 +1,10 @@
+{
+  "dataset_id": "veda-fantasy-credential-benchmark-v1",
+  "extraction_failure_rate": 0.0,
+  "mrz_check_digit_validation_accuracy": 1.0,
+  "mrz_field_accuracy": 1.0,
+  "ocr_field_exact_match_accuracy": 1.0,
+  "ocr_normalized_field_accuracy": 1.0,
+  "per_field_failures": [],
+  "specimen_count": 20
+}

@@ -1,0 +1,5 @@
+Read AGENTS.md and every document under docs/. Then execute ONLY codex/prompts/01_scaffold.md.
+
+You are explicitly authorized to create the repository scaffold and implementation required by Task 01 from the supplied specifications. Do not wait for additional source code: this is a new repository.
+
+Do not continue to Task 02. Stop after Task 01 and report files changed, commands/tests run, failures, limitations, and any specification conflicts.

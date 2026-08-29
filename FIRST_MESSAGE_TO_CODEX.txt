@@ -1,0 +1,7 @@
+Open this repository and do not implement features yet.
+
+First read AGENTS.md, README.md, docs/BUILD_SPEC.md, docs/ARCHITECTURE.md, docs/EVIDENCE_CONTRACTS.md, docs/ACCEPTANCE_TESTS.md, docs/THREAT_MODEL.md, docs/DATASET_LEDGER.md, and docs/DECISION_LOG.md.
+
+Then execute ONLY `codex/prompts/01_scaffold.md`.
+
+Do not continue to Task 02 automatically. After Task 01, stop and give me a concise implementation report with files changed, commands/tests run, failures, limitations, and any conflicts you found in the spec. Do not weaken requirements or invent missing product behavior.
