@@ -87,27 +87,86 @@ Severity = INFO | LOW | MEDIUM | HIGH | CRITICAL
 }
 ```
 
-### Task 04 extension
+### Integrated Prototype v2.0 Schema Extension
 
-The API now exposes these top-level evidence sections while preserving the Task 01 coverage and outcome invariants:
+The `IdentityForensicAutopsy` contract provides comprehensive structured forensic autopsy sections:
 
 ```json
 {
-  "visible_document_data": {"raw_visible_fields": {}, "visible_fields": {}, "field_confidence": {}, "missing_fields": []},
-  "mrz_analysis": {"mrz_detected": true, "fields": {}, "checks": {}, "raw_lines": []},
+  "case_id": "...",
+  "created_at": "2026-08-30T10:00:00Z",
+  "document_family": "TRAVEL_DOCUMENT",
+  "specimen_filename": "travel_clean.png",
+  "specimen_sha256": "...",
+  "outcome": "LOW_RISK",
+  "triage_risk_index": 8.0,
+  "triage_risk_label": "LOW RISK (CONSISTENT EVIDENCE ACROSS COMPLETED LANES)",
+  "capture_quality": {
+    "status": "PASS",
+    "acceptable": true,
+    "findings": []
+  },
+  "visible_document_data": {
+    "raw_visible_fields": {},
+    "visible_fields": {},
+    "field_confidence": {},
+    "missing_fields": []
+  },
+  "mrz_analysis": {
+    "mrz_detected": true,
+    "fields": {},
+    "checks": {},
+    "raw_lines": [],
+    "applicability": "APPLICABLE"
+  },
   "document_rules": [],
   "cross_source_consistency": [],
-  "threat_intelligence": {"source": "MOCK_BORDER_INTELLIGENCE", "demo_data": true, "status": "PASS", "result": "CLEAR", "lookups": []},
-  "evidence_coverage": {},
-  "outcome": "INDETERMINATE"
+  "visual_forensics": {
+    "status": "PASS",
+    "findings": [],
+    "suspicious_regions": [],
+    "measures": {}
+  },
+  "biometric_verification": {
+    "model": "OpenCV YuNet + SFace",
+    "similarity": 0.948753,
+    "configured_prototype_threshold": 0.55,
+    "decision": "MATCH",
+    "status": "PASS"
+  },
+  "threat_intelligence": {
+    "display_source": "LOCAL PROTOTYPE WATCHLIST",
+    "status": "PASS",
+    "result": "CLEAR"
+  },
+  "identity_linkage": {
+    "status": "PASS",
+    "identity_reference": "Biometric Cluster 001",
+    "matches": []
+  },
+  "evidence_graph": {
+    "nodes": [],
+    "edges": []
+  },
+  "forensic_hypotheses": [],
+  "next_best_actions": [],
+  "hard_gates": [],
+  "evidence_coverage": {
+    "mandatory_total": 7,
+    "mandatory_completed": 7,
+    "coverage_ratio": 1.0,
+    "missing_mandatory": [],
+    "state": "COMPLETE"
+  },
+  "audit_trail": [],
+  "limitations": [],
+  "disclaimer": "Research-prototype decision support. Human review is required; triage outcomes are policy-driven and are not fraud probabilities."
 }
 ```
 
-Cross-source records contain `field`, `source_a`, `value_a`, `source_b`, `value_b`, `status`, `severity`, and `reason`. Missing source values produce `UNAVAILABLE`. Mock intelligence evidence is local synthetic demo evidence, not authoritative border intelligence.
-
-## Governor invariants
+## Governor Invariants
 1. `UNAVAILABLE` must never be normalized to PASS or zero-risk evidence.
-2. A mandatory unavailable lane is visible in `CoverageReport`.
+2. A mandatory unavailable lane is visible in `EvidenceCoverage`.
 3. A configured critical hard gate cannot be averaged away by unrelated positive evidence.
-4. Risk index and outcome are separate fields.
-5. Every outcome reason references one or more `evidence_id` values.
+4. Triage risk index and triage outcome are separate fields.
+5. Every outcome reason references explicit evidence observations and hard gates.

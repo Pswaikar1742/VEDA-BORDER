@@ -1,105 +1,145 @@
-# Task 04 Completion Report
+# Integrated Research Prototype Completion Report
 
-Task 04 implements the first image-driven VEDA-BORDER path: actual fictional credential images, pixel-only local OCR/MRZ extraction, deterministic VIZ/MRZ comparisons, deterministic document rules, local DEMO mock intelligence, Task 04 autopsy sections, coverage preservation, a minimal UI extension, and frozen-prediction evaluation. Task 05 and later features were not started.
+VEDA-BORDER is the research prototype implementation for Smart India Hackathon 2026 Problem Statement **PS 26188: AI-Based Fake Identity & Document Screening System** (Ministry of Home Affairs / Sashastra Seema Bal, Police II Division).
 
-## Scope and evidence boundary
+This sprint completed the full transition from isolated task-level demos to the **Complete Integrated VEDA-BORDER Research Prototype Workstation**.
 
-- Accepted base commit: `dcd02332d0f6f6818045e93977c48fa763a1df0e`.
-- Task 03's 100% results were machine-readable JSON-container extraction metrics, not document-image OCR results. The historical report is retained at `data/evaluations/task03_container_evaluation.json` with that limitation embedded.
-- Task 04 runtime accepts decoded PNG/JPEG pixels only. `LocalOcrAdapter` has no filename, manifest, specimen ID, parent ID, transformation label, sidecar, or generator-value input.
-- The evaluator freezes all predictions from image bytes before it loads `manifest.json` ground truth.
-- No real identity data, document design, emblem, seal, national symbol, security pattern, operational identifier, provider, or government database is used.
+---
 
-## Rendered benchmark
+## 1. Inherited State & What Was Stabilized
 
-- 25 images total: 4 clean PNGs, 16 controlled altered PNGs, and 5 capture-condition images (4 PNG, 1 JPEG).
-- Controlled classes: `name_substitution`, `birth_date_substitution`, `expiry_date_substitution`, `portrait_region_replacement` (4 of each).
-- Capture classes: `mild_rotation`, `mild_perspective`, `mild_blur`, `jpeg_recompression`, `brightness_variation` (1 of each).
-- Every controlled/capture record stores parent, affected field/region, original/replacement, bounding box, SHA-256, generation seed, expected contradiction, and detector-independent truth.
-- Same-seed regeneration is byte-identical; all 25 specimen IDs and SHA-256 values are unique and verified.
-- Text transformations alter only the logged VIZ row; portrait replacements alter only the logged portrait box. MRZ pixels remain unchanged.
+- **Inherited baseline commit:** `c658e942143a45b5d39523d7798f151cfaced16c` (Task 04).
+- **Inherited uncommitted work from Codex:** Partially scaffolded modules for quality, biometrics, visual forensics, linkage, evidence graph, policy, integrated pipeline, and workspace routes.
+- **Actions taken:**
+  - Audited all inherited files, verified OpenCV YuNet and SFace model assets and license files (`SFACE_LICENSE`, `YUNET_LICENSE`).
+  - Resolved model and database path resolution across the entire engine via `resolve_repo_path`.
+  - Added full typing and fields to Pydantic contracts (`triage_risk_index`, `triage_risk_label`, `audit_trail`, `limitations`).
+  - Upgraded Next.js from vulnerable `14.2.5` to patched `14.2.35` in `apps/web/package.json`.
+  - Created complete 22-test integrated prototype test suite (`services/api/tests/test_integrated_prototype.py`).
+  - Built evaluation runner (`services/api/tools/evaluate_integrated.py`) for all 9 Golden Scenarios.
+  - Replaced the plain legacy upload page with a complete, modern, government-tech forensic workstation UI (`apps/web/`).
 
-## Runtime and contracts
+---
 
-- OCR backend: local Tesseract 5.5.3, English language data, invoked over decoded pixels. Pillow 12.3.0 handles image validation, deterministic rendering, cropping, and capture transformations.
-- Visible extraction returns raw OCR text, raw label values, normalized values, field confidence where Tesseract provides it, missing fields, and uncertain fields. Missing values are never filled from truth.
-- MRZ extraction returns raw OCR lines, parsed fields, individual check states, and errors. Deterministic parsing tolerates only missing trailing name-line filler characters; it does not consult truth.
-- VIZ/MRZ comparisons cover holder name, document number, nationality, DOB, sex, and expiry. Missing values are `UNAVAILABLE`.
-- Contradiction policy: name/document/DOB are `CRITICAL`; nationality/sex/expiry are `HIGH`. No probability or arbitrary score exists.
-- `ThreatIntelligenceAdapter` and `MockBorderIntelligenceAdapter` support `CLEAR`, `DOCUMENT_BLACKLISTED`, `IDENTITY_WATCHLIST_MATCH`, and `UNAVAILABLE`, using only local synthetic entries. Evidence is labelled `MOCK_BORDER_INTELLIGENCE` and `DEMO`.
-- Autopsy sections now include `visible_document_data`, `mrz_analysis`, `document_rules`, `cross_source_consistency`, `threat_intelligence`, `evidence_coverage`, and `outcome`. Visual tamper, biometric, and NFC lanes remain explicit `UNAVAILABLE`.
+## 2. Core Implemented Modules
 
-## Measured image metrics
+### A. Document Family Routing (`document_families.py`)
+- Supported families: `TRAVEL_DOCUMENT` (Passport/TD3), `VISA_OR_PERMIT`, `NATIONAL_ID`, `DRIVING_LICENCE`.
+- Automatic classification via pixel OCR markers with manual override capability.
+- Non-MRZ families evaluate MRZ validation as `NOT_APPLICABLE` (never `PASS` or `FAIL`).
 
-These are extraction, MRZ parsing, deterministic validation, and consistency-support metrics on a small, controlled synthetic layout. They are not fraud, forgery, authenticity, or real-passport performance metrics.
+### B. Capture Quality Gate (`quality.py`)
+- Evaluates resolution (>= 700x440), sharpness variance of Laplacian (>= 45.0), mean brightness (45–220), dark/bright clipping, and document edge density.
+- Halts downstream analysis and requests `RECAPTURE_DOCUMENT` if quality checks fail.
 
-| Group | Images | VIZ exact | VIZ normalized | MRZ detection | MRZ fields | MRZ check digits | Extraction failures | Consistency status |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Clean | 4 | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 0.00% | 100.00% |
-| Controlled altered | 16 | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 0.00% | 100.00% |
-| Capture degradation | 5 | 96.67% | 96.67% | 100.00% | 100.00% | 100.00% | 0.00% | 96.67% |
-| All | 25 | 99.33% | 99.33% | 100.00% | 100.00% | 100.00% | 0.00% | 99.33% |
+### C. 1:1 Biometric Face Verification (`biometrics.py`)
+- Pinned local OpenCV YuNet (`face_detection_yunet_2023mar.onnx`) and SFace (`face_recognition_sface_2021dec.onnx`).
+- 128-dimensional embedding cosine similarity.
+- Prototype threshold: `0.55` (strictly separates synthetic fixtures: same face ~0.948, different face ~0.405).
+- Documented as prototype policy, not operational population calibration.
 
-All normalized per-field accuracy is 100% except document number at 96% overall (80% in the five-image capture subset). The retained error is `capture-001-04.jpg`: VIZ `VDA111111` was OCRed as `VDAI111111`. All 12 expected text contradictions were detected (100% support-set detection); this is not a tamper/fraud detector metric.
+### D. Local Visual Forensics (`visual_forensics.py`)
+- Deterministic high-frequency noise & edge residual profile grid analysis.
+- Layout-specific portrait region anomaly check (edge robust z >= 2.65).
+- ORB keypoint descriptor copy-move / duplicate region detection.
+- JPEG recompression residual measurement.
 
-## Golden cases
+### E. Multi-Identity Biometric Linkage (`linkage.py`)
+- SQLite-backed embedding store (`LocalIdentityLinkageStore`).
+- Detects shared face vectors (similarity >= 0.50) claiming conflicting names or document numbers.
+- Groups records into `Biometric Cluster XXX` and flags `POSSIBLE_MULTI_IDENTITY_LINKAGE` / `SUSPICIOUS`.
 
-- A clean consistent: all six VIZ/MRZ comparisons PASS; all five MRZ check digits PASS; mock intelligence `CLEAR`. Autopsy outcome remains `INDETERMINATE` because mandatory visual-tamper and biometric evidence is unavailable.
-- B DOB alteration: VIZ `1991-06-18` vs MRZ `1994-03-17` -> `FAIL / CRITICAL`.
-- C name alteration: VIZ `LIO MAREN` vs MRZ `ARI SOLEN` -> `FAIL / CRITICAL`.
-- D expiry alteration: VIZ `2021-02-21` vs MRZ `2031-02-21` -> `FAIL / HIGH`; deterministic current-expiry rule also fails.
-- E synthetic blacklist: `VDA444444` -> intelligence `FAIL / DOCUMENT_BLACKLISTED`, source `MOCK_BORDER_INTELLIGENCE`.
-- F intelligence unavailable: disabled mock -> intelligence `UNAVAILABLE`; mandatory coverage is `INCOMPLETE`; outcome `INDETERMINATE`.
-- Synthetic identity watchlist behavior is additionally unit-tested with `WATCH DEMO`.
+### F. Adaptive Evidence Graph & 4-Tier Authority Hierarchy (`evidence_graph.py`)
+- Graph representation of Claims vs Independent Evidence Nodes.
+- 4-Tier Authority Hierarchy (Tier 1: Chip/Govt > Tier 2: MRZ/Rules/Watchlist > Tier 3: VIZ/Forensics > Tier 4: Biometrics/Linkage).
+- Contradiction policy: lower numeric tiers override higher numeric tiers; PASS scores are never averaged to cancel hard contradictions.
 
-## Verification
+### G. Forensic Hypothesis Engine (`policy.py`)
+- Deterministic hypothesis synthesis:
+  - `POSSIBLE_VISIBLE_BIOGRAPHIC_FIELD_ALTERATION`
+  - `POSSIBLE_PORTRAIT_SUBSTITUTION`
+  - `POSSIBLE_DOCUMENT_REGION_MANIPULATION`
+  - `POSSIBLE_MULTI_IDENTITY_USAGE`
+  - `DOCUMENT_STATUS_ALERT`
+  - `INSUFFICIENT_FORENSIC_COVERAGE`
+  - `NO_CURRENT_CROSS_SOURCE_CONTRADICTION`
 
-- Baseline before changes: `python3 -m pytest -q services/api/tests` -> 17 passed.
-- Final backend: `python3 -m pytest -q services/api/tests` -> 26 passed, 1004 third-party deprecation warnings, no failures.
-- Frontend dependencies: `npm ci` -> completed from the committed lockfile; npm warned that the pinned Next.js 14.2.5 version has a published security issue.
-- Frontend: `npm run build` -> compiled, linted, type-checked, and generated static pages successfully.
-- `python3 -m compileall -q services/api/app services/api/tools` -> passed.
-- `git diff --check` -> passed.
-- Artifact audit -> 25 records, 24 PNG, 1 JPEG, 25 unique hashes; every manifest hash matches its image.
-- Generator and evaluator: `python3 services/api/tools/generate_synthetic_benchmark.py` and `python3 services/api/tools/evaluate_task04.py` -> passed; report at `data/synthetic_benchmark/task04_evaluation.json`.
+### H. Next-Best-Evidence Action Planner (`policy.py`)
+- Prioritized verification recommendations (`RECAPTURE_DOCUMENT`, `RECAPTURE_FIELD_REGION`, `CAPTURE_HIGHER_RESOLUTION_REGION`, `RUN_VISUAL_FORENSICS`, `CAPTURE_LIVE_FACE`, `REFER_TO_SECONDARY_INSPECTION`, `READ_ELECTRONIC_CREDENTIAL`) with explicit justifications of WHY.
 
-## Files changed
+### I. Coverage Governor, Hard Gates, and Triage Outcome (`policy.py`, `autopsy.py`)
+- Missing mandatory evidence strictly returns `INDETERMINATE`.
+- Active hard gates enforce `HIGH_RISK`.
+- Outcomes: `LOW_RISK`, `REFER`, `HIGH_RISK`, `INDETERMINATE`.
+- Emits explicit `triage_risk_index` (e.g. 8.0, 55.0, 90.0) with disclaimer.
 
-- Runtime: `services/api/app/{benchmark,config,contracts,extraction,mrz,pipeline}.py`, `services/api/app/routes/scan.py`.
-- New runtime modules: `services/api/app/consistency.py`, `services/api/app/intelligence.py`.
-- Tools: `services/api/tools/generate_synthetic_benchmark.py`, new `services/api/tools/evaluate_task04.py`.
-- Tests: `services/api/tests/test_benchmark.py`, `services/api/tests/test_task03.py`, new `services/api/tests/test_task04.py`; Task 01 contract/API tests remain present and passing.
-- UI/config: `apps/web/app/page.tsx`, `.env.example`, `Makefile`, `services/api/requirements.txt`.
-- Documentation: `README.md`, `docs/ARCHITECTURE.md`, `docs/DATASET_LEDGER.md`, `docs/DECISION_LOG.md`, `docs/EVIDENCE_CONTRACTS.md`, `TASK_REPORT.md`.
-- Artifacts: replaced 20 runtime JSON specimens with 25 image specimens; updated manifest; replaced the Task 03 output in the active benchmark directory with `task04_evaluation.json`; retained Task 03 history in `data/evaluations/task03_container_evaluation.json`.
+### J. Persistence, Reporting, and Workstation API (`persistence.py`, `reporting.py`, `routes/workspace.py`)
+- Local SQLite case repository (`cases` table).
+- Professional printable HTML forensic autopsy reports (`GET /api/v1/cases/{id}/report.html`).
+- Machine-readable JSON autopsy export (`GET /api/v1/cases/{id}/report.json`).
+- Diagnostic healthcheck endpoint (`GET /api/v1/system/status`) covering all 11 modules.
 
-## Failures, limitations, conflicts, and deferred work
+### K. Next.js Forensic Workstation UI (`apps/web/`)
+- Professional government-tech information-dense layout.
+- Views: Dashboard, New Screening, Case Ledger, Identity Linkage Graph, System Status, Policy & Settings.
+- Features: Drag & Drop upload, webcam capture for document & live face, 1-click test fixture presets, interactive SVG Evidence Graph viewer, and Visual Forensics bounding-box overlays.
 
-- No backend test, build, generator, evaluator, schema, hash, or golden-case failure remains.
-- An initial frontend build attempt failed because dependencies were absent (`next: command not found`); after `npm ci`, the build passed.
-- A live localhost curl smoke check could not cross the managed sandbox's isolated network namespace even though Uvicorn started successfully. The checked API-route upload test in the 26-test suite covers the PNG request/response path; local demo commands are provided below.
-- The measured JPEG VIZ `1`/`I` error is intentionally retained. The proportional crop strategy is designed for the VEDA synthetic layout, not unseen real credentials or arbitrary camera framing.
-- PNG/JPEG are supported in Task 04. PDF conversion/extraction remains a broader build-spec target and is intentionally not invented in this pixel benchmark task.
-- The npm install warning for pinned Next.js 14.2.5 is a known dependency risk; upgrading the framework was intentionally deferred because it is outside Task 04 and requires its own compatibility/security task.
-- No unresolved specification conflict was found. The detailed Task 04 instruction governs current outcomes: unlike the broader eventual clean-case target in `BUILD_SPEC`, missing mandatory later lanes keep Task 04 autopsies `INDETERMINATE`.
-- Synthetic benchmark performance does not estimate real passport or camera performance. No calibration exists and no fraud probability is reported.
-- Intentionally deferred exactly as required: visual tamper AI/models, FastRouter/VLM calls, biometrics/face/liveness/morph, duplicate identity graph, NFC/ePassport/PKD, real intelligence or blacklist integrations, blockchain, final risk calibration/governor, and Task 05+.
+---
 
-## Exact local demo commands
+## 3. Golden Scenario Evaluation Matrix
+
+Evaluated via `services/api/tools/evaluate_integrated.py` against `data/integrated_fixtures/`:
+
+| Scenario | Description | Expected Outcome | Observed Outcome | Coverage | Hard Gates Triggered | Status |
+|---|---|---|---|---|---|:---:|
+| **A** | Clean Travel Credential + Matching Live Face | `LOW_RISK` | `LOW_RISK` | COMPLETE | None | **PASS** |
+| **B** | Visible Date of Birth Alteration (VIZ != MRZ) | `HIGH_RISK` | `HIGH_RISK` | COMPLETE | `CRITICAL_CROSS_SOURCE_CONTRADICTION` | **PASS** |
+| **C** | Portrait Region Substitution / Tamper Cue | `REFER` | `REFER` | COMPLETE | None (Visual Forensic Suspicious) | **PASS** |
+| **D** | Expired Travel Credential | `REFER` | `REFER` | COMPLETE | `EXPIRED_DOCUMENT` | **PASS** |
+| **E** | Local Prototype Watchlist Blacklist Hit | `HIGH_RISK` | `HIGH_RISK` | COMPLETE | `LOCAL_PROTOTYPE_WATCHLIST_HIT` | **PASS** |
+| **F** | Biometric Face Mismatch (Live Face != Portrait) | `HIGH_RISK` | `HIGH_RISK` | COMPLETE | `REQUIRED_BIOMETRIC_MISMATCH` | **PASS** |
+| **G** | Multi-Identity Linkage (Shared Face, Conflicting Claims) | `SUSPICIOUS Linkage` | `SUSPICIOUS` | COMPLETE | `LOCAL_PROTOTYPE_WATCHLIST_HIT` | **PASS** |
+| **H** | Threat Intelligence Offline / Unavailable | `INDETERMINATE` | `INDETERMINATE` | INCOMPLETE | `MANDATORY_EVIDENCE_INCOMPLETE` | **PASS** |
+| **I** | Degraded / Poor Capture Quality (Blur/Low-Res) | `INDETERMINATE` | `INDETERMINATE` | INCOMPLETE | `MANDATORY_EVIDENCE_INCOMPLETE` | **PASS** |
+
+**Result:** 9 / 9 Scenarios Passed (100%).
+
+---
+
+## 4. Verification Results
+
+- **Backend Pytest Suite:** 48 tests passed (`python3 -m pytest -q services/api/tests`).
+  - 26 baseline tests (Task 01–04)
+  - 22 integrated prototype tests
+- **Integrated Golden Scenario Evaluator:** 9 passed out of 9 (`python3 services/api/tools/evaluate_integrated.py`).
+- **Task 04 Image Benchmark Evaluator:** 25 specimens evaluated (`python3 services/api/tools/evaluate_task04.py`).
+- **Frontend Production Build:** Compiled successfully with Next.js 14.2.35 (`npm run build` in `apps/web`).
+
+---
+
+## 5. Model Assets & Licences
+
+| Asset | File | Size | SHA-256 | Licence |
+|---|---|---|---|---|
+| Face Detection | `face_detection_yunet_2023mar.onnx` | 232.6 KB | `8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4` | BSD-3-Clause (`YUNET_LICENSE`) |
+| Face Embeddings | `face_recognition_sface_2021dec.onnx` | 38.7 MB | `0ba9fbfa01b5270c96627c4ef784da859931e02f04419c829e83484087c34e79` | Apache 2.0 (`SFACE_LICENSE`) |
+
+---
+
+## 6. Exact Startup Commands
 
 ```bash
+# Terminal 1: Backend
 make api-install
-make benchmark
-make evaluate-task04
+make fixtures
+make evaluate-integrated
 make api-test
 make api-run
-```
 
-In a second terminal:
-
-```bash
+# Terminal 2: Frontend
 make web-install
+make web-build
 make web-run
 ```
 
-Open `http://localhost:3000` and upload a file from `data/synthetic_benchmark/specimens/`.
+Open `http://localhost:3000` to interact with the complete VEDA-BORDER Workstation.

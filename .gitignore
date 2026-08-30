@@ -7,4 +7,6 @@ node_modules/
 coverage/
 .env
 *.egg-info/
+*.db
+data/runtime/*.db
 
