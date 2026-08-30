@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Evaluate predictions first; load benchmark truth only after prediction."""
+"""Evaluate legacy JSON fixtures, or print the archived Task 03 container report."""
 import argparse
 import json
 from pathlib import Path
@@ -19,6 +19,11 @@ def main() -> None:
     parser.add_argument("--output", type=Path, default=Path("data/synthetic_benchmark/task03_evaluation.json"))
     args = parser.parse_args()
     specimen_paths = sorted((args.dataset / "specimens").glob("*.json"))
+    if not specimen_paths:
+        archived = Path(__file__).resolve().parents[3] / "data/evaluations/task03_container_evaluation.json"
+        report = json.loads(archived.read_text(encoding="utf-8"))
+        print(json.dumps(report, sort_keys=True))
+        return
     predictions = {path.stem: analyze_specimen(path.read_bytes(), path.name) for path in specimen_paths}
     truth = json.loads((args.dataset / "manifest.json").read_text(encoding="utf-8"))
     by_id = {record["specimen_id"]: record for record in truth["records"]}

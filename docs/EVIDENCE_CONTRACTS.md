@@ -87,6 +87,24 @@ Severity = INFO | LOW | MEDIUM | HIGH | CRITICAL
 }
 ```
 
+### Task 04 extension
+
+The API now exposes these top-level evidence sections while preserving the Task 01 coverage and outcome invariants:
+
+```json
+{
+  "visible_document_data": {"raw_visible_fields": {}, "visible_fields": {}, "field_confidence": {}, "missing_fields": []},
+  "mrz_analysis": {"mrz_detected": true, "fields": {}, "checks": {}, "raw_lines": []},
+  "document_rules": [],
+  "cross_source_consistency": [],
+  "threat_intelligence": {"source": "MOCK_BORDER_INTELLIGENCE", "demo_data": true, "status": "PASS", "result": "CLEAR", "lookups": []},
+  "evidence_coverage": {},
+  "outcome": "INDETERMINATE"
+}
+```
+
+Cross-source records contain `field`, `source_a`, `value_a`, `source_b`, `value_b`, `status`, `severity`, and `reason`. Missing source values produce `UNAVAILABLE`. Mock intelligence evidence is local synthetic demo evidence, not authoritative border intelligence.
+
 ## Governor invariants
 1. `UNAVAILABLE` must never be normalized to PASS or zero-risk evidence.
 2. A mandatory unavailable lane is visible in `CoverageReport`.

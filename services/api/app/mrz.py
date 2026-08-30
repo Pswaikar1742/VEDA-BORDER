@@ -51,6 +51,10 @@ def parse_mrz(raw_text: str) -> MrzResult:
     if len(candidates) < 2:
         return MrzResult(False, {}, {}, [], "two MRZ lines not detected")
     line1, line2 = candidates[-2:]
+    # OCR commonly drops one or two trailing filler glyphs from the name line.
+    # Padding only this non-data suffix is deterministic MRZ format normalization.
+    if line1.startswith("X<") and 40 <= len(line1) < 44:
+        line1 = line1.ljust(44, FILLER)
     if len(line1) != 44 or len(line2) != 44:
         return MrzResult(False, {}, {}, [line1, line2], "MRZ lines must be exactly 44 characters")
     try:
@@ -66,6 +70,7 @@ def parse_mrz(raw_text: str) -> MrzResult:
             "date_of_birth": decode_date(dob_value), "sex": line2[20], "expiry_date": decode_date(expiry_value),
             "optional_data": optional.rstrip(FILLER),
         }
+        fields["holder_name"] = " ".join(part for part in (fields["given_names"], fields["surname"]) if part)
         checks = {
             "document_number_check": _check(document_number, line2[9]),
             "birth_date_check": _check(dob_value, line2[19]),

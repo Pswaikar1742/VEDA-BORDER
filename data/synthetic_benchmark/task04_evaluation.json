@@ -1,0 +1,258 @@
+{
+  "dataset_id": "veda-fictional-credential-image-benchmark-v2",
+  "golden_cases": {
+    "case_a_clean_consistent": {
+      "cross_source_statuses": {
+        "date_of_birth": "PASS",
+        "document_number": "PASS",
+        "expiry_date": "PASS",
+        "holder_name": "PASS",
+        "nationality": "PASS",
+        "sex": "PASS"
+      },
+      "expiry_rule": {
+        "expected_condition": "expiry is today or later",
+        "observed_value": "2031-02-21",
+        "reason": "Credential is currently valid.",
+        "rule_id": "date.expiry.current",
+        "status": "PASS"
+      },
+      "intelligence": "CLEAR",
+      "mrz_checks": {
+        "birth_date_check": "PASS",
+        "composite_check": "PASS",
+        "document_number_check": "PASS",
+        "expiry_date_check": "PASS",
+        "optional_data_check": "PASS"
+      }
+    },
+    "case_b_dob_alteration": {
+      "field": "date_of_birth",
+      "reason": "Visible date of birth conflicts with MRZ date of birth.",
+      "severity": "CRITICAL",
+      "source_a": "VIZ",
+      "source_b": "MRZ",
+      "status": "FAIL",
+      "value_a": "1991-06-18",
+      "value_b": "1994-03-17"
+    },
+    "case_c_name_alteration": {
+      "field": "holder_name",
+      "reason": "Visible holder name conflicts with MRZ holder name.",
+      "severity": "CRITICAL",
+      "source_a": "VIZ",
+      "source_b": "MRZ",
+      "status": "FAIL",
+      "value_a": "LIO MAREN",
+      "value_b": "ARI SOLEN"
+    },
+    "case_d_expiry_alteration": {
+      "comparison": {
+        "field": "expiry_date",
+        "reason": "Visible expiry date conflicts with MRZ expiry date.",
+        "severity": "HIGH",
+        "source_a": "VIZ",
+        "source_b": "MRZ",
+        "status": "FAIL",
+        "value_a": "2021-02-21",
+        "value_b": "2031-02-21"
+      },
+      "expiry_rule": {
+        "expected_condition": "expiry is today or later",
+        "observed_value": "2021-02-21",
+        "reason": "Credential is expired.",
+        "rule_id": "date.expiry.current",
+        "status": "FAIL"
+      }
+    },
+    "case_e_mock_blacklist": {
+      "result": "DOCUMENT_BLACKLISTED",
+      "source": "MOCK_BORDER_INTELLIGENCE",
+      "status": "FAIL"
+    },
+    "case_f_intelligence_unavailable": {
+      "coverage_state": "INCOMPLETE",
+      "missing_mandatory": [
+        "threat_intelligence",
+        "forensics.visual_tamper",
+        "biometrics.face_verify"
+      ],
+      "outcome": "INDETERMINATE",
+      "status": "UNAVAILABLE"
+    }
+  },
+  "groups": {
+    "all_images": {
+      "consistency_status_accuracy": 0.9933333333333333,
+      "expected_contradiction_count": 12,
+      "expected_contradiction_detection_rate": 1.0,
+      "extraction_failure_rate": 0.0,
+      "mrz_check_digit_validation_accuracy": 1.0,
+      "mrz_detection_rate": 1.0,
+      "mrz_field_accuracy": 1.0,
+      "normalized_field_failures": [
+        {
+          "expected": "VDA111111",
+          "field": "document_number",
+          "observed": "VDAI111111",
+          "specimen_id": "capture-001-04"
+        }
+      ],
+      "per_field_accuracy": {
+        "date_of_birth": {
+          "exact": 1.0,
+          "normalized": 1.0
+        },
+        "document_number": {
+          "exact": 0.96,
+          "normalized": 0.96
+        },
+        "expiry_date": {
+          "exact": 1.0,
+          "normalized": 1.0
+        },
+        "holder_name": {
+          "exact": 1.0,
+          "normalized": 1.0
+        },
+        "nationality": {
+          "exact": 1.0,
+          "normalized": 1.0
+        },
+        "sex": {
+          "exact": 1.0,
+          "normalized": 1.0
+        }
+      },
+      "specimen_count": 25,
+      "visible_field_exact_match_accuracy": 0.9933333333333333,
+      "visible_field_normalized_accuracy": 0.9933333333333333
+    },
+    "capture_degradation_images": {
+      "consistency_status_accuracy": 0.9666666666666667,
+      "expected_contradiction_count": 0,
+      "expected_contradiction_detection_rate": null,
+      "extraction_failure_rate": 0.0,
+      "mrz_check_digit_validation_accuracy": 1.0,
+      "mrz_detection_rate": 1.0,
+      "mrz_field_accuracy": 1.0,
+      "normalized_field_failures": [
+        {
+          "expected": "VDA111111",
+          "field": "document_number",
+          "observed": "VDAI111111",
+          "specimen_id": "capture-001-04"
+        }
+      ],
+      "per_field_accuracy": {
+        "date_of_birth": {
+          "exact": 1.0,
+          "normalized": 1.0
+        },
+        "document_number": {
+          "exact": 0.8,
+          "normalized": 0.8
+        },
+        "expiry_date": {
+          "exact": 1.0,
+          "normalized": 1.0
+        },
+        "holder_name": {
+          "exact": 1.0,
+          "normalized": 1.0
+        },
+        "nationality": {
+          "exact": 1.0,
+          "normalized": 1.0
+        },
+        "sex": {
+          "exact": 1.0,
+          "normalized": 1.0
+        }
+      },
+      "specimen_count": 5,
+      "visible_field_exact_match_accuracy": 0.9666666666666667,
+      "visible_field_normalized_accuracy": 0.9666666666666667
+    },
+    "clean_images": {
+      "consistency_status_accuracy": 1.0,
+      "expected_contradiction_count": 0,
+      "expected_contradiction_detection_rate": null,
+      "extraction_failure_rate": 0.0,
+      "mrz_check_digit_validation_accuracy": 1.0,
+      "mrz_detection_rate": 1.0,
+      "mrz_field_accuracy": 1.0,
+      "normalized_field_failures": [],
+      "per_field_accuracy": {
+        "date_of_birth": {
+          "exact": 1.0,
+          "normalized": 1.0
+        },
+        "document_number": {
+          "exact": 1.0,
+          "normalized": 1.0
+        },
+        "expiry_date": {
+          "exact": 1.0,
+          "normalized": 1.0
+        },
+        "holder_name": {
+          "exact": 1.0,
+          "normalized": 1.0
+        },
+        "nationality": {
+          "exact": 1.0,
+          "normalized": 1.0
+        },
+        "sex": {
+          "exact": 1.0,
+          "normalized": 1.0
+        }
+      },
+      "specimen_count": 4,
+      "visible_field_exact_match_accuracy": 1.0,
+      "visible_field_normalized_accuracy": 1.0
+    },
+    "controlled_altered_images": {
+      "consistency_status_accuracy": 1.0,
+      "expected_contradiction_count": 12,
+      "expected_contradiction_detection_rate": 1.0,
+      "extraction_failure_rate": 0.0,
+      "mrz_check_digit_validation_accuracy": 1.0,
+      "mrz_detection_rate": 1.0,
+      "mrz_field_accuracy": 1.0,
+      "normalized_field_failures": [],
+      "per_field_accuracy": {
+        "date_of_birth": {
+          "exact": 1.0,
+          "normalized": 1.0
+        },
+        "document_number": {
+          "exact": 1.0,
+          "normalized": 1.0
+        },
+        "expiry_date": {
+          "exact": 1.0,
+          "normalized": 1.0
+        },
+        "holder_name": {
+          "exact": 1.0,
+          "normalized": 1.0
+        },
+        "nationality": {
+          "exact": 1.0,
+          "normalized": 1.0
+        },
+        "sex": {
+          "exact": 1.0,
+          "normalized": 1.0
+        }
+      },
+      "specimen_count": 16,
+      "visible_field_exact_match_accuracy": 1.0,
+      "visible_field_normalized_accuracy": 1.0
+    }
+  },
+  "metric_scope": "image extraction, MRZ parsing, deterministic validation, and consistency support only; not fraud, forgery, or authenticity accuracy",
+  "prediction_boundary": "All runtime predictions were frozen from PNG/JPEG bytes before manifest ground truth was loaded."
+}

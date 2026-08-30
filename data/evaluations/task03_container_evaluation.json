@@ -1,6 +1,7 @@
 {
   "dataset_id": "veda-fantasy-credential-benchmark-v1",
   "extraction_failure_rate": 0.0,
+  "metric_scope": "Historical Task 03 machine-readable JSON-container extraction metrics; not image OCR evidence.",
   "mrz_check_digit_validation_accuracy": 1.0,
   "mrz_field_accuracy": 1.0,
   "ocr_field_exact_match_accuracy": 1.0,

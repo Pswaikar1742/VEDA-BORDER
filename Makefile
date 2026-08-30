@@ -1,4 +1,4 @@
-.PHONY: api-install api-test api-run benchmark evaluate-task03 web-install web-run test
+.PHONY: api-install api-test api-run benchmark evaluate-task03 evaluate-task04 web-install web-run test
 
 api-install:
 	python3 -m pip install -r services/api/requirements.txt
@@ -14,6 +14,9 @@ benchmark:
 
 evaluate-task03:
 	python3 services/api/tools/evaluate_task03.py
+
+evaluate-task04:
+	python3 services/api/tools/evaluate_task04.py
 
 web-install:
 	cd apps/web && npm install
