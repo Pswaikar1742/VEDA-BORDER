@@ -13,8 +13,24 @@ class EvidenceState(str, Enum):
 
 class ScreeningOutcome(str, Enum):
     CLEAR = "CLEAR"
+    LOW_RISK = "LOW_RISK"
     REFER = "REFER"
+    HIGH_RISK = "HIGH_RISK"
     INDETERMINATE = "INDETERMINATE"
+
+
+class DocumentFamily(str, Enum):
+    TRAVEL_DOCUMENT = "TRAVEL_DOCUMENT"
+    VISA_OR_PERMIT = "VISA_OR_PERMIT"
+    NATIONAL_ID = "NATIONAL_ID"
+    DRIVING_LICENCE = "DRIVING_LICENCE"
+
+
+class CoverageExecutionState(str, Enum):
+    COMPLETED = "COMPLETED"
+    UNAVAILABLE = "UNAVAILABLE"
+    NOT_APPLICABLE = "NOT_APPLICABLE"
+    FAILED_TO_EXECUTE = "FAILED_TO_EXECUTE"
 
 
 class EvidenceItem(BaseModel):
@@ -42,6 +58,7 @@ class EvidenceCoverage(BaseModel):
     coverage_ratio: float
     missing_mandatory: list[str] = Field(default_factory=list)
     state: str
+    lanes: list[dict[str, Any]] = Field(default_factory=list)
 
 
 class IdentityForensicAutopsy(BaseModel):
@@ -63,7 +80,22 @@ class IdentityForensicAutopsy(BaseModel):
     document_rules: list[dict[str, Any]] = Field(default_factory=list)
     cross_source_consistency: list[dict[str, Any]] = Field(default_factory=list)
     threat_intelligence: dict[str, Any] = Field(default_factory=dict)
-    disclaimer: str = "Decision support only. Human review is required; no fraud probability is asserted."
+    case_id: str | None = None
+    created_at: str | None = None
+    document_family: str | None = None
+    capture_quality: dict[str, Any] = Field(default_factory=dict)
+    visual_forensics: dict[str, Any] = Field(default_factory=dict)
+    biometric_verification: dict[str, Any] = Field(default_factory=dict)
+    identity_linkage: dict[str, Any] = Field(default_factory=dict)
+    evidence_graph: dict[str, Any] = Field(default_factory=dict)
+    forensic_hypotheses: list[dict[str, Any]] = Field(default_factory=list)
+    next_best_actions: list[dict[str, Any]] = Field(default_factory=list)
+    hard_gates: list[dict[str, Any]] = Field(default_factory=list)
+    triage_risk_index: float | None = None
+    triage_risk_label: str | None = None
+    audit_trail: list[dict[str, Any]] = Field(default_factory=list)
+    limitations: list[str] = Field(default_factory=list)
+    disclaimer: str = "Research-prototype decision support. Human review is required; triage outcomes are policy-driven and are not fraud probabilities."
 
 
 def unavailable_lane(lane_id: str, name: str, required: bool = True) -> EvidenceLane:

@@ -1,0 +1,101 @@
+{
+  "dataset_id": "veda-integrated-research-prototype-golden-v1",
+  "generation_seed": 20260830,
+  "records": [
+    {
+      "document_family": "TRAVEL_DOCUMENT",
+      "expected_outcome": "LOW_RISK",
+      "filename": "travel_clean.png",
+      "scenario": "A_CLEAN_CONSISTENT",
+      "sha256": "80338ca2ed49538fc44cc27b816a968464c3fb5cd89da1b367ac41e27244af68"
+    },
+    {
+      "affected_region": [
+        560,
+        490,
+        1710,
+        558
+      ],
+      "document_family": "TRAVEL_DOCUMENT",
+      "expected_gate": "CRITICAL_CROSS_SOURCE_CONTRADICTION",
+      "filename": "travel_dob_altered.png",
+      "scenario": "B_DOB_ALTERED",
+      "sha256": "6f53eb75d9b4d25fb5b63406172fbc998a3b5088629d54c77cce126a4b871f7e"
+    },
+    {
+      "affected_region": [
+        80,
+        280,
+        500,
+        745
+      ],
+      "document_family": "TRAVEL_DOCUMENT",
+      "expected_biometric": "MISMATCH",
+      "filename": "travel_portrait_replaced.png",
+      "scenario": "C_PORTRAIT_REPLACED",
+      "sha256": "777c7f63c0df123692c4ec0b4a86e21eb21a5ac236bdafd86980910c43820f75"
+    },
+    {
+      "document_family": "TRAVEL_DOCUMENT",
+      "expected_gate": "EXPIRED_DOCUMENT",
+      "filename": "travel_expired.png",
+      "scenario": "D_EXPIRED",
+      "sha256": "a94703efec3c44e204c123d27fa47c8364c66e0aa03fee1cbefaae6b68fc979e"
+    },
+    {
+      "document_family": "TRAVEL_DOCUMENT",
+      "expected_intelligence": "DOCUMENT_BLACKLISTED",
+      "filename": "travel_blacklisted.png",
+      "scenario": "E_LOCAL_WATCHLIST_HIT",
+      "sha256": "8b469c126778c82e0e09b3b1665b58828027ba66ab041591f827e648c5a26561"
+    },
+    {
+      "document_family": "TRAVEL_DOCUMENT",
+      "expected_quality": "FAIL",
+      "filename": "travel_poor_capture.png",
+      "scenario": "I_POOR_CAPTURE",
+      "sha256": "0d70e135a585ffe7b090532cafbb72cd9d84d16cca6174c1e0e949faeb3a6e43"
+    },
+    {
+      "document_family": "VISA_OR_PERMIT",
+      "expected_mrz": "NOT_APPLICABLE",
+      "filename": "visa_or_permit.png",
+      "scenario": "FAMILY_VISA_OR_PERMIT",
+      "sha256": "66b680670eb63d52eeb4d6e8761e990bbae94f4bcc79a16583064b41d5b594b2"
+    },
+    {
+      "document_family": "NATIONAL_ID",
+      "expected_mrz": "NOT_APPLICABLE",
+      "filename": "national_id.png",
+      "scenario": "FAMILY_NATIONAL_ID",
+      "sha256": "8da4c78c2b548e97dc57817d466c3f29000faa9f464bc28ac194b857b1113c83"
+    },
+    {
+      "document_family": "DRIVING_LICENCE",
+      "expected_mrz": "NOT_APPLICABLE",
+      "filename": "driving_licence.png",
+      "scenario": "FAMILY_DRIVING_LICENCE",
+      "sha256": "764e50abda8600d940bd58c8de29b3252b60f16fc1ef3c36d004315b2c4c33dc"
+    },
+    {
+      "document_family": "FACE_IMAGE",
+      "filename": "ari_selfie.png",
+      "scenario": "SYNTHETIC_SELFIE_MATCH",
+      "sha256": "9fcfbfc445b24505c7ef90e463afaed000fc0c949ce39e931cb8ae255c107e6b"
+    },
+    {
+      "document_family": "FACE_IMAGE",
+      "filename": "ari_selfie_variant.png",
+      "scenario": "SYNTHETIC_SELFIE_SAME_IDENTITY",
+      "sha256": "5cd36da276a6bb0559162b31c4d5f66facd980bf03bf4424c523e5a482d55f12"
+    },
+    {
+      "document_family": "FACE_IMAGE",
+      "filename": "lio_selfie.png",
+      "scenario": "SYNTHETIC_SELFIE_MISMATCH",
+      "sha256": "acd17fd6723c58fa7cff7c719cf89879bdf94098ef4fa8d0cc95bfa0273d12c8"
+    }
+  ],
+  "runtime_truth_boundary": "Runtime accepts image bytes only and cannot read this manifest.",
+  "safety_boundary": "All identities and credentials are fictional/synthetic. No real document design or government connection."
+}

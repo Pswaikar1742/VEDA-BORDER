@@ -1,0 +1,112 @@
+{
+  "evaluation_type": "VEDA_BORDER_INTEGRATED_GOLDEN_SCENARIOS",
+  "total_scenarios": 9,
+  "passed_scenarios": 9,
+  "all_passed": true,
+  "results": [
+    {
+      "scenario": "A",
+      "title": "Clean Consistent Travel Credential with Matching Live Face",
+      "expected_outcome": "LOW_RISK",
+      "observed_outcome": "LOW_RISK",
+      "coverage": "COMPLETE",
+      "hard_gates": [],
+      "status": "PASS",
+      "details": "All 6 VIZ/MRZ comparisons PASS; biometrics MATCH (similarity: 0.948753); watchlist CLEAR."
+    },
+    {
+      "scenario": "B",
+      "title": "Visible Date of Birth Alteration",
+      "expected_outcome": "HIGH_RISK",
+      "observed_outcome": "HIGH_RISK",
+      "coverage": "COMPLETE",
+      "hard_gates": [
+        "CRITICAL_CROSS_SOURCE_CONTRADICTION"
+      ],
+      "status": "PASS",
+      "details": "VIZ DOB (1991-06-18) != MRZ DOB (1994-03-17); triggered CRITICAL_CROSS_SOURCE_CONTRADICTION hard gate."
+    },
+    {
+      "scenario": "C",
+      "title": "Portrait Region Substitution / Tamper Cue",
+      "expected_outcome": "REFER",
+      "observed_outcome": "REFER",
+      "coverage": "COMPLETE",
+      "hard_gates": [],
+      "status": "PASS",
+      "details": "Local visual heuristics detected anomalous portrait-region edge profile (TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY)."
+    },
+    {
+      "scenario": "D",
+      "title": "Expired Credential",
+      "expected_outcome": "REFER or HIGH_RISK",
+      "observed_outcome": "REFER",
+      "coverage": "COMPLETE",
+      "hard_gates": [
+        "EXPIRED_DOCUMENT"
+      ],
+      "status": "PASS",
+      "details": "Deterministic expiry check failed (date.expiry.current); triggered EXPIRED_DOCUMENT gate."
+    },
+    {
+      "scenario": "E",
+      "title": "Local Prototype Blacklist Hit",
+      "expected_outcome": "HIGH_RISK",
+      "observed_outcome": "HIGH_RISK",
+      "coverage": "COMPLETE",
+      "hard_gates": [
+        "LOCAL_PROTOTYPE_WATCHLIST_HIT"
+      ],
+      "status": "PASS",
+      "details": "Synthetic document number VDA444444 matched LOCAL PROTOTYPE WATCHLIST blacklist."
+    },
+    {
+      "scenario": "F",
+      "title": "Biometric Face Verification Mismatch",
+      "expected_outcome": "HIGH_RISK",
+      "observed_outcome": "HIGH_RISK",
+      "coverage": "COMPLETE",
+      "hard_gates": [
+        "REQUIRED_BIOMETRIC_MISMATCH"
+      ],
+      "status": "PASS",
+      "details": "Live face (Lio Maren) vs document portrait (Ari Solen) cosine similarity 0.405273 < threshold 0.55."
+    },
+    {
+      "scenario": "G",
+      "title": "Multi-Identity Linkage Alert (Shared Biometrics / Conflicting Claims)",
+      "expected_outcome": "SUSPICIOUS Linkage",
+      "observed_outcome": "SUSPICIOUS",
+      "coverage": "COMPLETE",
+      "hard_gates": [
+        "LOCAL_PROTOTYPE_WATCHLIST_HIT"
+      ],
+      "status": "PASS",
+      "details": "Ari Solen face embedding re-used under different name (ZARA CHEN); linked to existing Biometric Cluster."
+    },
+    {
+      "scenario": "H",
+      "title": "Threat Intelligence Lane Offline / Unavailable",
+      "expected_outcome": "INDETERMINATE",
+      "observed_outcome": "INDETERMINATE",
+      "coverage": "INCOMPLETE",
+      "hard_gates": [
+        "MANDATORY_EVIDENCE_INCOMPLETE"
+      ],
+      "status": "PASS",
+      "details": "Mandatory threat intelligence lane unavailable -> Coverage Governor enforces INDETERMINATE outcome."
+    },
+    {
+      "scenario": "I",
+      "title": "Degraded / Poor Capture Quality",
+      "expected_outcome": "INDETERMINATE",
+      "observed_outcome": "INDETERMINATE",
+      "coverage": "INCOMPLETE",
+      "hard_gates": [
+        "MANDATORY_EVIDENCE_INCOMPLETE"
+      ],
+      "status": "PASS",
+      "details": "Low resolution & blur failed quality gate -> downstream analysis halted; RECAPTURE_DOCUMENT requested."
+    }
+  ]
+}

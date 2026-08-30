@@ -1,4 +1,26 @@
+from pathlib import Path
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
+
+def _repo_root() -> Path:
+    current = Path(__file__).resolve().parent
+    for parent in [current, *current.parents]:
+        if (parent / "services" / "api").is_dir() and (parent / "data").is_dir():
+            return parent
+    return Path.cwd()
+
+
+REPO_ROOT = _repo_root()
+
+
+def resolve_repo_path(path_str: str) -> str:
+    p = Path(path_str)
+    if p.is_absolute() or p.exists():
+        return str(p)
+    candidate = REPO_ROOT / p
+    if candidate.exists() or candidate.parent.exists():
+        return str(candidate)
+    return str(p)
 
 
 class Settings(BaseSettings):
@@ -10,6 +32,15 @@ class Settings(BaseSettings):
     fast_router_max_spend_usd: float = 0.0
     mock_border_intelligence_enabled: bool = True
     threat_intelligence_mandatory: bool = True
+    case_database_path: str = "data/runtime/veda_border.db"
+    face_detector_model: str = "services/api/assets/models/face_detection_yunet_2023mar.onnx"
+    face_recognizer_model: str = "services/api/assets/models/face_recognition_sface_2021dec.onnx"
+    face_match_threshold: float = 0.55
+    identity_linkage_threshold: float = 0.50
+    visual_forensics_enabled: bool = True
+    biometrics_enabled: bool = True
+    minimum_image_width: int = 700
+    minimum_image_height: int = 440
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore", case_sensitive=False)
 

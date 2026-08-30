@@ -19,10 +19,18 @@ class ThreatIntelligenceAdapter(ABC):
         """Return demo intelligence evidence without accessing a real system."""
 
 
+class AuthorizedGovernmentAdapter(ThreatIntelligenceAdapter):
+    """Inactive interface boundary. No operational government integration is configured."""
+
+    def check(self, document_number: str | None, holder_name: str | None) -> dict[str, Any]:
+        return {"source": "AUTHORIZED_GOVERNMENT_SOURCE", "display_source": "AUTHORIZED GOVERNMENT SOURCE", "status": "UNAVAILABLE", "result": IntelligenceResult.UNAVAILABLE.value, "reason": "No authorized government adapter is configured.", "lookups": []}
+
+
 class MockBorderIntelligenceAdapter(ThreatIntelligenceAdapter):
     """Local-only synthetic lookup. This is not a government integration."""
 
     source = "MOCK_BORDER_INTELLIGENCE"
+    display_source = "LOCAL PROTOTYPE WATCHLIST"
     blacklisted_documents = frozenset({"VDA444444", "DEMO-BLACKLIST-77"})
     watched_identities = frozenset({"WATCH DEMO", "SYNTHETIC ALERT"})
 
@@ -34,6 +42,7 @@ class MockBorderIntelligenceAdapter(ThreatIntelligenceAdapter):
             "query_type": query_type,
             "queried_synthetic_identifier": identifier,
             "source": self.source,
+            "display_source": self.display_source,
             "result": result.value,
             "reason": reason,
             "lookup_timestamp": datetime.now(timezone.utc).isoformat(),
@@ -43,7 +52,7 @@ class MockBorderIntelligenceAdapter(ThreatIntelligenceAdapter):
     def check(self, document_number: str | None, holder_name: str | None) -> dict[str, Any]:
         if not self.available:
             lookup = self._lookup("AVAILABILITY", None, IntelligenceResult.UNAVAILABLE, "DEMO mock intelligence adapter is disabled.")
-            return {"source": self.source, "demo_data": True, "status": "UNAVAILABLE", "result": IntelligenceResult.UNAVAILABLE.value, "reason": lookup["reason"], "lookups": [lookup]}
+            return {"source": self.source, "display_source": self.display_source, "local_prototype": True, "demo_data": True, "status": "UNAVAILABLE", "result": IntelligenceResult.UNAVAILABLE.value, "reason": lookup["reason"], "lookups": [lookup]}
 
         normalized_document = "".join((document_number or "").upper().split()) or None
         normalized_name = " ".join((holder_name or "").upper().split()) or None
@@ -65,4 +74,4 @@ class MockBorderIntelligenceAdapter(ThreatIntelligenceAdapter):
             status = "PASS"
         queried_identifier = normalized_name if result == IntelligenceResult.IDENTITY_WATCHLIST_MATCH else (normalized_document or normalized_name)
         lookup = self._lookup("DOCUMENT_AND_IDENTITY", queried_identifier, result, reason)
-        return {"source": self.source, "demo_data": True, "status": status, "result": result.value, "reason": reason, "lookups": [lookup]}
+        return {"source": self.source, "display_source": self.display_source, "local_prototype": True, "demo_data": True, "status": status, "result": result.value, "reason": reason, "lookups": [lookup]}

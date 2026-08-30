@@ -8,8 +8,8 @@ def evidence(rule_id: str, status: str, observed_value: Any, expected_condition:
     return {"rule_id": rule_id, "status": status, "observed_value": observed_value, "expected_condition": expected_condition, "reason": reason}
 
 
-def validate_document(visible: dict[str, str], mrz: MrzResult) -> list[dict[str, Any]]:
-    required = ("holder_name", "document_number", "nationality", "date_of_birth", "expiry_date")
+def validate_document(visible: dict[str, str], mrz: MrzResult, required_fields: tuple[str, ...] | None = None, supports_mrz: bool = True) -> list[dict[str, Any]]:
+    required = required_fields or ("holder_name", "document_number", "nationality", "date_of_birth", "expiry_date")
     present = all(visible.get(field) for field in required)
     results = [evidence("fields.required", "PASS" if present else "FAIL", {field: visible.get(field) for field in required}, "all required visible fields present", "Required visible fields are present." if present else "One or more required visible fields are missing.")]
     try:
@@ -24,9 +24,10 @@ def validate_document(visible: dict[str, str], mrz: MrzResult) -> list[dict[str,
         ]
     except (KeyError, ValueError):
         results.append(evidence("date.parse", "FAIL", {"dob": visible.get("date_of_birth"), "expiry": visible.get("expiry_date")}, "parseable calendar dates", "One or more document dates are missing or invalid."))
-    if mrz.detected:
+    if not supports_mrz:
+        results.append(evidence("mrz.applicability", "NOT_APPLICABLE", None, "MRZ not required for this document family", "MRZ validation is not applicable to this document family."))
+    elif mrz.detected:
         results.extend(evidence(f"mrz.{name}", status, None, "individual MRZ check digit is valid", f"MRZ {name.replace('_', ' ')}.") for name, status in mrz.checks.items())
     else:
         results.append(evidence("mrz.detected", "UNAVAILABLE", None, "two valid MRZ lines detected", "MRZ could not be parsed."))
     return results
-
