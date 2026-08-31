@@ -182,8 +182,9 @@ export default function Home() {
   async function loadPreset(preset: typeof PRESET_SCENARIOS[0]) {
     setErrorMessage(null);
     setSelectedFamily(preset.family);
+    const apiBase = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
     try {
-      const docRes = await fetch(`http://localhost:8000/api/v1/fixtures/${preset.docFile}`);
+      const docRes = await fetch(`${apiBase}/api/v1/fixtures/${preset.docFile}`);
       if (!docRes.ok) throw new Error(`Could not load fixture ${preset.docFile}`);
       const docBlob = await docRes.blob();
       const docF = new File([docBlob], preset.docFile, { type: "image/png" });
@@ -191,7 +192,7 @@ export default function Home() {
       setDocPreview(URL.createObjectURL(docBlob));
 
       if (preset.selfieFile) {
-        const selfieRes = await fetch(`http://localhost:8000/api/v1/fixtures/${preset.selfieFile}`);
+        const selfieRes = await fetch(`${apiBase}/api/v1/fixtures/${preset.selfieFile}`);
         if (selfieRes.ok) {
           const selfieBlob = await selfieRes.blob();
           const selfieF = new File([selfieBlob], preset.selfieFile, { type: "image/png" });
