@@ -1,4 +1,5 @@
 from pathlib import Path
+from pydantic import AliasChoices, Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -24,12 +25,12 @@ def resolve_repo_path(path_str: str) -> str:
 
 
 class Settings(BaseSettings):
-    fast_router_api_key: str = ""
-    fast_router_base_url: str = ""
-    fast_router_model: str = ""
-    fast_router_enabled: bool = False
-    fast_router_max_requests: int = 0
-    fast_router_max_spend_usd: float = 0.0
+    fast_router_api_key: str = Field(default="", validation_alias=AliasChoices("FASTROUTER_API_KEY", "fast_router_api_key", "FAST_ROUTER_API_KEY"))
+    fast_router_base_url: str = Field(default="https://api.fastrouter.ai/api/v1", validation_alias=AliasChoices("FASTROUTER_BASE_URL", "fast_router_base_url", "FAST_ROUTER_BASE_URL"))
+    fast_router_model: str = Field(default="fastrouter/auto", validation_alias=AliasChoices("FASTROUTER_MODEL", "fast_router_model", "FAST_ROUTER_MODEL"))
+    fast_router_enabled: bool = Field(default=False, validation_alias=AliasChoices("FASTROUTER_ENABLED", "fast_router_enabled", "FAST_ROUTER_ENABLED"))
+    fast_router_max_requests: int = Field(default=0, validation_alias=AliasChoices("FASTROUTER_MAX_REQUESTS", "fast_router_max_requests", "FAST_ROUTER_MAX_REQUESTS"))
+    fast_router_max_spend_usd: float = Field(default=0.0, validation_alias=AliasChoices("FASTROUTER_MAX_SPEND_USD", "fast_router_max_spend_usd", "FAST_ROUTER_MAX_SPEND_USD"))
     mock_border_intelligence_enabled: bool = True
     threat_intelligence_mandatory: bool = True
     case_database_path: str = "data/runtime/veda_border.db"
