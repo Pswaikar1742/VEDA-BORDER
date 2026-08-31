@@ -1,0 +1,25 @@
+{
+  "dataset_id": "SIDTD",
+  "version": "1.0",
+  "official_source": "TC-11 / Computer Vision Center (CVC), Universitat Autonoma de Barcelona",
+  "total_bonafide_count": 1000,
+  "total_forgery_count": 1222,
+  "total_samples": 2222,
+  "template_classes": [
+    "alb",
+    "aze",
+    "esp",
+    "est",
+    "fin",
+    "grc",
+    "lva",
+    "rus",
+    "srb",
+    "svk"
+  ],
+  "official_splits_available": [
+    "split_normal",
+    "split_kfold",
+    "split_shot"
+  ]
+}

@@ -1,0 +1,512 @@
+{
+  "timestamp": "2026-08-30T12:05:11.603302+00:00",
+  "evaluation_scope": "STANDARDIZED EXTERNAL BENCHMARK EVALUATION (BASELINE V1)",
+  "benchmarks": {
+    "SIDTD": {
+      "benchmark_id": "SIDTD",
+      "official_source": "TC-11 / Computer Vision Center (CVC)",
+      "split": "test",
+      "split_protocol": "split_normal",
+      "evaluated_at": "2026-08-30T11:58:16.514776+00:00",
+      "detector_evaluated": {
+        "name": "VEDA_LOCAL_IMAGE_FORENSICS",
+        "version": "1.0",
+        "type": "Local Deterministic Heuristics (Pre-Adaptation Baseline)"
+      },
+      "metrics": {
+        "sample_count": 222,
+        "true_positives": 39,
+        "false_positives": 23,
+        "true_negatives": 77,
+        "false_negatives": 83,
+        "accuracy": 0.5225225225225225,
+        "balanced_accuracy": 0.5448360655737705,
+        "precision": 0.6290322580645161,
+        "recall": 0.319672131147541,
+        "specificity": 0.77,
+        "f1_score": 0.42391304347826086,
+        "false_positive_rate": 0.23,
+        "false_negative_rate": 0.680327868852459,
+        "confusion_matrix": {
+          "tp": 39,
+          "fp": 23,
+          "tn": 77,
+          "fn": 83
+        },
+        "evaluation_duration_seconds": 27.42,
+        "throughput_samples_per_sec": 8.1
+      },
+      "per_class_metrics": {
+        "lva": {
+          "sample_count": 16,
+          "true_positives": 7,
+          "false_positives": 4,
+          "true_negatives": 2,
+          "false_negatives": 3,
+          "accuracy": 0.5625,
+          "balanced_accuracy": 0.5166666666666666,
+          "precision": 0.6363636363636364,
+          "recall": 0.7,
+          "specificity": 0.3333333333333333,
+          "f1_score": 0.6666666666666666,
+          "false_positive_rate": 0.6666666666666666,
+          "false_negative_rate": 0.3,
+          "confusion_matrix": {
+            "tp": 7,
+            "fp": 4,
+            "tn": 2,
+            "fn": 3
+          }
+        },
+        "est": {
+          "sample_count": 25,
+          "true_positives": 0,
+          "false_positives": 0,
+          "true_negatives": 15,
+          "false_negatives": 10,
+          "accuracy": 0.6,
+          "balanced_accuracy": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 1.0,
+          "f1_score": 0.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0,
+          "confusion_matrix": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 15,
+            "fn": 10
+          }
+        },
+        "srb": {
+          "sample_count": 15,
+          "true_positives": 9,
+          "false_positives": 6,
+          "true_negatives": 0,
+          "false_negatives": 0,
+          "accuracy": 0.6,
+          "balanced_accuracy": 0.5,
+          "precision": 0.6,
+          "recall": 1.0,
+          "specificity": 0.0,
+          "f1_score": 0.7499999999999999,
+          "false_positive_rate": 1.0,
+          "false_negative_rate": 0.0,
+          "confusion_matrix": {
+            "tp": 9,
+            "fp": 6,
+            "tn": 0,
+            "fn": 0
+          }
+        },
+        "grc": {
+          "sample_count": 27,
+          "true_positives": 14,
+          "false_positives": 9,
+          "true_negatives": 3,
+          "false_negatives": 1,
+          "accuracy": 0.6296296296296297,
+          "balanced_accuracy": 0.5916666666666667,
+          "precision": 0.6086956521739131,
+          "recall": 0.9333333333333333,
+          "specificity": 0.25,
+          "f1_score": 0.7368421052631579,
+          "false_positive_rate": 0.75,
+          "false_negative_rate": 0.06666666666666667,
+          "confusion_matrix": {
+            "tp": 14,
+            "fp": 9,
+            "tn": 3,
+            "fn": 1
+          }
+        },
+        "fin": {
+          "sample_count": 30,
+          "true_positives": 1,
+          "false_positives": 0,
+          "true_negatives": 12,
+          "false_negatives": 17,
+          "accuracy": 0.43333333333333335,
+          "balanced_accuracy": 0.5277777777777778,
+          "precision": 1.0,
+          "recall": 0.05555555555555555,
+          "specificity": 1.0,
+          "f1_score": 0.10526315789473684,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.9444444444444444,
+          "confusion_matrix": {
+            "tp": 1,
+            "fp": 0,
+            "tn": 12,
+            "fn": 17
+          }
+        },
+        "alb": {
+          "sample_count": 27,
+          "true_positives": 4,
+          "false_positives": 2,
+          "true_negatives": 8,
+          "false_negatives": 13,
+          "accuracy": 0.4444444444444444,
+          "balanced_accuracy": 0.5176470588235295,
+          "precision": 0.6666666666666666,
+          "recall": 0.23529411764705882,
+          "specificity": 0.8,
+          "f1_score": 0.3478260869565218,
+          "false_positive_rate": 0.2,
+          "false_negative_rate": 0.7647058823529411,
+          "confusion_matrix": {
+            "tp": 4,
+            "fp": 2,
+            "tn": 8,
+            "fn": 13
+          }
+        },
+        "rus": {
+          "sample_count": 20,
+          "true_positives": 0,
+          "false_positives": 0,
+          "true_negatives": 12,
+          "false_negatives": 8,
+          "accuracy": 0.6,
+          "balanced_accuracy": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 1.0,
+          "f1_score": 0.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0,
+          "confusion_matrix": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 12,
+            "fn": 8
+          }
+        },
+        "aze": {
+          "sample_count": 22,
+          "true_positives": 4,
+          "false_positives": 1,
+          "true_negatives": 9,
+          "false_negatives": 8,
+          "accuracy": 0.5909090909090909,
+          "balanced_accuracy": 0.6166666666666667,
+          "precision": 0.8,
+          "recall": 0.3333333333333333,
+          "specificity": 0.9,
+          "f1_score": 0.47058823529411764,
+          "false_positive_rate": 0.1,
+          "false_negative_rate": 0.6666666666666666,
+          "confusion_matrix": {
+            "tp": 4,
+            "fp": 1,
+            "tn": 9,
+            "fn": 8
+          }
+        },
+        "svk": {
+          "sample_count": 17,
+          "true_positives": 0,
+          "false_positives": 0,
+          "true_negatives": 8,
+          "false_negatives": 9,
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 1.0,
+          "f1_score": 0.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0,
+          "confusion_matrix": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 8,
+            "fn": 9
+          }
+        },
+        "esp": {
+          "sample_count": 23,
+          "true_positives": 0,
+          "false_positives": 1,
+          "true_negatives": 8,
+          "false_negatives": 14,
+          "accuracy": 0.34782608695652173,
+          "balanced_accuracy": 0.4444444444444444,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 0.8888888888888888,
+          "f1_score": 0.0,
+          "false_positive_rate": 0.1111111111111111,
+          "false_negative_rate": 1.0,
+          "confusion_matrix": {
+            "tp": 0,
+            "fp": 1,
+            "tn": 8,
+            "fn": 14
+          }
+        }
+      },
+      "failure_summary": {
+        "false_positives": 23,
+        "false_negatives": 83,
+        "false_positive_rate": 0.23,
+        "false_negative_rate": 0.680327868852459
+      },
+      "scientific_boundary": "This evaluates VEDA's initial layout-specific noise/edge heuristics against the external SIDTD dataset. Because the current heuristic was designed for controlled VEDA synthetic geometry without learned model weights, these numbers establish the honest uncalibrated baseline (EXTERNAL BASELINE V1) prior to external model training."
+    },
+    "FantasyID": {
+      "benchmark_id": "FantasyID",
+      "official_source": "Idiap Research Institute (Zenodo DOI: 10.34777/c966-nn94)",
+      "license": "CC-BY-4.0",
+      "split": "all",
+      "evaluated_at": "2026-08-30T12:05:11.570736+00:00",
+      "detector_evaluated": {
+        "name": "VEDA_LOCAL_IMAGE_FORENSICS",
+        "version": "1.0",
+        "type": "Local Deterministic Heuristics (Pre-Adaptation Baseline)"
+      },
+      "metrics": {
+        "sample_count": 1899,
+        "true_positives": 354,
+        "false_positives": 183,
+        "true_negatives": 450,
+        "false_negatives": 912,
+        "accuracy": 0.42338072669826227,
+        "balanced_accuracy": 0.495260663507109,
+        "precision": 0.659217877094972,
+        "recall": 0.2796208530805687,
+        "specificity": 0.7109004739336493,
+        "f1_score": 0.3926788685524127,
+        "false_positive_rate": 0.2890995260663507,
+        "false_negative_rate": 0.7203791469194313,
+        "confusion_matrix": {
+          "tp": 354,
+          "fp": 183,
+          "tn": 450,
+          "fn": 912
+        },
+        "evaluation_duration_seconds": 415.02,
+        "throughput_samples_per_sec": 4.58
+      },
+      "per_language_metrics": {
+        "ara": {
+          "sample_count": 198,
+          "true_positives": 47,
+          "false_positives": 10,
+          "true_negatives": 56,
+          "false_negatives": 85,
+          "accuracy": 0.5202020202020202,
+          "balanced_accuracy": 0.6022727272727273,
+          "precision": 0.8245614035087719,
+          "recall": 0.3560606060606061,
+          "specificity": 0.8484848484848485,
+          "f1_score": 0.4973544973544974,
+          "false_positive_rate": 0.15151515151515152,
+          "false_negative_rate": 0.6439393939393939,
+          "confusion_matrix": {
+            "tp": 47,
+            "fp": 10,
+            "tn": 56,
+            "fn": 85
+          }
+        },
+        "hin": {
+          "sample_count": 207,
+          "true_positives": 10,
+          "false_positives": 12,
+          "true_negatives": 57,
+          "false_negatives": 128,
+          "accuracy": 0.32367149758454106,
+          "balanced_accuracy": 0.4492753623188406,
+          "precision": 0.45454545454545453,
+          "recall": 0.07246376811594203,
+          "specificity": 0.8260869565217391,
+          "f1_score": 0.125,
+          "false_positive_rate": 0.17391304347826086,
+          "false_negative_rate": 0.927536231884058,
+          "confusion_matrix": {
+            "tp": 10,
+            "fp": 12,
+            "tn": 57,
+            "fn": 128
+          }
+        },
+        "french": {
+          "sample_count": 207,
+          "true_positives": 121,
+          "false_positives": 52,
+          "true_negatives": 17,
+          "false_negatives": 17,
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy": 0.5615942028985508,
+          "precision": 0.6994219653179191,
+          "recall": 0.8768115942028986,
+          "specificity": 0.2463768115942029,
+          "f1_score": 0.7781350482315113,
+          "false_positive_rate": 0.7536231884057971,
+          "false_negative_rate": 0.12318840579710146,
+          "confusion_matrix": {
+            "tp": 121,
+            "fp": 52,
+            "tn": 17,
+            "fn": 17
+          }
+        },
+        "unknown": {
+          "sample_count": 360,
+          "true_positives": 97,
+          "false_positives": 77,
+          "true_negatives": 43,
+          "false_negatives": 143,
+          "accuracy": 0.3888888888888889,
+          "balanced_accuracy": 0.38125,
+          "precision": 0.5574712643678161,
+          "recall": 0.4041666666666667,
+          "specificity": 0.35833333333333334,
+          "f1_score": 0.46859903381642515,
+          "false_positive_rate": 0.6416666666666667,
+          "false_negative_rate": 0.5958333333333333,
+          "confusion_matrix": {
+            "tp": 97,
+            "fp": 77,
+            "tn": 43,
+            "fn": 143
+          }
+        },
+        "per": {
+          "sample_count": 153,
+          "true_positives": 35,
+          "false_positives": 23,
+          "true_negatives": 28,
+          "false_negatives": 67,
+          "accuracy": 0.4117647058823529,
+          "balanced_accuracy": 0.44607843137254904,
+          "precision": 0.603448275862069,
+          "recall": 0.3431372549019608,
+          "specificity": 0.5490196078431373,
+          "f1_score": 0.4375,
+          "false_positive_rate": 0.45098039215686275,
+          "false_negative_rate": 0.6568627450980392,
+          "confusion_matrix": {
+            "tp": 35,
+            "fp": 23,
+            "tn": 28,
+            "fn": 67
+          }
+        },
+        "por": {
+          "sample_count": 252,
+          "true_positives": 18,
+          "false_positives": 0,
+          "true_negatives": 84,
+          "false_negatives": 150,
+          "accuracy": 0.40476190476190477,
+          "balanced_accuracy": 0.5535714285714286,
+          "precision": 1.0,
+          "recall": 0.10714285714285714,
+          "specificity": 1.0,
+          "f1_score": 0.19354838709677416,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.8928571428571429,
+          "confusion_matrix": {
+            "tp": 18,
+            "fp": 0,
+            "tn": 84,
+            "fn": 150
+          }
+        },
+        "rus": {
+          "sample_count": 144,
+          "true_positives": 26,
+          "false_positives": 9,
+          "true_negatives": 39,
+          "false_negatives": 70,
+          "accuracy": 0.4513888888888889,
+          "balanced_accuracy": 0.5416666666666666,
+          "precision": 0.7428571428571429,
+          "recall": 0.2708333333333333,
+          "specificity": 0.8125,
+          "f1_score": 0.39694656488549623,
+          "false_positive_rate": 0.1875,
+          "false_negative_rate": 0.7291666666666666,
+          "confusion_matrix": {
+            "tp": 26,
+            "fp": 9,
+            "tn": 39,
+            "fn": 70
+          }
+        },
+        "tur": {
+          "sample_count": 225,
+          "true_positives": 0,
+          "false_positives": 0,
+          "true_negatives": 75,
+          "false_negatives": 150,
+          "accuracy": 0.3333333333333333,
+          "balanced_accuracy": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 1.0,
+          "f1_score": 0.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0,
+          "confusion_matrix": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 75,
+            "fn": 150
+          }
+        },
+        "ukr": {
+          "sample_count": 153,
+          "true_positives": 0,
+          "false_positives": 0,
+          "true_negatives": 51,
+          "false_negatives": 102,
+          "accuracy": 0.3333333333333333,
+          "balanced_accuracy": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 1.0,
+          "f1_score": 0.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0,
+          "confusion_matrix": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 51,
+            "fn": 102
+          }
+        }
+      },
+      "failure_summary": {
+        "false_positives": 183,
+        "false_negatives": 912,
+        "false_positive_rate": 0.2890995260663507,
+        "false_negative_rate": 0.7203791469194313
+      },
+      "scientific_boundary": "Evaluates baseline heuristic generalizability across 13 distinct international and domestic language templates. Establishes initial benchmark baseline prior to training learned visual tamper representations."
+    },
+    "DLC-2021": {
+      "benchmark_id": "DLC-2021",
+      "official_source": "Smart Engines / Journal of Imaging (DOI: 10.3390/jimaging8070181)",
+      "license": "CC-BY-SA-2.5",
+      "total_video_clips": 1424,
+      "modality_breakdown": {
+        "color_copy": 484,
+        "grayscale_copy": 250,
+        "original_mock": 290,
+        "screen_recapture": 400
+      },
+      "device_breakdown": {
+        "iphone": 601,
+        "android": 823
+      },
+      "experimental_baseline_status": "DOWNLOADED (experimental_baseline.zip, 84.3 MB)",
+      "full_video_corpus_status": "DEFERRED_DUE_TO_SIZE_POLICY (99 GB total across 4 archives)",
+      "scientific_boundary": "DLC-2021 establishes the official presentation attack detection benchmark protocol for mock IDs. Current VEDA implementation does not yet incorporate video temporal presentation attack analysis; this baseline explicitly documents that capability boundary without faking coverage."
+    }
+  }
+}

@@ -1,0 +1,2246 @@
+[
+  {
+    "sample_id": "templates/Images/reals/srb_passport_36.jpg",
+    "error_type": "FALSE_POSITIVE",
+    "ground_truth": "BONAFIDE",
+    "prediction": "SUSPICIOUS",
+    "findings": [
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 216,
+          "y": 496,
+          "width": 216,
+          "height": 248
+        },
+        "raw_measure": {
+          "edge_robust_z": 2.995,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      },
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 216,
+          "y": 744,
+          "width": 216,
+          "height": 248
+        },
+        "raw_measure": {
+          "edge_robust_z": 4.539,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      }
+    ],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 1.855,
+      "maximum_edge_robust_z": 4.539,
+      "jpeg_recompression_residual": 1.3
+    }
+  },
+  {
+    "sample_id": "templates/Images/reals/lva_passport_92.jpg",
+    "error_type": "FALSE_POSITIVE",
+    "ground_truth": "BONAFIDE",
+    "prediction": "SUSPICIOUS",
+    "findings": [
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 216,
+          "y": 760,
+          "width": 217,
+          "height": 254
+        },
+        "raw_measure": {
+          "edge_robust_z": 3.25,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      }
+    ],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.075,
+      "maximum_edge_robust_z": 3.25,
+      "jpeg_recompression_residual": 0.833
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_76_fake_7_11.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.284,
+      "maximum_edge_robust_z": 3.362,
+      "jpeg_recompression_residual": 1.072
+    }
+  },
+  {
+    "sample_id": "templates/Images/reals/lva_passport_07.jpg",
+    "error_type": "FALSE_POSITIVE",
+    "ground_truth": "BONAFIDE",
+    "prediction": "SUSPICIOUS",
+    "findings": [
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 216,
+          "y": 760,
+          "width": 217,
+          "height": 254
+        },
+        "raw_measure": {
+          "edge_robust_z": 3.709,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      }
+    ],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.48,
+      "maximum_edge_robust_z": 3.709,
+      "jpeg_recompression_residual": 0.844
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_00_fake_7_72.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.715,
+      "maximum_edge_robust_z": 2.847,
+      "jpeg_recompression_residual": 1.066
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_80_fake_6_57.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.09,
+      "maximum_edge_robust_z": 2.41,
+      "jpeg_recompression_residual": 1.083
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/lva_passport_14_fake_0_45.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.191,
+      "maximum_edge_robust_z": 2.474,
+      "jpeg_recompression_residual": 0.675
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_21_fake_7_91.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 1.984,
+      "maximum_edge_robust_z": 2.406,
+      "jpeg_recompression_residual": 1.03
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/est_id_74_fake_9_115.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.739,
+      "maximum_edge_robust_z": 2.14,
+      "jpeg_recompression_residual": 0.459
+    }
+  },
+  {
+    "sample_id": "templates/Images/reals/grc_passport_97.jpg",
+    "error_type": "FALSE_POSITIVE",
+    "ground_truth": "BONAFIDE",
+    "prediction": "SUSPICIOUS",
+    "findings": [
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 113,
+          "y": 401,
+          "width": 114,
+          "height": 134
+        },
+        "raw_measure": {
+          "edge_robust_z": 3.242,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      }
+    ],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.325,
+      "maximum_edge_robust_z": 3.242,
+      "jpeg_recompression_residual": 1.028
+    }
+  },
+  {
+    "sample_id": "templates/Images/reals/grc_passport_79.jpg",
+    "error_type": "FALSE_POSITIVE",
+    "ground_truth": "BONAFIDE",
+    "prediction": "SUSPICIOUS",
+    "findings": [
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 113,
+          "y": 401,
+          "width": 114,
+          "height": 134
+        },
+        "raw_measure": {
+          "edge_robust_z": 2.869,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      }
+    ],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.372,
+      "maximum_edge_robust_z": 2.869,
+      "jpeg_recompression_residual": 1.046
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_66_fake_6_21.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.062,
+      "maximum_edge_robust_z": 2.227,
+      "jpeg_recompression_residual": 1.062
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_83_fake_6_35.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.312,
+      "maximum_edge_robust_z": 2.374,
+      "jpeg_recompression_residual": 1.102
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_81_fake_6_91.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.163,
+      "maximum_edge_robust_z": 2.221,
+      "jpeg_recompression_residual": 1.11
+    }
+  },
+  {
+    "sample_id": "templates/Images/reals/lva_passport_41.jpg",
+    "error_type": "FALSE_POSITIVE",
+    "ground_truth": "BONAFIDE",
+    "prediction": "SUSPICIOUS",
+    "findings": [
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 216,
+          "y": 507,
+          "width": 217,
+          "height": 253
+        },
+        "raw_measure": {
+          "edge_robust_z": 2.728,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      },
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 216,
+          "y": 760,
+          "width": 217,
+          "height": 254
+        },
+        "raw_measure": {
+          "edge_robust_z": 3.618,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      }
+    ],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.068,
+      "maximum_edge_robust_z": 3.618,
+      "jpeg_recompression_residual": 0.834
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/aze_passport_39_fake_3_23.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 4.332,
+      "maximum_edge_robust_z": 2.954,
+      "jpeg_recompression_residual": 0.511
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_86_fake_7_47.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.374,
+      "maximum_edge_robust_z": 3.493,
+      "jpeg_recompression_residual": 1.074
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/svk_id_93_fake_8_63.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.045,
+      "maximum_edge_robust_z": 1.773,
+      "jpeg_recompression_residual": 0.705
+    }
+  },
+  {
+    "sample_id": "templates/Images/reals/grc_passport_96.jpg",
+    "error_type": "FALSE_POSITIVE",
+    "ground_truth": "BONAFIDE",
+    "prediction": "SUSPICIOUS",
+    "findings": [
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 113,
+          "y": 401,
+          "width": 114,
+          "height": 134
+        },
+        "raw_measure": {
+          "edge_robust_z": 3.17,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      }
+    ],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.341,
+      "maximum_edge_robust_z": 3.17,
+      "jpeg_recompression_residual": 1.036
+    }
+  },
+  {
+    "sample_id": "templates/Images/reals/srb_passport_29.jpg",
+    "error_type": "FALSE_POSITIVE",
+    "ground_truth": "BONAFIDE",
+    "prediction": "SUSPICIOUS",
+    "findings": [
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 216,
+          "y": 496,
+          "width": 216,
+          "height": 248
+        },
+        "raw_measure": {
+          "edge_robust_z": 6.789,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      },
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 432,
+          "y": 496,
+          "width": 216,
+          "height": 248
+        },
+        "raw_measure": {
+          "edge_robust_z": 2.811,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      }
+    ],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.023,
+      "maximum_edge_robust_z": 7.561,
+      "jpeg_recompression_residual": 1.264
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_96_fake_2_24.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 4.046,
+      "maximum_edge_robust_z": 1.984,
+      "jpeg_recompression_residual": 0.546
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_77_fake_2_103.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.994,
+      "maximum_edge_robust_z": 2.577,
+      "jpeg_recompression_residual": 0.559
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/svk_id_03_fake_8_69.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.192,
+      "maximum_edge_robust_z": 2.188,
+      "jpeg_recompression_residual": 0.711
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/rus_internalpassport_98_fake_1_74.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 1.583,
+      "maximum_edge_robust_z": 3.181,
+      "jpeg_recompression_residual": 0.436
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/aze_passport_63_fake_3_15.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 4.587,
+      "maximum_edge_robust_z": 3.772,
+      "jpeg_recompression_residual": 0.52
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/rus_internalpassport_68_fake_1_55.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 1.642,
+      "maximum_edge_robust_z": 3.326,
+      "jpeg_recompression_residual": 0.42
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/est_id_55_fake_9_90.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 4.063,
+      "maximum_edge_robust_z": 3.073,
+      "jpeg_recompression_residual": 0.456
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/aze_passport_54_fake_3_42.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 4.162,
+      "maximum_edge_robust_z": 2.883,
+      "jpeg_recompression_residual": 0.518
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/est_id_62_fake_9_113.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.987,
+      "maximum_edge_robust_z": 2.492,
+      "jpeg_recompression_residual": 0.469
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/est_id_44_fake_9_2.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.954,
+      "maximum_edge_robust_z": 2.578,
+      "jpeg_recompression_residual": 0.428
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_11_fake_7_69.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.18,
+      "maximum_edge_robust_z": 2.872,
+      "jpeg_recompression_residual": 1.064
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/aze_passport_96_fake_3_33.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 4.799,
+      "maximum_edge_robust_z": 3.128,
+      "jpeg_recompression_residual": 0.502
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_17_fake_2_51.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 4.719,
+      "maximum_edge_robust_z": 3.929,
+      "jpeg_recompression_residual": 0.573
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_85_fake_7_51.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.643,
+      "maximum_edge_robust_z": 3.389,
+      "jpeg_recompression_residual": 1.06
+    }
+  },
+  {
+    "sample_id": "templates/Images/reals/grc_passport_54.jpg",
+    "error_type": "FALSE_POSITIVE",
+    "ground_truth": "BONAFIDE",
+    "prediction": "SUSPICIOUS",
+    "findings": [
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 113,
+          "y": 267,
+          "width": 114,
+          "height": 134
+        },
+        "raw_measure": {
+          "edge_robust_z": 2.657,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      },
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 113,
+          "y": 401,
+          "width": 114,
+          "height": 134
+        },
+        "raw_measure": {
+          "edge_robust_z": 3.028,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      }
+    ],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.787,
+      "maximum_edge_robust_z": 3.028,
+      "jpeg_recompression_residual": 1.03
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/aze_passport_38_fake_3_43.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 4.289,
+      "maximum_edge_robust_z": 3.255,
+      "jpeg_recompression_residual": 0.505
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/svk_id_95_fake_8_80.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.171,
+      "maximum_edge_robust_z": 2.103,
+      "jpeg_recompression_residual": 0.703
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_40_fake_2_22.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 4.121,
+      "maximum_edge_robust_z": 3.186,
+      "jpeg_recompression_residual": 0.547
+    }
+  },
+  {
+    "sample_id": "templates/Images/reals/alb_id_19.jpg",
+    "error_type": "FALSE_POSITIVE",
+    "ground_truth": "BONAFIDE",
+    "prediction": "SUSPICIOUS",
+    "findings": [
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 216,
+          "y": 453,
+          "width": 217,
+          "height": 227
+        },
+        "raw_measure": {
+          "edge_robust_z": 3.454,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      }
+    ],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.407,
+      "maximum_edge_robust_z": 3.454,
+      "jpeg_recompression_residual": 1.323
+    }
+  },
+  {
+    "sample_id": "templates/Images/reals/srb_passport_66.jpg",
+    "error_type": "FALSE_POSITIVE",
+    "ground_truth": "BONAFIDE",
+    "prediction": "SUSPICIOUS",
+    "findings": [
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 216,
+          "y": 496,
+          "width": 216,
+          "height": 248
+        },
+        "raw_measure": {
+          "edge_robust_z": 5.271,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      },
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 216,
+          "y": 744,
+          "width": 216,
+          "height": 248
+        },
+        "raw_measure": {
+          "edge_robust_z": 7.132,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      }
+    ],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 1.993,
+      "maximum_edge_robust_z": 7.132,
+      "jpeg_recompression_residual": 1.289
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_09_fake_2_63.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.875,
+      "maximum_edge_robust_z": 2.479,
+      "jpeg_recompression_residual": 0.537
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/lva_passport_71_fake_0_114.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.32,
+      "maximum_edge_robust_z": 2.576,
+      "jpeg_recompression_residual": 0.666
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_78_fake_7_53.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.179,
+      "maximum_edge_robust_z": 3.3,
+      "jpeg_recompression_residual": 1.02
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_70_fake_6_55.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.964,
+      "maximum_edge_robust_z": 2.02,
+      "jpeg_recompression_residual": 1.047
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_48_fake_2_21.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.738,
+      "maximum_edge_robust_z": 3.228,
+      "jpeg_recompression_residual": 0.528
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_11_fake_7_101.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.926,
+      "maximum_edge_robust_z": 2.498,
+      "jpeg_recompression_residual": 1.065
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/svk_id_88_fake_8_62.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.645,
+      "maximum_edge_robust_z": 1.836,
+      "jpeg_recompression_residual": 0.687
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_74_fake_7_114.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.972,
+      "maximum_edge_robust_z": 2.75,
+      "jpeg_recompression_residual": 1.035
+    }
+  },
+  {
+    "sample_id": "templates/Images/reals/grc_passport_95.jpg",
+    "error_type": "FALSE_POSITIVE",
+    "ground_truth": "BONAFIDE",
+    "prediction": "SUSPICIOUS",
+    "findings": [
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 113,
+          "y": 401,
+          "width": 114,
+          "height": 134
+        },
+        "raw_measure": {
+          "edge_robust_z": 3.277,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      }
+    ],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.224,
+      "maximum_edge_robust_z": 3.277,
+      "jpeg_recompression_residual": 1.031
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_42_fake_6_94.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.109,
+      "maximum_edge_robust_z": 2.196,
+      "jpeg_recompression_residual": 1.058
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_35_fake_2_71.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 4.075,
+      "maximum_edge_robust_z": 2.404,
+      "jpeg_recompression_residual": 0.506
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_36_fake_7_61.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.134,
+      "maximum_edge_robust_z": 2.974,
+      "jpeg_recompression_residual": 1.013
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_17_fake_6_98.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.102,
+      "maximum_edge_robust_z": 2.372,
+      "jpeg_recompression_residual": 1.076
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_16_fake_2_72.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 4.668,
+      "maximum_edge_robust_z": 2.259,
+      "jpeg_recompression_residual": 0.565
+    }
+  },
+  {
+    "sample_id": "templates/Images/reals/srb_passport_47.jpg",
+    "error_type": "FALSE_POSITIVE",
+    "ground_truth": "BONAFIDE",
+    "prediction": "SUSPICIOUS",
+    "findings": [
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 216,
+          "y": 496,
+          "width": 216,
+          "height": 248
+        },
+        "raw_measure": {
+          "edge_robust_z": 4.854,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      },
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 216,
+          "y": 744,
+          "width": 216,
+          "height": 248
+        },
+        "raw_measure": {
+          "edge_robust_z": 6.166,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      }
+    ],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 1.91,
+      "maximum_edge_robust_z": 6.166,
+      "jpeg_recompression_residual": 1.272
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/svk_id_09_fake_8_97.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.399,
+      "maximum_edge_robust_z": 2.272,
+      "jpeg_recompression_residual": 0.681
+    }
+  },
+  {
+    "sample_id": "templates/Images/reals/esp_id_84.jpg",
+    "error_type": "FALSE_POSITIVE",
+    "ground_truth": "BONAFIDE",
+    "prediction": "SUSPICIOUS",
+    "findings": [
+      {
+        "finding_type": "LOCAL_NOISE_EDGE_INCONSISTENCY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 398,
+          "y": 137,
+          "width": 132,
+          "height": 138
+        },
+        "raw_measure": {
+          "noise_robust_z": 4.47,
+          "edge_robust_z": 2.259
+        },
+        "explanation": "This region differs strongly from the document's median high-frequency noise and edge profile."
+      }
+    ],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 4.47,
+      "maximum_edge_robust_z": 3.534,
+      "jpeg_recompression_residual": 0.781
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_39_fake_2_42.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 4.174,
+      "maximum_edge_robust_z": 2.666,
+      "jpeg_recompression_residual": 0.507
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_24_fake_6_100.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.75,
+      "maximum_edge_robust_z": 2.076,
+      "jpeg_recompression_residual": 1.068
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_03_fake_7_31.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.65,
+      "maximum_edge_robust_z": 3.547,
+      "jpeg_recompression_residual": 1.082
+    }
+  },
+  {
+    "sample_id": "templates/Images/reals/grc_passport_48.jpg",
+    "error_type": "FALSE_POSITIVE",
+    "ground_truth": "BONAFIDE",
+    "prediction": "SUSPICIOUS",
+    "findings": [
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 0,
+          "y": 401,
+          "width": 113,
+          "height": 134
+        },
+        "raw_measure": {
+          "edge_robust_z": 2.991,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      },
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 113,
+          "y": 401,
+          "width": 114,
+          "height": 134
+        },
+        "raw_measure": {
+          "edge_robust_z": 3.132,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      }
+    ],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.355,
+      "maximum_edge_robust_z": 3.132,
+      "jpeg_recompression_residual": 1.064
+    }
+  },
+  {
+    "sample_id": "templates/Images/reals/grc_passport_55.jpg",
+    "error_type": "FALSE_POSITIVE",
+    "ground_truth": "BONAFIDE",
+    "prediction": "SUSPICIOUS",
+    "findings": [
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 113,
+          "y": 401,
+          "width": 114,
+          "height": 134
+        },
+        "raw_measure": {
+          "edge_robust_z": 3.563,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      }
+    ],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.499,
+      "maximum_edge_robust_z": 3.563,
+      "jpeg_recompression_residual": 1.032
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_19_fake_7_60.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.295,
+      "maximum_edge_robust_z": 2.771,
+      "jpeg_recompression_residual": 1.061
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_54_fake_6_24.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.075,
+      "maximum_edge_robust_z": 2.225,
+      "jpeg_recompression_residual": 1.062
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/rus_internalpassport_00_fake_1_67.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 1.921,
+      "maximum_edge_robust_z": 2.428,
+      "jpeg_recompression_residual": 0.475
+    }
+  },
+  {
+    "sample_id": "templates/Images/reals/grc_passport_26.jpg",
+    "error_type": "FALSE_POSITIVE",
+    "ground_truth": "BONAFIDE",
+    "prediction": "SUSPICIOUS",
+    "findings": [
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 113,
+          "y": 267,
+          "width": 114,
+          "height": 134
+        },
+        "raw_measure": {
+          "edge_robust_z": 2.805,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      },
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 113,
+          "y": 401,
+          "width": 114,
+          "height": 134
+        },
+        "raw_measure": {
+          "edge_robust_z": 3.207,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      }
+    ],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.332,
+      "maximum_edge_robust_z": 3.207,
+      "jpeg_recompression_residual": 1.042
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_63_fake_2_112.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 4.077,
+      "maximum_edge_robust_z": 2.304,
+      "jpeg_recompression_residual": 0.581
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_84_fake_7_104.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.886,
+      "maximum_edge_robust_z": 2.437,
+      "jpeg_recompression_residual": 1.046
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/est_id_69_fake_9_96.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.449,
+      "maximum_edge_robust_z": 2.226,
+      "jpeg_recompression_residual": 0.44
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/grc_passport_30_fake_4_108.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.295,
+      "maximum_edge_robust_z": 2.554,
+      "jpeg_recompression_residual": 0.884
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/rus_internalpassport_74_fake_1_9.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.398,
+      "maximum_edge_robust_z": 3.657,
+      "jpeg_recompression_residual": 0.469
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_53_fake_6_33.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.809,
+      "maximum_edge_robust_z": 2.149,
+      "jpeg_recompression_residual": 1.062
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/aze_passport_97_fake_3_115.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 4.356,
+      "maximum_edge_robust_z": 3.419,
+      "jpeg_recompression_residual": 0.506
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/est_id_53_fake_9_68.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 4.105,
+      "maximum_edge_robust_z": 2.655,
+      "jpeg_recompression_residual": 0.439
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_33_fake_6_10.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.964,
+      "maximum_edge_robust_z": 2.237,
+      "jpeg_recompression_residual": 1.073
+    }
+  },
+  {
+    "sample_id": "templates/Images/reals/srb_passport_59.jpg",
+    "error_type": "FALSE_POSITIVE",
+    "ground_truth": "BONAFIDE",
+    "prediction": "SUSPICIOUS",
+    "findings": [
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 216,
+          "y": 496,
+          "width": 216,
+          "height": 248
+        },
+        "raw_measure": {
+          "edge_robust_z": 5.027,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      },
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 432,
+          "y": 496,
+          "width": 216,
+          "height": 248
+        },
+        "raw_measure": {
+          "edge_robust_z": 2.961,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      }
+    ],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.034,
+      "maximum_edge_robust_z": 6.158,
+      "jpeg_recompression_residual": 1.262
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/est_id_38_fake_9_35.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 4.076,
+      "maximum_edge_robust_z": 2.782,
+      "jpeg_recompression_residual": 0.431
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/rus_internalpassport_49_fake_1_83.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.164,
+      "maximum_edge_robust_z": 3.04,
+      "jpeg_recompression_residual": 0.498
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/svk_id_34_fake_8_103.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.422,
+      "maximum_edge_robust_z": 1.844,
+      "jpeg_recompression_residual": 0.695
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/est_id_60_fake_9_32.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.898,
+      "maximum_edge_robust_z": 2.32,
+      "jpeg_recompression_residual": 0.457
+    }
+  },
+  {
+    "sample_id": "templates/Images/reals/lva_passport_83.jpg",
+    "error_type": "FALSE_POSITIVE",
+    "ground_truth": "BONAFIDE",
+    "prediction": "SUSPICIOUS",
+    "findings": [
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 216,
+          "y": 507,
+          "width": 217,
+          "height": 253
+        },
+        "raw_measure": {
+          "edge_robust_z": 3.267,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      },
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 216,
+          "y": 760,
+          "width": 217,
+          "height": 254
+        },
+        "raw_measure": {
+          "edge_robust_z": 3.28,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      }
+    ],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.5,
+      "maximum_edge_robust_z": 3.28,
+      "jpeg_recompression_residual": 0.843
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_74_fake_7_40.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.297,
+      "maximum_edge_robust_z": 2.656,
+      "jpeg_recompression_residual": 1.049
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/lva_passport_85_fake_0_13.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.353,
+      "maximum_edge_robust_z": 2.411,
+      "jpeg_recompression_residual": 0.66
+    }
+  },
+  {
+    "sample_id": "templates/Images/reals/grc_passport_58.jpg",
+    "error_type": "FALSE_POSITIVE",
+    "ground_truth": "BONAFIDE",
+    "prediction": "SUSPICIOUS",
+    "findings": [
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 113,
+          "y": 401,
+          "width": 114,
+          "height": 134
+        },
+        "raw_measure": {
+          "edge_robust_z": 2.819,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      },
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 227,
+          "y": 401,
+          "width": 113,
+          "height": 134
+        },
+        "raw_measure": {
+          "edge_robust_z": 2.733,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      }
+    ],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.431,
+      "maximum_edge_robust_z": 2.819,
+      "jpeg_recompression_residual": 1.042
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/est_id_10_fake_9_63.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.748,
+      "maximum_edge_robust_z": 2.236,
+      "jpeg_recompression_residual": 0.434
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/aze_passport_65_fake_3_87.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 4.588,
+      "maximum_edge_robust_z": 3.348,
+      "jpeg_recompression_residual": 0.507
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/svk_id_69_fake_8_49.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.43,
+      "maximum_edge_robust_z": 1.876,
+      "jpeg_recompression_residual": 0.699
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_81_fake_6_63.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.337,
+      "maximum_edge_robust_z": 2.221,
+      "jpeg_recompression_residual": 1.109
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_23_fake_2_78.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 4.524,
+      "maximum_edge_robust_z": 2.433,
+      "jpeg_recompression_residual": 0.564
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/rus_internalpassport_65_fake_1_17.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.026,
+      "maximum_edge_robust_z": 2.508,
+      "jpeg_recompression_residual": 0.461
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/rus_internalpassport_85_fake_1_5.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.052,
+      "maximum_edge_robust_z": 2.459,
+      "jpeg_recompression_residual": 0.458
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_61_fake_2_27.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 4.053,
+      "maximum_edge_robust_z": 2.691,
+      "jpeg_recompression_residual": 0.554
+    }
+  },
+  {
+    "sample_id": "templates/Images/reals/aze_passport_82.jpg",
+    "error_type": "FALSE_POSITIVE",
+    "ground_truth": "BONAFIDE",
+    "prediction": "SUSPICIOUS",
+    "findings": [
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 0,
+          "y": 762,
+          "width": 216,
+          "height": 254
+        },
+        "raw_measure": {
+          "edge_robust_z": 2.719,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      }
+    ],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 5.982,
+      "maximum_edge_robust_z": 2.9,
+      "jpeg_recompression_residual": 0.714
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_18_fake_7_110.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.816,
+      "maximum_edge_robust_z": 2.729,
+      "jpeg_recompression_residual": 1.076
+    }
+  },
+  {
+    "sample_id": "templates/Images/reals/alb_id_75.jpg",
+    "error_type": "FALSE_POSITIVE",
+    "ground_truth": "BONAFIDE",
+    "prediction": "SUSPICIOUS",
+    "findings": [
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 216,
+          "y": 453,
+          "width": 217,
+          "height": 227
+        },
+        "raw_measure": {
+          "edge_robust_z": 3.151,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      }
+    ],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.825,
+      "maximum_edge_robust_z": 3.151,
+      "jpeg_recompression_residual": 1.326
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/aze_passport_75_fake_3_107.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 4.716,
+      "maximum_edge_robust_z": 3.248,
+      "jpeg_recompression_residual": 0.513
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_18_fake_7_79.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.816,
+      "maximum_edge_robust_z": 2.729,
+      "jpeg_recompression_residual": 1.07
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/est_id_57_fake_9_72.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 4.414,
+      "maximum_edge_robust_z": 2.574,
+      "jpeg_recompression_residual": 0.433
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/rus_internalpassport_21_fake_1_31.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 1.774,
+      "maximum_edge_robust_z": 3.394,
+      "jpeg_recompression_residual": 0.422
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/svk_id_85_fake_8_71.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.196,
+      "maximum_edge_robust_z": 1.947,
+      "jpeg_recompression_residual": 0.701
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/svk_id_66_fake_8_25.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.617,
+      "maximum_edge_robust_z": 1.816,
+      "jpeg_recompression_residual": 0.688
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_30_fake_7_15.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.092,
+      "maximum_edge_robust_z": 3.061,
+      "jpeg_recompression_residual": 1.08
+    }
+  },
+  {
+    "sample_id": "templates/Images/reals/srb_passport_23.jpg",
+    "error_type": "FALSE_POSITIVE",
+    "ground_truth": "BONAFIDE",
+    "prediction": "SUSPICIOUS",
+    "findings": [
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 216,
+          "y": 496,
+          "width": 216,
+          "height": 248
+        },
+        "raw_measure": {
+          "edge_robust_z": 6.285,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      },
+      {
+        "finding_type": "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+        "status": "SUSPICIOUS",
+        "bounding_box": {
+          "x": 432,
+          "y": 496,
+          "width": 216,
+          "height": 248
+        },
+        "raw_measure": {
+          "edge_robust_z": 2.889,
+          "configured_threshold": 2.65
+        },
+        "explanation": "The documented portrait area of the fictional VEDA fixture has an outlying edge profile relative to the submitted image."
+      }
+    ],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.022,
+      "maximum_edge_robust_z": 6.285,
+      "jpeg_recompression_residual": 1.269
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_20_fake_6_51.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 2.94,
+      "maximum_edge_robust_z": 2.108,
+      "jpeg_recompression_residual": 1.06
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_56_fake_2_107.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 3.53,
+      "maximum_edge_robust_z": 2.791,
+      "jpeg_recompression_residual": 0.529
+    }
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_74_fake_2_99.jpg",
+    "error_type": "FALSE_NEGATIVE",
+    "ground_truth": "FORGERY",
+    "prediction": "PASS",
+    "findings": [],
+    "measures": {
+      "grid": [
+        10,
+        6
+      ],
+      "maximum_noise_robust_z": 4.156,
+      "maximum_edge_robust_z": 2.503,
+      "jpeg_recompression_residual": 0.545
+    }
+  }
+]

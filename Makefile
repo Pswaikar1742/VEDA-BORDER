@@ -24,6 +24,9 @@ fixtures:
 evaluate-integrated:
 	python3 services/api/tools/evaluate_integrated.py
 
+evaluate-external:
+	PYTHONPATH=services/api python3 services/api/tools/evaluate_external_benchmarks.py
+
 web-install:
 	cd apps/web && npm install
 

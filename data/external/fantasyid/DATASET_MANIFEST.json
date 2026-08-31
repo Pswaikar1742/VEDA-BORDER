@@ -1,0 +1,30 @@
+{
+  "dataset_id": "FantasyID",
+  "version": "1.0",
+  "publisher": "Idiap Research Institute",
+  "zenodo_doi": "10.34777/c966-nn94",
+  "license": "CC-BY-4.0",
+  "total_train_samples": 1899,
+  "total_test_samples": 1385,
+  "total_samples": 3284,
+  "attack_types": [
+    "face",
+    "text",
+    "face_text"
+  ],
+  "language_templates": [
+    "ara",
+    "chi",
+    "eng",
+    "fra",
+    "hin",
+    "hkg",
+    "nld",
+    "per",
+    "por",
+    "rus",
+    "sgp",
+    "tur",
+    "ukr"
+  ]
+}

@@ -10,7 +10,7 @@ Read these before coding:
 4. `docs/ARCHITECTURE.md`
 5. `docs/THREAT_MODEL.md`
 6. `docs/DECISION_LOG.md`
-7. the current task under `codex/prompts/`
+7. Project documentation and sprint requirements under `docs/`
 
 If a requirement conflicts, stop and report the conflict. Do not silently invent behavior.
 

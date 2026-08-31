@@ -1,16 +1,21 @@
 # Dataset Ledger
 
-Do not add a dataset without recording its terms.
+This ledger records all internal and external datasets, provenance, licensing, access statuses, and leakage controls.
 
-| Dataset | Purpose | Source | License / Terms | Competition Use OK? | PII / Sensitivity | Split Strategy | Status |
-|---|---|---|---|---|---|---|---|
-| Synthetic VEDA rendered-image benchmark v2 | Task 04 OCR/MRZ/consistency support and golden cases: 4 clean, 16 controlled visible/portrait variants, 5 capture-condition variants | Deterministically generated in repo | Project-owned | Yes | Entirely fictional; no real PII | Parent-linked transformations; evaluation truth loaded only after frozen byte-only predictions | GENERATED / TASK 04 |
-| DLC-2021 metadata/baseline subset | Legitimate external synthetic/mock-document reference | Zenodo record 6466768 | CC BY-SA 2.5; Generated Photos attribution noted in license | Verify for derivatives | Synthetic IDs/artificial personal information | Not used for Task 03 scoring | DOWNLOADED METADATA ONLY |
-| FantasyID | ID tamper research | Idiap | Verify at acquisition | Verify | Synthetic/fantasy | template/style-disjoint | CANDIDATE |
-| MIDV-2020 | OCR/capture robustness | Public research dataset | Verify at acquisition | Verify | Synthetic/mock IDs | document/template-disjoint | CANDIDATE |
-| FRLL-Morphs | Morph evaluation | Public research release | Verify at acquisition | Verify | Face images | subject-disjoint | STRETCH |
-| MIDV-Holo | Hologram/security feature | Public research release | Verify at acquisition | Verify | ID-like research data | video/document-disjoint | STRETCH |
+| Dataset Identifier | Purpose | Official Source / Publisher | Licence / Terms | Access Status | Raw / Extracted Size | PII / Sensitivity | Split Strategy | VEDA Usage |
+|---|---|---|---|---|---|---|---|---|
+| **Synthetic VEDA Fixtures v2** | Task 01–04 integration tests, golden cases, failure injection, UI demos | In-repo generator (`generate_integrated_fixtures.py`) | Project-owned | `AVAILABLE` | ~15 MB | Entirely fictional synthetic data | Deterministic seeds; evaluation truth loaded only after frozen predictions | Integration & Golden Suite Only |
+| **SIDTD (Templates + Splits)** | Primary external forgery & manipulation benchmark | TC-11 / CVC Universitat Autònoma de Barcelona | Open Research / CVC Terms | `DOWNLOADED` | 1.2 GB / ~1.4 GB | Synthetic mock IDs (MIDV-2020 derived) | Official `split_normal` (Train: 2511, Val: 313, Test: 315) | External Forgery Evaluation |
+| **FantasyID** | Multi-language digital forgery (Hindi, French, English, etc.) | Idiap Research Institute (Zenodo DOI: 10.34777/c966-nn94) | `CC-BY-4.0` | `DOWNLOADED` | 2.4 GB / ~2.6 GB | Synthetic / Fantasy ID cards | Language & template disjoint validation/test | Digital Manipulation Benchmark |
+| **DLC-2021 (Metadata & Baseline)** | Physical presentation attack detection (original, copies, screen recapture) | Smart Engines / MDPI / Zenodo (DOI: 10.5281/zenodo.7467028) | `CC-BY-SA-2.5` | `METADATA_AND_BASELINE_DOWNLOADED` | 84.4 MB (Raw video corpus 99 GB) | Synthetic IDs / artificial personal information | Official split lists (`graycopy`, `screen`, `unlaminated`) | Physical Liveness Benchmark |
+| **MIDV-2020** | Mobile document localization & OCR robustness under capture variations | La Rochelle University / Smart Engines | Research Licence (Form required) | `WAITING_FOR_HUMAN_ACCESS` | ~124 GB | Synthetic mock IDs | Document & template disjoint partitions | Evaluation deferred pending access |
+| **MIDV-Holo** | Dynamic hologram & optical variable security feature research | Smart Engines | Research Release | `DEFERRED` | ~15 GB | Synthetic / research credentials | Video sequence disjoint | Optional Future Research |
+| **ICAO Doc 9303** | International Standard for MRZ check digits & travel document specifications | International Civil Aviation Organization (ICAO) | International Standard (Free access) | `AVAILABLE` | N/A (Standard Specification) | Official Specifications | Standard specifications (Not a dataset) | Deterministic MRZ Rule Validation |
 
-Never treat Aegis invoice/health benchmark labels as real border fraud ground truth.
+---
 
-Task 03's JSON-container benchmark results were controlled container-level extraction metrics, not image OCR evidence. Task 04 specimens are actual rendered PNG/JPEG files. Their measured results are specific to this small synthetic layout and do not estimate real passport, visa, national-ID, camera, fraud, forgery, or authenticity performance.
+## Prediction Boundary Invariants
+1. Runtime modules accept only raw decoded specimen bytes.
+2. Runtime modules NEVER receive ground truth class, manipulation type, split annotations, or ground truth metadata.
+3. Benchmark evaluation runner freezes runtime predictions before loading ground truth annotations for scoring.
+4. Internal golden suite results are strictly separated from external benchmark metrics.

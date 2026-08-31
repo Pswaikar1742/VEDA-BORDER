@@ -1,0 +1,19 @@
+{
+  "benchmark_id": "DLC-2021",
+  "official_source": "Smart Engines / Journal of Imaging (DOI: 10.3390/jimaging8070181)",
+  "license": "CC-BY-SA-2.5",
+  "total_video_clips": 1424,
+  "modality_breakdown": {
+    "color_copy": 484,
+    "grayscale_copy": 250,
+    "original_mock": 290,
+    "screen_recapture": 400
+  },
+  "device_breakdown": {
+    "iphone": 601,
+    "android": 823
+  },
+  "experimental_baseline_status": "DOWNLOADED (experimental_baseline.zip, 84.3 MB)",
+  "full_video_corpus_status": "DEFERRED_DUE_TO_SIZE_POLICY (99 GB total across 4 archives)",
+  "scientific_boundary": "DLC-2021 establishes the official presentation attack detection benchmark protocol for mock IDs. Current VEDA implementation does not yet incorporate video temporal presentation attack analysis; this baseline explicitly documents that capability boundary without faking coverage."
+}

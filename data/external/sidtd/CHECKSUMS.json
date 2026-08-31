@@ -1,0 +1,7 @@
+{
+  "templates.zip": "e21a1c8bb85a184137faac160641f67bfe39b96b50ce1f645626e10a35567c0f",
+  "split_normal.zip": "44d3c93ff59ea56ccd75f040aad73abbc650764b538dcde84b41f82e2add5c7b",
+  "hold_out_split_templates.zip": "2b6f6757f9ed056c7b75e99334de4e0ff1ff32c17c5975df26f8cd43170e0225",
+  "kfold_split_templates.zip": "ac54b711ad1202d60ba741512f1cebae1aec839b8d8e6160a2c229fc580b4b6a",
+  "few_shot_split_templates.zip": "7639854096fe6233fccc17415cdc009e3f1455d6e6e97f106b2cc4a6f418cdc9"
+}

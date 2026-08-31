@@ -1,0 +1,15 @@
+{
+  "dataset_id": "FantasyID",
+  "splits": {
+    "train": {
+      "count": 1899,
+      "attacks": 1266,
+      "bonafide": 633
+    },
+    "test": {
+      "count": 1385,
+      "attacks": 1085,
+      "bonafide": 300
+    }
+  }
+}

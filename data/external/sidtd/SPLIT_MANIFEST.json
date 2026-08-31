@@ -1,0 +1,21 @@
+{
+  "dataset_id": "SIDTD",
+  "active_split": "split_normal",
+  "splits": {
+    "train": {
+      "count": 2511,
+      "fakes": 1700,
+      "reals": 811
+    },
+    "val": {
+      "count": 313,
+      "fakes": 217,
+      "reals": 96
+    },
+    "test": {
+      "count": 315,
+      "fakes": 222,
+      "reals": 93
+    }
+  }
+}

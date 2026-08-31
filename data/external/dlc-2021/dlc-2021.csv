@@ -914,9 +914,9 @@ lva_passport/03.or0002;android;artificial light + color temperature 6300
 lva_passport/03.re0001;iphone;macbook pro
 lva_passport/03.re0002;iphone;philips
 lva_passport/03.re0003;iphone;hp
-lva_passport/03.re0003;android;hp
 lva_passport/03.re0004;android;macbook pro
 lva_passport/03.re0005;android;philips
+lva_passport/03.re0006;android;hp
 lva_passport/04.cc0001;iphone;artificial light
 lva_passport/04.cc0002;iphone;artificial light + flash
 lva_passport/04.cc0003;iphone;low light

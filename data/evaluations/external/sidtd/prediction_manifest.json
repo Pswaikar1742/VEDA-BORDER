@@ -1,0 +1,2823 @@
+[
+  {
+    "sample_id": "templates/Images/fakes/lva_passport_39_fake_0_50.jpg",
+    "document_id": "lva_passport_39",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "lva"
+  },
+  {
+    "sample_id": "templates/Images/reals/est_id_75.jpg",
+    "document_id": "est_id_75",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "est"
+  },
+  {
+    "sample_id": "templates/Images/reals/srb_passport_36.jpg",
+    "document_id": "srb_passport_36",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "srb"
+  },
+  {
+    "sample_id": "templates/Images/fakes/srb_passport_84_fake_5_98.jpg",
+    "document_id": "srb_passport_84",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "srb"
+  },
+  {
+    "sample_id": "templates/Images/fakes/grc_passport_44_fake_4_24.jpg",
+    "document_id": "grc_passport_44",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/reals/lva_passport_92.jpg",
+    "document_id": "lva_passport_92",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "lva"
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_76_fake_7_11.jpg",
+    "document_id": "fin_id_76",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_03_fake_6_87.jpg",
+    "document_id": "alb_id_03",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/reals/lva_passport_07.jpg",
+    "document_id": "lva_passport_07",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "lva"
+  },
+  {
+    "sample_id": "templates/Images/reals/rus_internalpassport_43.jpg",
+    "document_id": "rus_internalpassport_43",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "rus"
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_00_fake_7_72.jpg",
+    "document_id": "fin_id_00",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/fakes/grc_passport_52_fake_4_84.jpg",
+    "document_id": "grc_passport_52",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_80_fake_6_57.jpg",
+    "document_id": "alb_id_80",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/fakes/lva_passport_14_fake_0_45.jpg",
+    "document_id": "lva_passport_14",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "lva"
+  },
+  {
+    "sample_id": "templates/Images/reals/aze_passport_27.jpg",
+    "document_id": "aze_passport_27",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "aze"
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_21_fake_7_91.jpg",
+    "document_id": "fin_id_21",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/fakes/est_id_74_fake_9_115.jpg",
+    "document_id": "est_id_74",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "est"
+  },
+  {
+    "sample_id": "templates/Images/reals/alb_id_83.jpg",
+    "document_id": "alb_id_83",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/reals/grc_passport_97.jpg",
+    "document_id": "grc_passport_97",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/fakes/srb_passport_02_fake_5_63.jpg",
+    "document_id": "srb_passport_02",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "srb"
+  },
+  {
+    "sample_id": "templates/Images/reals/est_id_36.jpg",
+    "document_id": "est_id_36",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "est"
+  },
+  {
+    "sample_id": "templates/Images/reals/grc_passport_79.jpg",
+    "document_id": "grc_passport_79",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/fakes/grc_passport_90_fake_4_77.jpg",
+    "document_id": "grc_passport_90",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/fakes/lva_passport_51_fake_0_114.jpg",
+    "document_id": "lva_passport_51",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "lva"
+  },
+  {
+    "sample_id": "templates/Images/reals/rus_internalpassport_75.jpg",
+    "document_id": "rus_internalpassport_75",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "rus"
+  },
+  {
+    "sample_id": "templates/Images/fakes/lva_passport_93_fake_0_26.jpg",
+    "document_id": "lva_passport_93",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "lva"
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_66_fake_6_21.jpg",
+    "document_id": "alb_id_66",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/reals/aze_passport_33.jpg",
+    "document_id": "aze_passport_33",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "aze"
+  },
+  {
+    "sample_id": "templates/Images/reals/lva_passport_22.jpg",
+    "document_id": "lva_passport_22",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "lva"
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_83_fake_6_35.jpg",
+    "document_id": "alb_id_83",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_81_fake_6_91.jpg",
+    "document_id": "alb_id_81",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/reals/lva_passport_41.jpg",
+    "document_id": "lva_passport_41",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "lva"
+  },
+  {
+    "sample_id": "templates/Images/fakes/aze_passport_39_fake_3_23.jpg",
+    "document_id": "aze_passport_39",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "aze"
+  },
+  {
+    "sample_id": "templates/Images/reals/est_id_51.jpg",
+    "document_id": "est_id_51",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "est"
+  },
+  {
+    "sample_id": "templates/Images/reals/aze_passport_43.jpg",
+    "document_id": "aze_passport_43",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "aze"
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_45_fake_6_62.jpg",
+    "document_id": "alb_id_45",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/reals/est_id_37.jpg",
+    "document_id": "est_id_37",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "est"
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_86_fake_7_47.jpg",
+    "document_id": "fin_id_86",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/fakes/lva_passport_28_fake_0_44.jpg",
+    "document_id": "lva_passport_28",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "lva"
+  },
+  {
+    "sample_id": "templates/Images/fakes/svk_id_93_fake_8_63.jpg",
+    "document_id": "svk_id_93",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "svk"
+  },
+  {
+    "sample_id": "templates/Images/reals/grc_passport_96.jpg",
+    "document_id": "grc_passport_96",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/reals/rus_internalpassport_77.jpg",
+    "document_id": "rus_internalpassport_77",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "rus"
+  },
+  {
+    "sample_id": "templates/Images/reals/srb_passport_29.jpg",
+    "document_id": "srb_passport_29",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "srb"
+  },
+  {
+    "sample_id": "templates/Images/reals/est_id_55.jpg",
+    "document_id": "est_id_55",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "est"
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_96_fake_2_24.jpg",
+    "document_id": "esp_id_96",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "esp"
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_59_fake_6_7.jpg",
+    "document_id": "alb_id_59",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/reals/grc_passport_42.jpg",
+    "document_id": "grc_passport_42",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/fakes/lva_passport_66_fake_0_36.jpg",
+    "document_id": "lva_passport_66",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "lva"
+  },
+  {
+    "sample_id": "templates/Images/fakes/srb_passport_41_fake_5_21.jpg",
+    "document_id": "srb_passport_41",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "srb"
+  },
+  {
+    "sample_id": "templates/Images/reals/grc_passport_60.jpg",
+    "document_id": "grc_passport_60",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_77_fake_2_103.jpg",
+    "document_id": "esp_id_77",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "esp"
+  },
+  {
+    "sample_id": "templates/Images/reals/grc_passport_72.jpg",
+    "document_id": "grc_passport_72",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/fakes/svk_id_03_fake_8_69.jpg",
+    "document_id": "svk_id_03",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "svk"
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_74_fake_7_113.jpg",
+    "document_id": "fin_id_74",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "LOCAL_NOISE_EDGE_INCONSISTENCY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/reals/alb_id_89.jpg",
+    "document_id": "alb_id_89",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/reals/esp_id_08.jpg",
+    "document_id": "esp_id_08",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "esp"
+  },
+  {
+    "sample_id": "templates/Images/reals/aze_passport_75.jpg",
+    "document_id": "aze_passport_75",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "aze"
+  },
+  {
+    "sample_id": "templates/Images/fakes/rus_internalpassport_98_fake_1_74.jpg",
+    "document_id": "rus_internalpassport_98",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "rus"
+  },
+  {
+    "sample_id": "templates/Images/reals/svk_id_48.jpg",
+    "document_id": "svk_id_48",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "svk"
+  },
+  {
+    "sample_id": "templates/Images/reals/esp_id_69.jpg",
+    "document_id": "esp_id_69",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "esp"
+  },
+  {
+    "sample_id": "templates/Images/fakes/aze_passport_00_fake_3_105.jpg",
+    "document_id": "aze_passport_00",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "aze"
+  },
+  {
+    "sample_id": "templates/Images/fakes/aze_passport_63_fake_3_15.jpg",
+    "document_id": "aze_passport_63",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "aze"
+  },
+  {
+    "sample_id": "templates/Images/fakes/rus_internalpassport_68_fake_1_55.jpg",
+    "document_id": "rus_internalpassport_68",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "rus"
+  },
+  {
+    "sample_id": "templates/Images/fakes/est_id_55_fake_9_90.jpg",
+    "document_id": "est_id_55",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "est"
+  },
+  {
+    "sample_id": "templates/Images/reals/fin_id_11.jpg",
+    "document_id": "fin_id_11",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/fakes/lva_passport_82_fake_0_72.jpg",
+    "document_id": "lva_passport_82",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "lva"
+  },
+  {
+    "sample_id": "templates/Images/reals/est_id_06.jpg",
+    "document_id": "est_id_06",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "est"
+  },
+  {
+    "sample_id": "templates/Images/reals/fin_id_96.jpg",
+    "document_id": "fin_id_96",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/fakes/aze_passport_54_fake_3_42.jpg",
+    "document_id": "aze_passport_54",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "aze"
+  },
+  {
+    "sample_id": "templates/Images/fakes/est_id_62_fake_9_113.jpg",
+    "document_id": "est_id_62",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "est"
+  },
+  {
+    "sample_id": "templates/Images/fakes/est_id_44_fake_9_2.jpg",
+    "document_id": "est_id_44",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "est"
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_11_fake_7_69.jpg",
+    "document_id": "fin_id_11",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/fakes/aze_passport_96_fake_3_33.jpg",
+    "document_id": "aze_passport_96",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "aze"
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_17_fake_2_51.jpg",
+    "document_id": "esp_id_17",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "esp"
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_85_fake_7_51.jpg",
+    "document_id": "fin_id_85",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/fakes/aze_passport_35_fake_3_85.jpg",
+    "document_id": "aze_passport_35",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "aze"
+  },
+  {
+    "sample_id": "templates/Images/reals/grc_passport_54.jpg",
+    "document_id": "grc_passport_54",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/reals/alb_id_63.jpg",
+    "document_id": "alb_id_63",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/fakes/aze_passport_38_fake_3_43.jpg",
+    "document_id": "aze_passport_38",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "aze"
+  },
+  {
+    "sample_id": "templates/Images/reals/esp_id_44.jpg",
+    "document_id": "esp_id_44",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "esp"
+  },
+  {
+    "sample_id": "templates/Images/reals/aze_passport_77.jpg",
+    "document_id": "aze_passport_77",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "aze"
+  },
+  {
+    "sample_id": "templates/Images/fakes/svk_id_95_fake_8_80.jpg",
+    "document_id": "svk_id_95",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "svk"
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_40_fake_2_22.jpg",
+    "document_id": "esp_id_40",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "esp"
+  },
+  {
+    "sample_id": "templates/Images/reals/alb_id_19.jpg",
+    "document_id": "alb_id_19",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/reals/srb_passport_66.jpg",
+    "document_id": "srb_passport_66",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "srb"
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_09_fake_2_63.jpg",
+    "document_id": "esp_id_09",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "esp"
+  },
+  {
+    "sample_id": "templates/Images/fakes/lva_passport_71_fake_0_114.jpg",
+    "document_id": "lva_passport_71",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "lva"
+  },
+  {
+    "sample_id": "templates/Images/fakes/lva_passport_07_fake_0_16.jpg",
+    "document_id": "lva_passport_07",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "lva"
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_78_fake_7_53.jpg",
+    "document_id": "fin_id_78",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/reals/esp_id_37.jpg",
+    "document_id": "esp_id_37",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "esp"
+  },
+  {
+    "sample_id": "templates/Images/reals/svk_id_23.jpg",
+    "document_id": "svk_id_23",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "svk"
+  },
+  {
+    "sample_id": "templates/Images/reals/fin_id_53.jpg",
+    "document_id": "fin_id_53",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_70_fake_6_55.jpg",
+    "document_id": "alb_id_70",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/reals/rus_internalpassport_54.jpg",
+    "document_id": "rus_internalpassport_54",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "rus"
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_48_fake_2_21.jpg",
+    "document_id": "esp_id_48",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "esp"
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_11_fake_7_101.jpg",
+    "document_id": "fin_id_11",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/fakes/svk_id_88_fake_8_62.jpg",
+    "document_id": "svk_id_88",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "svk"
+  },
+  {
+    "sample_id": "templates/Images/fakes/grc_passport_08_fake_4_85.jpg",
+    "document_id": "grc_passport_08",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/reals/est_id_07.jpg",
+    "document_id": "est_id_07",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "est"
+  },
+  {
+    "sample_id": "templates/Images/reals/est_id_67.jpg",
+    "document_id": "est_id_67",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "est"
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_74_fake_7_114.jpg",
+    "document_id": "fin_id_74",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/fakes/grc_passport_58_fake_4_10.jpg",
+    "document_id": "grc_passport_58",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/reals/grc_passport_95.jpg",
+    "document_id": "grc_passport_95",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/fakes/grc_passport_83_fake_4_49.jpg",
+    "document_id": "grc_passport_83",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_42_fake_6_94.jpg",
+    "document_id": "alb_id_42",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_35_fake_2_71.jpg",
+    "document_id": "esp_id_35",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "esp"
+  },
+  {
+    "sample_id": "templates/Images/reals/svk_id_86.jpg",
+    "document_id": "svk_id_86",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "svk"
+  },
+  {
+    "sample_id": "templates/Images/fakes/grc_passport_22_fake_4_4.jpg",
+    "document_id": "grc_passport_22",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/reals/alb_id_90.jpg",
+    "document_id": "alb_id_90",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/reals/svk_id_55.jpg",
+    "document_id": "svk_id_55",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "svk"
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_36_fake_7_61.jpg",
+    "document_id": "fin_id_36",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/reals/rus_internalpassport_96.jpg",
+    "document_id": "rus_internalpassport_96",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "rus"
+  },
+  {
+    "sample_id": "templates/Images/reals/svk_id_75.jpg",
+    "document_id": "svk_id_75",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "svk"
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_17_fake_6_98.jpg",
+    "document_id": "alb_id_17",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/fakes/aze_passport_40_fake_3_100.jpg",
+    "document_id": "aze_passport_40",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "aze"
+  },
+  {
+    "sample_id": "templates/Images/fakes/grc_passport_43_fake_4_65.jpg",
+    "document_id": "grc_passport_43",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_16_fake_2_72.jpg",
+    "document_id": "esp_id_16",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "esp"
+  },
+  {
+    "sample_id": "templates/Images/reals/srb_passport_47.jpg",
+    "document_id": "srb_passport_47",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "srb"
+  },
+  {
+    "sample_id": "templates/Images/fakes/svk_id_09_fake_8_97.jpg",
+    "document_id": "svk_id_09",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "svk"
+  },
+  {
+    "sample_id": "templates/Images/reals/rus_internalpassport_83.jpg",
+    "document_id": "rus_internalpassport_83",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "rus"
+  },
+  {
+    "sample_id": "templates/Images/fakes/grc_passport_94_fake_4_88.jpg",
+    "document_id": "grc_passport_94",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/reals/esp_id_84.jpg",
+    "document_id": "esp_id_84",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "LOCAL_NOISE_EDGE_INCONSISTENCY"
+    ],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "esp"
+  },
+  {
+    "sample_id": "templates/Images/fakes/srb_passport_68_fake_5_23.jpg",
+    "document_id": "srb_passport_68",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "srb"
+  },
+  {
+    "sample_id": "templates/Images/reals/aze_passport_34.jpg",
+    "document_id": "aze_passport_34",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "aze"
+  },
+  {
+    "sample_id": "templates/Images/reals/alb_id_37.jpg",
+    "document_id": "alb_id_37",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_69_fake_6_3.jpg",
+    "document_id": "alb_id_69",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/fakes/srb_passport_26_fake_5_18.jpg",
+    "document_id": "srb_passport_26",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "srb"
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_39_fake_2_42.jpg",
+    "document_id": "esp_id_39",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "esp"
+  },
+  {
+    "sample_id": "templates/Images/reals/fin_id_58.jpg",
+    "document_id": "fin_id_58",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/reals/est_id_44.jpg",
+    "document_id": "est_id_44",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "est"
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_24_fake_6_100.jpg",
+    "document_id": "alb_id_24",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/reals/rus_internalpassport_82.jpg",
+    "document_id": "rus_internalpassport_82",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "rus"
+  },
+  {
+    "sample_id": "templates/Images/reals/aze_passport_17.jpg",
+    "document_id": "aze_passport_17",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "aze"
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_03_fake_7_31.jpg",
+    "document_id": "fin_id_03",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/reals/grc_passport_48.jpg",
+    "document_id": "grc_passport_48",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/fakes/grc_passport_94_fake_4_106.jpg",
+    "document_id": "grc_passport_94",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/reals/fin_id_88.jpg",
+    "document_id": "fin_id_88",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/reals/grc_passport_55.jpg",
+    "document_id": "grc_passport_55",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/reals/alb_id_41.jpg",
+    "document_id": "alb_id_41",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/reals/est_id_88.jpg",
+    "document_id": "est_id_88",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "est"
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_19_fake_7_60.jpg",
+    "document_id": "fin_id_19",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/reals/esp_id_41.jpg",
+    "document_id": "esp_id_41",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "esp"
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_54_fake_6_24.jpg",
+    "document_id": "alb_id_54",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/reals/svk_id_00.jpg",
+    "document_id": "svk_id_00",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "svk"
+  },
+  {
+    "sample_id": "templates/Images/reals/est_id_40.jpg",
+    "document_id": "est_id_40",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "est"
+  },
+  {
+    "sample_id": "templates/Images/fakes/rus_internalpassport_00_fake_1_67.jpg",
+    "document_id": "rus_internalpassport_00",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "rus"
+  },
+  {
+    "sample_id": "templates/Images/reals/grc_passport_26.jpg",
+    "document_id": "grc_passport_26",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_63_fake_2_112.jpg",
+    "document_id": "esp_id_63",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "esp"
+  },
+  {
+    "sample_id": "templates/Images/reals/svk_id_35.jpg",
+    "document_id": "svk_id_35",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "svk"
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_84_fake_7_104.jpg",
+    "document_id": "fin_id_84",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/fakes/est_id_69_fake_9_96.jpg",
+    "document_id": "est_id_69",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "est"
+  },
+  {
+    "sample_id": "templates/Images/fakes/srb_passport_79_fake_5_71.jpg",
+    "document_id": "srb_passport_79",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "srb"
+  },
+  {
+    "sample_id": "templates/Images/fakes/grc_passport_30_fake_4_108.jpg",
+    "document_id": "grc_passport_30",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/reals/aze_passport_10.jpg",
+    "document_id": "aze_passport_10",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "aze"
+  },
+  {
+    "sample_id": "templates/Images/fakes/rus_internalpassport_74_fake_1_9.jpg",
+    "document_id": "rus_internalpassport_74",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "rus"
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_53_fake_6_33.jpg",
+    "document_id": "alb_id_53",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/fakes/aze_passport_97_fake_3_115.jpg",
+    "document_id": "aze_passport_97",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "aze"
+  },
+  {
+    "sample_id": "templates/Images/fakes/est_id_53_fake_9_68.jpg",
+    "document_id": "est_id_53",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "est"
+  },
+  {
+    "sample_id": "templates/Images/fakes/grc_passport_12_fake_4_53.jpg",
+    "document_id": "grc_passport_12",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/fakes/grc_passport_77_fake_4_83.jpg",
+    "document_id": "grc_passport_77",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/reals/rus_internalpassport_12.jpg",
+    "document_id": "rus_internalpassport_12",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "rus"
+  },
+  {
+    "sample_id": "templates/Images/fakes/grc_passport_07_fake_4_101.jpg",
+    "document_id": "grc_passport_07",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_33_fake_6_10.jpg",
+    "document_id": "alb_id_33",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/reals/srb_passport_59.jpg",
+    "document_id": "srb_passport_59",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "srb"
+  },
+  {
+    "sample_id": "templates/Images/reals/rus_internalpassport_50.jpg",
+    "document_id": "rus_internalpassport_50",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "rus"
+  },
+  {
+    "sample_id": "templates/Images/reals/aze_passport_96.jpg",
+    "document_id": "aze_passport_96",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "aze"
+  },
+  {
+    "sample_id": "templates/Images/reals/fin_id_97.jpg",
+    "document_id": "fin_id_97",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/fakes/est_id_38_fake_9_35.jpg",
+    "document_id": "est_id_38",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "est"
+  },
+  {
+    "sample_id": "templates/Images/fakes/rus_internalpassport_49_fake_1_83.jpg",
+    "document_id": "rus_internalpassport_49",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "rus"
+  },
+  {
+    "sample_id": "templates/Images/fakes/svk_id_34_fake_8_103.jpg",
+    "document_id": "svk_id_34",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "svk"
+  },
+  {
+    "sample_id": "templates/Images/reals/fin_id_92.jpg",
+    "document_id": "fin_id_92",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/reals/est_id_76.jpg",
+    "document_id": "est_id_76",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "est"
+  },
+  {
+    "sample_id": "templates/Images/fakes/est_id_60_fake_9_32.jpg",
+    "document_id": "est_id_60",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "est"
+  },
+  {
+    "sample_id": "templates/Images/reals/est_id_61.jpg",
+    "document_id": "est_id_61",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "est"
+  },
+  {
+    "sample_id": "templates/Images/reals/lva_passport_83.jpg",
+    "document_id": "lva_passport_83",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "lva"
+  },
+  {
+    "sample_id": "templates/Images/reals/esp_id_58.jpg",
+    "document_id": "esp_id_58",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "esp"
+  },
+  {
+    "sample_id": "templates/Images/fakes/srb_passport_35_fake_5_39.jpg",
+    "document_id": "srb_passport_35",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "srb"
+  },
+  {
+    "sample_id": "templates/Images/fakes/grc_passport_86_fake_4_7.jpg",
+    "document_id": "grc_passport_86",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_74_fake_7_40.jpg",
+    "document_id": "fin_id_74",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/fakes/lva_passport_85_fake_0_13.jpg",
+    "document_id": "lva_passport_85",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "lva"
+  },
+  {
+    "sample_id": "templates/Images/reals/grc_passport_58.jpg",
+    "document_id": "grc_passport_58",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "grc"
+  },
+  {
+    "sample_id": "templates/Images/fakes/est_id_10_fake_9_63.jpg",
+    "document_id": "est_id_10",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "est"
+  },
+  {
+    "sample_id": "templates/Images/fakes/aze_passport_65_fake_3_87.jpg",
+    "document_id": "aze_passport_65",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "aze"
+  },
+  {
+    "sample_id": "templates/Images/fakes/svk_id_69_fake_8_49.jpg",
+    "document_id": "svk_id_69",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "svk"
+  },
+  {
+    "sample_id": "templates/Images/reals/fin_id_63.jpg",
+    "document_id": "fin_id_63",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/reals/rus_internalpassport_93.jpg",
+    "document_id": "rus_internalpassport_93",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "rus"
+  },
+  {
+    "sample_id": "templates/Images/reals/rus_internalpassport_31.jpg",
+    "document_id": "rus_internalpassport_31",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "rus"
+  },
+  {
+    "sample_id": "templates/Images/fakes/srb_passport_39_fake_5_96.jpg",
+    "document_id": "srb_passport_39",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "srb"
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_81_fake_6_63.jpg",
+    "document_id": "alb_id_81",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/reals/fin_id_59.jpg",
+    "document_id": "fin_id_59",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_23_fake_2_78.jpg",
+    "document_id": "esp_id_23",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "esp"
+  },
+  {
+    "sample_id": "templates/Images/reals/fin_id_49.jpg",
+    "document_id": "fin_id_49",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/reals/esp_id_80.jpg",
+    "document_id": "esp_id_80",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "esp"
+  },
+  {
+    "sample_id": "templates/Images/fakes/rus_internalpassport_65_fake_1_17.jpg",
+    "document_id": "rus_internalpassport_65",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "rus"
+  },
+  {
+    "sample_id": "templates/Images/fakes/rus_internalpassport_85_fake_1_5.jpg",
+    "document_id": "rus_internalpassport_85",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "rus"
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_61_fake_2_27.jpg",
+    "document_id": "esp_id_61",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "esp"
+  },
+  {
+    "sample_id": "templates/Images/reals/aze_passport_82.jpg",
+    "document_id": "aze_passport_82",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "aze"
+  },
+  {
+    "sample_id": "templates/Images/fakes/srb_passport_87_fake_5_100.jpg",
+    "document_id": "srb_passport_87",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "srb"
+  },
+  {
+    "sample_id": "templates/Images/reals/rus_internalpassport_67.jpg",
+    "document_id": "rus_internalpassport_67",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "rus"
+  },
+  {
+    "sample_id": "templates/Images/fakes/aze_passport_71_fake_3_94.jpg",
+    "document_id": "aze_passport_71",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "aze"
+  },
+  {
+    "sample_id": "templates/Images/reals/svk_id_39.jpg",
+    "document_id": "svk_id_39",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "svk"
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_18_fake_7_110.jpg",
+    "document_id": "fin_id_18",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/reals/alb_id_75.jpg",
+    "document_id": "alb_id_75",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 1,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/reals/alb_id_61.jpg",
+    "document_id": "alb_id_61",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/fakes/aze_passport_75_fake_3_107.jpg",
+    "document_id": "aze_passport_75",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "aze"
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_18_fake_7_79.jpg",
+    "document_id": "fin_id_18",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/reals/lva_passport_30.jpg",
+    "document_id": "lva_passport_30",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "lva"
+  },
+  {
+    "sample_id": "templates/Images/fakes/est_id_57_fake_9_72.jpg",
+    "document_id": "est_id_57",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "est"
+  },
+  {
+    "sample_id": "templates/Images/reals/est_id_42.jpg",
+    "document_id": "est_id_42",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "est"
+  },
+  {
+    "sample_id": "templates/Images/reals/fin_id_09.jpg",
+    "document_id": "fin_id_09",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/reals/esp_id_96.jpg",
+    "document_id": "esp_id_96",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "esp"
+  },
+  {
+    "sample_id": "templates/Images/reals/est_id_70.jpg",
+    "document_id": "est_id_70",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "est"
+  },
+  {
+    "sample_id": "templates/Images/fakes/rus_internalpassport_21_fake_1_31.jpg",
+    "document_id": "rus_internalpassport_21",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "rus"
+  },
+  {
+    "sample_id": "templates/Images/fakes/svk_id_85_fake_8_71.jpg",
+    "document_id": "svk_id_85",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "svk"
+  },
+  {
+    "sample_id": "templates/Images/fakes/svk_id_66_fake_8_25.jpg",
+    "document_id": "svk_id_66",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "svk"
+  },
+  {
+    "sample_id": "templates/Images/reals/alb_id_13.jpg",
+    "document_id": "alb_id_13",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/fakes/fin_id_30_fake_7_15.jpg",
+    "document_id": "fin_id_30",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/reals/srb_passport_23.jpg",
+    "document_id": "srb_passport_23",
+    "document_family": "TRAVEL_DOCUMENT",
+    "predicted_forgery": 1,
+    "predicted_status": "SUSPICIOUS",
+    "findings_count": 2,
+    "findings": [
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY",
+      "TEMPLATE_PORTRAIT_REGION_EDGE_ANOMALY"
+    ],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "srb"
+  },
+  {
+    "sample_id": "templates/Images/fakes/alb_id_20_fake_6_51.jpg",
+    "document_id": "alb_id_20",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "alb"
+  },
+  {
+    "sample_id": "templates/Images/reals/fin_id_37.jpg",
+    "document_id": "fin_id_37",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "BONAFIDE",
+    "is_actual_forgery": 0,
+    "class_name": "fin"
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_56_fake_2_107.jpg",
+    "document_id": "esp_id_56",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "esp"
+  },
+  {
+    "sample_id": "templates/Images/fakes/esp_id_74_fake_2_99.jpg",
+    "document_id": "esp_id_74",
+    "document_family": "NATIONAL_ID",
+    "predicted_forgery": 0,
+    "predicted_status": "PASS",
+    "findings_count": 0,
+    "findings": [],
+    "ground_truth_class": "FORGERY",
+    "is_actual_forgery": 1,
+    "class_name": "esp"
+  }
+]

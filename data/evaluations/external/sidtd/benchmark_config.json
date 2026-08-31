@@ -1,0 +1,6 @@
+{
+  "benchmark_id": "SIDTD",
+  "split": "test",
+  "sample_count": 222,
+  "source_dir": "data/external/sidtd"
+}

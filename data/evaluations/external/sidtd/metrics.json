@@ -1,0 +1,254 @@
+{
+  "benchmark_id": "SIDTD",
+  "official_source": "TC-11 / Computer Vision Center (CVC)",
+  "split": "test",
+  "split_protocol": "split_normal",
+  "evaluated_at": "2026-08-30T11:58:16.514776+00:00",
+  "detector_evaluated": {
+    "name": "VEDA_LOCAL_IMAGE_FORENSICS",
+    "version": "1.0",
+    "type": "Local Deterministic Heuristics (Pre-Adaptation Baseline)"
+  },
+  "metrics": {
+    "sample_count": 222,
+    "true_positives": 39,
+    "false_positives": 23,
+    "true_negatives": 77,
+    "false_negatives": 83,
+    "accuracy": 0.5225225225225225,
+    "balanced_accuracy": 0.5448360655737705,
+    "precision": 0.6290322580645161,
+    "recall": 0.319672131147541,
+    "specificity": 0.77,
+    "f1_score": 0.42391304347826086,
+    "false_positive_rate": 0.23,
+    "false_negative_rate": 0.680327868852459,
+    "confusion_matrix": {
+      "tp": 39,
+      "fp": 23,
+      "tn": 77,
+      "fn": 83
+    },
+    "evaluation_duration_seconds": 27.42,
+    "throughput_samples_per_sec": 8.1
+  },
+  "per_class_metrics": {
+    "lva": {
+      "sample_count": 16,
+      "true_positives": 7,
+      "false_positives": 4,
+      "true_negatives": 2,
+      "false_negatives": 3,
+      "accuracy": 0.5625,
+      "balanced_accuracy": 0.5166666666666666,
+      "precision": 0.6363636363636364,
+      "recall": 0.7,
+      "specificity": 0.3333333333333333,
+      "f1_score": 0.6666666666666666,
+      "false_positive_rate": 0.6666666666666666,
+      "false_negative_rate": 0.3,
+      "confusion_matrix": {
+        "tp": 7,
+        "fp": 4,
+        "tn": 2,
+        "fn": 3
+      }
+    },
+    "est": {
+      "sample_count": 25,
+      "true_positives": 0,
+      "false_positives": 0,
+      "true_negatives": 15,
+      "false_negatives": 10,
+      "accuracy": 0.6,
+      "balanced_accuracy": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1_score": 0.0,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 1.0,
+      "confusion_matrix": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 15,
+        "fn": 10
+      }
+    },
+    "srb": {
+      "sample_count": 15,
+      "true_positives": 9,
+      "false_positives": 6,
+      "true_negatives": 0,
+      "false_negatives": 0,
+      "accuracy": 0.6,
+      "balanced_accuracy": 0.5,
+      "precision": 0.6,
+      "recall": 1.0,
+      "specificity": 0.0,
+      "f1_score": 0.7499999999999999,
+      "false_positive_rate": 1.0,
+      "false_negative_rate": 0.0,
+      "confusion_matrix": {
+        "tp": 9,
+        "fp": 6,
+        "tn": 0,
+        "fn": 0
+      }
+    },
+    "grc": {
+      "sample_count": 27,
+      "true_positives": 14,
+      "false_positives": 9,
+      "true_negatives": 3,
+      "false_negatives": 1,
+      "accuracy": 0.6296296296296297,
+      "balanced_accuracy": 0.5916666666666667,
+      "precision": 0.6086956521739131,
+      "recall": 0.9333333333333333,
+      "specificity": 0.25,
+      "f1_score": 0.7368421052631579,
+      "false_positive_rate": 0.75,
+      "false_negative_rate": 0.06666666666666667,
+      "confusion_matrix": {
+        "tp": 14,
+        "fp": 9,
+        "tn": 3,
+        "fn": 1
+      }
+    },
+    "fin": {
+      "sample_count": 30,
+      "true_positives": 1,
+      "false_positives": 0,
+      "true_negatives": 12,
+      "false_negatives": 17,
+      "accuracy": 0.43333333333333335,
+      "balanced_accuracy": 0.5277777777777778,
+      "precision": 1.0,
+      "recall": 0.05555555555555555,
+      "specificity": 1.0,
+      "f1_score": 0.10526315789473684,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.9444444444444444,
+      "confusion_matrix": {
+        "tp": 1,
+        "fp": 0,
+        "tn": 12,
+        "fn": 17
+      }
+    },
+    "alb": {
+      "sample_count": 27,
+      "true_positives": 4,
+      "false_positives": 2,
+      "true_negatives": 8,
+      "false_negatives": 13,
+      "accuracy": 0.4444444444444444,
+      "balanced_accuracy": 0.5176470588235295,
+      "precision": 0.6666666666666666,
+      "recall": 0.23529411764705882,
+      "specificity": 0.8,
+      "f1_score": 0.3478260869565218,
+      "false_positive_rate": 0.2,
+      "false_negative_rate": 0.7647058823529411,
+      "confusion_matrix": {
+        "tp": 4,
+        "fp": 2,
+        "tn": 8,
+        "fn": 13
+      }
+    },
+    "rus": {
+      "sample_count": 20,
+      "true_positives": 0,
+      "false_positives": 0,
+      "true_negatives": 12,
+      "false_negatives": 8,
+      "accuracy": 0.6,
+      "balanced_accuracy": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1_score": 0.0,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 1.0,
+      "confusion_matrix": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 12,
+        "fn": 8
+      }
+    },
+    "aze": {
+      "sample_count": 22,
+      "true_positives": 4,
+      "false_positives": 1,
+      "true_negatives": 9,
+      "false_negatives": 8,
+      "accuracy": 0.5909090909090909,
+      "balanced_accuracy": 0.6166666666666667,
+      "precision": 0.8,
+      "recall": 0.3333333333333333,
+      "specificity": 0.9,
+      "f1_score": 0.47058823529411764,
+      "false_positive_rate": 0.1,
+      "false_negative_rate": 0.6666666666666666,
+      "confusion_matrix": {
+        "tp": 4,
+        "fp": 1,
+        "tn": 9,
+        "fn": 8
+      }
+    },
+    "svk": {
+      "sample_count": 17,
+      "true_positives": 0,
+      "false_positives": 0,
+      "true_negatives": 8,
+      "false_negatives": 9,
+      "accuracy": 0.47058823529411764,
+      "balanced_accuracy": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1_score": 0.0,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 1.0,
+      "confusion_matrix": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 8,
+        "fn": 9
+      }
+    },
+    "esp": {
+      "sample_count": 23,
+      "true_positives": 0,
+      "false_positives": 1,
+      "true_negatives": 8,
+      "false_negatives": 14,
+      "accuracy": 0.34782608695652173,
+      "balanced_accuracy": 0.4444444444444444,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 0.8888888888888888,
+      "f1_score": 0.0,
+      "false_positive_rate": 0.1111111111111111,
+      "false_negative_rate": 1.0,
+      "confusion_matrix": {
+        "tp": 0,
+        "fp": 1,
+        "tn": 8,
+        "fn": 14
+      }
+    }
+  },
+  "failure_summary": {
+    "false_positives": 23,
+    "false_negatives": 83,
+    "false_positive_rate": 0.23,
+    "false_negative_rate": 0.680327868852459
+  },
+  "scientific_boundary": "This evaluates VEDA's initial layout-specific noise/edge heuristics against the external SIDTD dataset. Because the current heuristic was designed for controlled VEDA synthetic geometry without learned model weights, these numbers establish the honest uncalibrated baseline (EXTERNAL BASELINE V1) prior to external model training."
+}
