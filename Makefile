@@ -1,4 +1,4 @@
-.PHONY: api-install api-test api-run benchmark evaluate-task03 evaluate-task04 fixtures evaluate-integrated web-install web-build web-run test
+.PHONY: api-install api-test api-run benchmark evaluate-task03 evaluate-task04 fixtures evaluate-integrated web-install web-build web-run test docker-up docker-down docker-build
 
 api-install:
 	python3 -m pip install -r services/api/requirements.txt
@@ -36,4 +36,14 @@ web-build:
 web-run:
 	cd apps/web && npm run dev
 
+docker-up:
+	docker compose up --build
+
+docker-down:
+	docker compose down
+
+docker-build:
+	docker compose build
+
 test: api-test evaluate-integrated
+
