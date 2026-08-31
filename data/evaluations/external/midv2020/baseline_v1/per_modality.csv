@@ -1,0 +1,5 @@
+modality,samples,exact_match_rate,norm_match_rate,substring_match_rate,cer,field_failure_rate,doc_all_exact_rate,quality_pass_rate
+templates,1000,0.0,0.0,0.5071,0.9333,1.0,0.0,1.0
+scan_upright,1000,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+scan_rotated,1000,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+photo,1000,0.0,0.0,0.0,0.0,0.0,0.0,0.854

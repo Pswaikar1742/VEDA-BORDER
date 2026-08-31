@@ -1,0 +1,244 @@
+{
+  "baseline_identifier": "MIDV2020_EXTERNAL_OCR_BASELINE_V1",
+  "freeze_timestamp": "2026-08-31T07:36:49.317799+00:00",
+  "git_commit": "ec671dc0369b5c41a13a40448a6d22d30ce886b8",
+  "dataset_manifest_hash": "ba3045ed26a81fe7fe11a2ac639821f1a3011ee2309c4f5073fc812066760b82",
+  "checksums_hash": "c20a26121bcbc8def84196f77895a04176f5a0c83c944816f928c8b575b9cf42",
+  "python_version": "3.14.7",
+  "operating_system": "Linux-7.1.8-201.nobara.fc44.x86_64-x86_64-with-glibc2.43",
+  "tesseract_version": "5.5.0",
+  "ocr_psm": 6,
+  "ocr_lang": "eng",
+  "ocr_whitelist_mrz": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789<",
+  "quality_gate_thresholds": {
+    "min_width": 700,
+    "min_height": 440
+  },
+  "overall_metrics": {
+    "benchmark_id": "MIDV-2020",
+    "benchmark_name": "MIDV-2020 External OCR & Field Extraction Baseline V1",
+    "evaluated_at": "2026-08-31T07:36:49.189255+00:00",
+    "total_samples": 4000,
+    "total_unique_documents": 1000,
+    "total_annotated_fields": 13393,
+    "field_exact_match_rate": 0.0,
+    "field_normalized_match_rate": 0.0,
+    "field_substring_ocr_match_rate": 0.5071,
+    "character_error_rate": 0.9333,
+    "field_extraction_failure_rate": 1.0,
+    "document_all_fields_exact_rate": 0.0,
+    "document_all_fields_normalized_rate": 0.0,
+    "document_with_field_errors_rate": 0.25,
+    "document_total_extraction_failure_rate": 0.7558,
+    "localization_status": "LOCALIZATION METRIC NOT CURRENTLY SUPPORTED (V1 uses static template crop heuristics rather than dynamic bounding-box regression)",
+    "throughput_samples_per_sec": 2.97,
+    "total_evaluation_duration_seconds": 1345.49
+  },
+  "per_modality_metrics": {
+    "templates": {
+      "sample_count": 1000,
+      "total_annotated_fields": 13393,
+      "exact_field_match_rate": 0.0,
+      "normalized_field_match_rate": 0.0,
+      "substring_ocr_match_rate": 0.5071,
+      "character_error_rate": 0.9333,
+      "field_extraction_failure_rate": 1.0,
+      "document_all_fields_exact_rate": 0.0,
+      "document_all_fields_normalized_rate": 0.0,
+      "document_with_field_errors_rate": 1.0,
+      "document_total_extraction_failure_rate": 0.023,
+      "capture_quality_pass_rate": 1.0
+    },
+    "scan_upright": {
+      "sample_count": 1000,
+      "total_annotated_fields": 0,
+      "exact_field_match_rate": 0.0,
+      "normalized_field_match_rate": 0.0,
+      "substring_ocr_match_rate": 0.0,
+      "character_error_rate": 0.0,
+      "field_extraction_failure_rate": 0.0,
+      "document_all_fields_exact_rate": 0.0,
+      "document_all_fields_normalized_rate": 0.0,
+      "document_with_field_errors_rate": 0.0,
+      "document_total_extraction_failure_rate": 1.0,
+      "capture_quality_pass_rate": 0.0
+    },
+    "scan_rotated": {
+      "sample_count": 1000,
+      "total_annotated_fields": 0,
+      "exact_field_match_rate": 0.0,
+      "normalized_field_match_rate": 0.0,
+      "substring_ocr_match_rate": 0.0,
+      "character_error_rate": 0.0,
+      "field_extraction_failure_rate": 0.0,
+      "document_all_fields_exact_rate": 0.0,
+      "document_all_fields_normalized_rate": 0.0,
+      "document_with_field_errors_rate": 0.0,
+      "document_total_extraction_failure_rate": 1.0,
+      "capture_quality_pass_rate": 0.0
+    },
+    "photo": {
+      "sample_count": 1000,
+      "total_annotated_fields": 0,
+      "exact_field_match_rate": 0.0,
+      "normalized_field_match_rate": 0.0,
+      "substring_ocr_match_rate": 0.0,
+      "character_error_rate": 0.0,
+      "field_extraction_failure_rate": 0.0,
+      "document_all_fields_exact_rate": 0.0,
+      "document_all_fields_normalized_rate": 0.0,
+      "document_with_field_errors_rate": 0.0,
+      "document_total_extraction_failure_rate": 1.0,
+      "capture_quality_pass_rate": 0.854
+    }
+  },
+  "per_document_type_metrics": {
+    "alb_id": {
+      "sample_count": 400,
+      "document_family": "NATIONAL_ID",
+      "total_annotated_fields": 1100,
+      "exact_field_match_rate": 0.0,
+      "normalized_field_match_rate": 0.0,
+      "substring_ocr_match_rate": 0.3682,
+      "character_error_rate": 1.0,
+      "capture_quality_pass_rate": 0.47
+    },
+    "aze_passport": {
+      "sample_count": 400,
+      "document_family": "TRAVEL_DOCUMENT",
+      "total_annotated_fields": 1900,
+      "exact_field_match_rate": 0.0,
+      "normalized_field_match_rate": 0.0,
+      "substring_ocr_match_rate": 0.6889,
+      "character_error_rate": 1.0,
+      "capture_quality_pass_rate": 0.46
+    },
+    "esp_id": {
+      "sample_count": 400,
+      "document_family": "NATIONAL_ID",
+      "total_annotated_fields": 1100,
+      "exact_field_match_rate": 0.0,
+      "normalized_field_match_rate": 0.0,
+      "substring_ocr_match_rate": 0.4764,
+      "character_error_rate": 1.0,
+      "capture_quality_pass_rate": 0.45
+    },
+    "est_id": {
+      "sample_count": 400,
+      "document_family": "NATIONAL_ID",
+      "total_annotated_fields": 1000,
+      "exact_field_match_rate": 0.0,
+      "normalized_field_match_rate": 0.0,
+      "substring_ocr_match_rate": 0.654,
+      "character_error_rate": 1.0,
+      "capture_quality_pass_rate": 0.455
+    },
+    "fin_id": {
+      "sample_count": 400,
+      "document_family": "NATIONAL_ID",
+      "total_annotated_fields": 1100,
+      "exact_field_match_rate": 0.0,
+      "normalized_field_match_rate": 0.0,
+      "substring_ocr_match_rate": 0.4709,
+      "character_error_rate": 1.0,
+      "capture_quality_pass_rate": 0.455
+    },
+    "grc_passport": {
+      "sample_count": 400,
+      "document_family": "TRAVEL_DOCUMENT",
+      "total_annotated_fields": 1900,
+      "exact_field_match_rate": 0.0,
+      "normalized_field_match_rate": 0.0,
+      "substring_ocr_match_rate": 0.7,
+      "character_error_rate": 0.8416,
+      "capture_quality_pass_rate": 0.4775
+    },
+    "lva_passport": {
+      "sample_count": 400,
+      "document_family": "TRAVEL_DOCUMENT",
+      "total_annotated_fields": 1699,
+      "exact_field_match_rate": 0.0,
+      "normalized_field_match_rate": 0.0,
+      "substring_ocr_match_rate": 0.5191,
+      "character_error_rate": 1.0,
+      "capture_quality_pass_rate": 0.4725
+    },
+    "rus_internalpassport": {
+      "sample_count": 400,
+      "document_family": "TRAVEL_DOCUMENT",
+      "total_annotated_fields": 794,
+      "exact_field_match_rate": 0.0,
+      "normalized_field_match_rate": 0.0,
+      "substring_ocr_match_rate": 0.0995,
+      "character_error_rate": 0.2544,
+      "capture_quality_pass_rate": 0.4525
+    },
+    "srb_passport": {
+      "sample_count": 400,
+      "document_family": "TRAVEL_DOCUMENT",
+      "total_annotated_fields": 1800,
+      "exact_field_match_rate": 0.0,
+      "normalized_field_match_rate": 0.0,
+      "substring_ocr_match_rate": 0.3139,
+      "character_error_rate": 1.0,
+      "capture_quality_pass_rate": 0.48
+    },
+    "svk_id": {
+      "sample_count": 400,
+      "document_family": "NATIONAL_ID",
+      "total_annotated_fields": 1000,
+      "exact_field_match_rate": 0.0,
+      "normalized_field_match_rate": 0.0,
+      "substring_ocr_match_rate": 0.526,
+      "character_error_rate": 1.0,
+      "capture_quality_pass_rate": 0.4625
+    }
+  },
+  "quality_gate_metrics": {
+    "total_samples": 4000,
+    "overall_quality_pass_count": 1854,
+    "overall_quality_pass_rate": 0.4635,
+    "per_modality_pass_rate": {
+      "templates": 1.0,
+      "scan_upright": 0.0,
+      "scan_rotated": 0.0,
+      "photo": 0.854
+    },
+    "quality_gate_failure_reasons": {
+      "blur": 108,
+      "brightness": 2076,
+      "exposure_clipping": 2064
+    }
+  },
+  "mrz_metrics": {
+    "mrz_applicable_samples": 1600,
+    "mrz_detected_count": 125,
+    "mrz_detection_rate": 0.0781,
+    "mrz_all_checks_pass_count": 84,
+    "mrz_all_checks_pass_rate": 0.0525,
+    "per_modality_mrz_detection": {
+      "templates": 0.3125,
+      "scan_upright": 0.0,
+      "scan_rotated": 0.0,
+      "photo": 0.0
+    }
+  },
+  "device_metrics": {
+    "samsung_s10": {
+      "sample_count": 500,
+      "exact_field_match_rate": 0.0,
+      "normalized_field_match_rate": 0.0,
+      "substring_ocr_match_rate": 0.0,
+      "character_error_rate": 0.0,
+      "capture_quality_pass_rate": 0.882
+    },
+    "iphone_xr": {
+      "sample_count": 500,
+      "exact_field_match_rate": 0.0,
+      "normalized_field_match_rate": 0.0,
+      "substring_ocr_match_rate": 0.0,
+      "character_error_rate": 0.0,
+      "capture_quality_pass_rate": 0.826
+    }
+  }
+}

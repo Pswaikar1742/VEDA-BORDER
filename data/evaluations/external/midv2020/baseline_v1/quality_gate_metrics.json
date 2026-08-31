@@ -1,0 +1,16 @@
+{
+  "total_samples": 4000,
+  "overall_quality_pass_count": 1854,
+  "overall_quality_pass_rate": 0.4635,
+  "per_modality_pass_rate": {
+    "templates": 1.0,
+    "scan_upright": 0.0,
+    "scan_rotated": 0.0,
+    "photo": 0.854
+  },
+  "quality_gate_failure_reasons": {
+    "blur": 108,
+    "brightness": 2076,
+    "exposure_clipping": 2064
+  }
+}

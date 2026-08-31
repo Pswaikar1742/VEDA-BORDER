@@ -1,0 +1,13 @@
+{
+  "mrz_applicable_samples": 1600,
+  "mrz_detected_count": 125,
+  "mrz_detection_rate": 0.0781,
+  "mrz_all_checks_pass_count": 84,
+  "mrz_all_checks_pass_rate": 0.0525,
+  "per_modality_mrz_detection": {
+    "templates": 0.3125,
+    "scan_upright": 0.0,
+    "scan_rotated": 0.0,
+    "photo": 0.0
+  }
+}

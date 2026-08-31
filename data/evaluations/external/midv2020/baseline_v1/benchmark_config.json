@@ -1,0 +1,20 @@
+{
+  "benchmark_id": "MIDV-2020",
+  "version": "BASELINE_V1",
+  "dataset_root": "data/external/midv-2020",
+  "total_samples": 4000,
+  "modalities": [
+    "templates",
+    "scan_upright",
+    "scan_rotated",
+    "photo"
+  ],
+  "workers": 16,
+  "ocr_engine": "Tesseract 5 local",
+  "tesseract_psm": 6,
+  "tesseract_lang": "eng",
+  "capture_quality_thresholds": {
+    "min_width": 700,
+    "min_height": 440
+  }
+}

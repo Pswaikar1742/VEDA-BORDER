@@ -1,0 +1,11 @@
+document_type,family,samples,exact_match_rate,norm_match_rate,substring_match_rate,cer,quality_pass_rate
+alb_id,NATIONAL_ID,400,0.0,0.0,0.3682,1.0,0.47
+aze_passport,TRAVEL_DOCUMENT,400,0.0,0.0,0.6889,1.0,0.46
+esp_id,NATIONAL_ID,400,0.0,0.0,0.4764,1.0,0.45
+est_id,NATIONAL_ID,400,0.0,0.0,0.654,1.0,0.455
+fin_id,NATIONAL_ID,400,0.0,0.0,0.4709,1.0,0.455
+grc_passport,TRAVEL_DOCUMENT,400,0.0,0.0,0.7,0.8416,0.4775
+lva_passport,TRAVEL_DOCUMENT,400,0.0,0.0,0.5191,1.0,0.4725
+rus_internalpassport,TRAVEL_DOCUMENT,400,0.0,0.0,0.0995,0.2544,0.4525
+srb_passport,TRAVEL_DOCUMENT,400,0.0,0.0,0.3139,1.0,0.48
+svk_id,NATIONAL_ID,400,0.0,0.0,0.526,1.0,0.4625
