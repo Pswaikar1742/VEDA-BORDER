@@ -1,0 +1,8 @@
+752dc7770ef555d4e16273045c2f1726  clips.tar
+562070f3fe2d8ed38aa7699cc858edb3  clips_video.tar
+e716b2044a0af872cb21c9dc2f51d752  photo.tar
+3db227b453121b7e0a8c152e79988edf  scan_rotated.tar
+03d98443b30a905780277ac566157b30  scan_rotated_tif.tar
+f6e0aeb6981a89aa2dfc717575fcea28  scan_upright.tar
+379e7b098166696b6ae28fbee5bc84da  scan_upright_tif.tar
+5bf6bd22df4808d4c8df9500e01f4f0a  templates.tar

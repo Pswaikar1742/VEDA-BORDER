@@ -1,0 +1,41 @@
+{
+  "available_splits": [
+    "templates",
+    "scan_upright",
+    "scan_rotated",
+    "photo",
+    "all"
+  ],
+  "split_definitions": {
+    "templates": {
+      "count": 1000,
+      "purpose": "Canonical clean baseline verification"
+    },
+    "scan_upright": {
+      "count": 1000,
+      "purpose": "Flatbed scanner OCR & field extraction"
+    },
+    "scan_rotated": {
+      "count": 1000,
+      "purpose": "Rotation & skew invariance"
+    },
+    "photo": {
+      "count": 1000,
+      "purpose": "Smartphone mobile video/photo capture conditions"
+    },
+    "all": {
+      "count": 4000,
+      "purpose": "Comprehensive document analysis"
+    }
+  },
+  "official_partitions": {
+    "samsung_s10_photos": {
+      "count": 500,
+      "indices": "photo numbers 10-19, 25-29, 35-39, 45-49, 55-59, 65-69, 80-89, 95-99"
+    },
+    "iphone_xr_photos": {
+      "count": 500,
+      "indices": "photo numbers 00-09, 20-24, 30-34, 40-44, 50-54, 60-64, 70-79, 90-94"
+    }
+  }
+}

@@ -46,4 +46,8 @@ data/external/**/Cropped/
 data/external/**/Forged/
 data/external/**/Original/
 data/external/**/DLC-2021/
+data/external/**/photo/
+data/external/**/scan_upright/
+data/external/**/scan_rotated/
+data/external/**/scans/
 

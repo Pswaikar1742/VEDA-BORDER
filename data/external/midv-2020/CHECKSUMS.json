@@ -1,0 +1,37 @@
+{
+  "templates.tar": {
+    "size_bytes": 863293440,
+    "md5": "5bf6bd22df4808d4c8df9500e01f4f0a",
+    "sha256": "cdde6c9356ae14ed0ff7e3a7e3f917481bfe5189d70801e8d4a5c97fe163e53f"
+  },
+  "scan_upright.tar": {
+    "size_bytes": 1149143040,
+    "md5": "f6e0aeb6981a89aa2dfc717575fcea28",
+    "sha256": "8ca94baaea11e33115a3f1b233ac9b224667511a8c3f62800dedec97aac4edcd"
+  },
+  "scan_rotated.tar": {
+    "size_bytes": 1122682880,
+    "md5": "3db227b453121b7e0a8c152e79988edf",
+    "sha256": "1650820d53759906c0beccdfb56a63886538bf6e330c752d54a1326bd463ca42"
+  },
+  "photo.tar": {
+    "size_bytes": 4002467840,
+    "md5": "e716b2044a0af872cb21c9dc2f51d752",
+    "sha256": "3ae5a14265ee044713ed15ae06c1be02b6ddecd2438a05275740c684579262c2"
+  },
+  "LICENSE": {
+    "size_bytes": 439,
+    "md5": "2b7400d830c39eb792908265c936565d",
+    "sha256": "3b6bc8eb8a4a6bba41619051803991d9de949f7f722eee30bc0954c7b38aed7d"
+  },
+  "README_OFFICIAL.txt": {
+    "size_bytes": 9576,
+    "md5": "ab3e4d0099d35e82ce86cd1c30398448",
+    "sha256": "02b2b1b562a97c6cfec9cc2986dc55dd711ef20b92454150a072815373d07eb4"
+  },
+  "MD5_OFFICIAL.txt": {
+    "size_bytes": 397,
+    "md5": "4879102697f5ff6759948bc9419990d7",
+    "sha256": "13a39b97deb00ca6c4f195ee1b557dbb15ef2c76743f43ade8bae995a2c81506"
+  }
+}

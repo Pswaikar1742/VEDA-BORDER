@@ -82,3 +82,21 @@ def test_fantasyid_adapter_structure():
     adapter = FantasyIDAdapter("data/external/fantasyid")
     assert adapter.benchmark_id == "FantasyID"
     assert "hindi_subset" in adapter.list_splits()
+
+
+def test_midv2020_adapter_normalization():
+    """Verify MIDV-2020 adapter produces normalized records with field annotations."""
+    from app.external_benchmarks.midv2020_adapter import MIDV2020Adapter
+
+    adapter = MIDV2020Adapter("data/external/midv-2020")
+    if not adapter.is_available():
+        pytest.skip("MIDV-2020 not downloaded locally.")
+
+    samples = adapter.list_samples("templates")
+    assert len(samples) == 1000
+    for s in samples[:20]:
+        assert s.benchmark_id == "MIDV-2020"
+        assert s.ground_truth_class == "BONAFIDE"
+        assert s.document_family in {"TRAVEL_DOCUMENT", "NATIONAL_ID"}
+        assert len(s.document_id) > 0
+        assert "fields" in s.annotations

@@ -1,0 +1,93 @@
+{
+  "dataset_id": "MIDV-2020",
+  "dataset_name": "MIDV-2020: A Comprehensive Benchmark Dataset for Identity Documents Analysis",
+  "official_source": "L3i Laboratory, La Rochelle University & Smart Engines",
+  "official_license": "Creative Commons Attribution-ShareAlike 2.5 Generic (CC-BY-SA-2.5)",
+  "access_status": "AVAILABLE_LOCALLY",
+  "total_unique_mock_identities": 1000,
+  "total_document_classes": 10,
+  "document_classes": [
+    {
+      "code": "alb_id",
+      "description": "ID Card of Albania",
+      "family": "NATIONAL_ID"
+    },
+    {
+      "code": "aze_passport",
+      "description": "Passport of Azerbaijan",
+      "family": "TRAVEL_DOCUMENT"
+    },
+    {
+      "code": "esp_id",
+      "description": "ID Card of Spain",
+      "family": "NATIONAL_ID"
+    },
+    {
+      "code": "est_id",
+      "description": "ID Card of Estonia",
+      "family": "NATIONAL_ID"
+    },
+    {
+      "code": "fin_id",
+      "description": "ID Card of Finland",
+      "family": "NATIONAL_ID"
+    },
+    {
+      "code": "grc_passport",
+      "description": "Passport of Greece",
+      "family": "TRAVEL_DOCUMENT"
+    },
+    {
+      "code": "lva_passport",
+      "description": "Passport of Latvia",
+      "family": "TRAVEL_DOCUMENT"
+    },
+    {
+      "code": "rus_internalpassport",
+      "description": "Internal passport of Russia",
+      "family": "NATIONAL_ID"
+    },
+    {
+      "code": "srb_passport",
+      "description": "Passport of Serbia",
+      "family": "TRAVEL_DOCUMENT"
+    },
+    {
+      "code": "svk_id",
+      "description": "ID Card of Slovakia",
+      "family": "NATIONAL_ID"
+    }
+  ],
+  "downloaded_modalities": {
+    "templates": {
+      "images": 1000,
+      "annotations": 10,
+      "description": "Canonical digital mock templates & field schemas"
+    },
+    "scan_upright": {
+      "images": 1000,
+      "annotations": 10,
+      "description": "High-resolution upright flatbed scans"
+    },
+    "scan_rotated": {
+      "images": 1000,
+      "annotations": 10,
+      "description": "Rotated scans for skew and rotation invariance testing"
+    },
+    "photo": {
+      "images": 1000,
+      "annotations": 10,
+      "description": "Real-world smartphone photo captures across 8 environmental conditions"
+    }
+  },
+  "total_local_images": 4000,
+  "total_local_annotation_files": 40,
+  "annotation_format": "VGG Image Annotator (VIA) v2.0.11 JSON",
+  "supported_evaluation_capabilities": [
+    "OCR Robustness & Field Extraction Accuracy",
+    "Perspective, Lighting & Glare Robustness",
+    "Document Type Classification",
+    "Document Boundary & Field Localization",
+    "Scan vs Smartphone Photo Generalization"
+  ]
+}

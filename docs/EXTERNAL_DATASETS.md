@@ -56,11 +56,18 @@ This document defines the standardized external benchmarks integrated into VEDA-
 
 - **Dataset Identifier:** `MIDV-2020`
 - **Official Publisher / Source:** L3i Laboratory, La Rochelle University (France) & Smart Engines
-- **Access Status:** `WAITING_FOR_HUMAN_ACCESS`
-- **Reason for Human Access:** Official distribution (124 GB) is hosted on the University of La Rochelle sFTP server and requires submitting a formal request form ([Google Form](https://docs.google.com/forms/d/e/1FAIpQLSdxB1gvdVlRcARUlMolTJzyqY93XBZHhwiBwkDx8BDyMIPWIg/viewform)).
-- **Action for User:** Complete the institutional request form to obtain sFTP access credentials.
-- **Supported Capabilities:** Camera perspective, illumination variations, and OCR field extraction accuracy under realistic mobile video conditions.
+- **Access Status:** `DOWNLOADED` / `AVAILABLE` (Official SFTP Access Approved)
+- **Official Distribution Server:** `l3i-share.univ-lr.fr` (SFTP Server)
+- **Licence:** Creative Commons Attribution-ShareAlike 2.5 Generic (`CC-BY-SA-2.5`)
+- **Integrated Modalities:**
+  - `templates/`: 1,000 canonical digital template renderings + 10 VIA JSON annotation schemas.
+  - `scan_upright/`: 1,000 flatbed scanner captures (upright) + 10 VIA JSON annotation schemas.
+  - `scan_rotated/`: 1,000 flatbed scanner captures (rotated) + 10 VIA JSON annotation schemas.
+  - `photo/`: 1,000 smartphone captures (Samsung S10 & iPhone XR) across 8 capturing conditions (glare, low light, clutter, perspective distortion) + 10 VIA JSON annotation schemas.
+- **Supported Capabilities:** Camera perspective, illumination variations, field boundary localization, and OCR field extraction accuracy under realistic conditions across 10 international document types.
 - **Leakage Controls:** Template-level and document-level disjoint partitioning.
+- **Citation:**
+  > V. V. Arlazarov, K. Bulatov, T. Chernov et al., "MIDV-2020: A Comprehensive Benchmark Dataset for Identity Documents Analysis," Computer Vision and Pattern Recognition, 2021.
 
 ---
 
