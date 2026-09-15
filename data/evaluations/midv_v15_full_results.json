@@ -1,0 +1,460 @@
+[
+  {
+    "sample_id": "alb_id_00",
+    "modality": "templates",
+    "document_type": "alb_id",
+    "raw_ocr_text_length": 429,
+    "ocr_average_confidence": 34.4,
+    "structured_fields": {
+      "expiry_date": "13-04-2019",
+      "document_number": "367253746"
+    },
+    "field_names": [
+      "expiry_date",
+      "document_number"
+    ],
+    "field_confidences": {},
+    "field_provenance": {
+      "expiry_date": {
+        "method": "generic_nearby_label_date",
+        "source_line": 6
+      },
+      "document_number": {
+        "method": "generic_identifier_shape",
+        "source_line": 2
+      }
+    },
+    "mrz_status": "NOT_APPLICABLE",
+    "mrz_checks_passed": 0,
+    "quality_status": "PASS",
+    "rule_status": "FAIL",
+    "consistency_status": "PASS",
+    "visual_forensics_status": "UNAVAILABLE",
+    "outcome": "INDETERMINATE",
+    "primary_reason": "A required deterministic document rule failed."
+  },
+  {
+    "sample_id": "aze_passport_00",
+    "modality": "templates",
+    "document_type": "aze_passport",
+    "raw_ocr_text_length": 573,
+    "ocr_average_confidence": 72.2,
+    "structured_fields": {
+      "date_of_birth": "14-08-1994",
+      "expiry_date": "16-08-2018",
+      "document_number": "5188L2V",
+      "holder_name": "ABDULLAYEV AHA"
+    },
+    "field_names": [
+      "date_of_birth",
+      "expiry_date",
+      "document_number",
+      "holder_name"
+    ],
+    "field_confidences": {},
+    "field_provenance": {
+      "date_of_birth": {
+        "method": "generic_nearby_label_date",
+        "source_line": 7
+      },
+      "expiry_date": {
+        "method": "generic_nearby_label_date",
+        "source_line": 11
+      },
+      "document_number": {
+        "method": "generic_identifier_shape",
+        "source_line": 7
+      },
+      "holder_name": {
+        "method": "generic_nearby_name_label",
+        "source_line": 0
+      }
+    },
+    "mrz_status": "UNAVAILABLE",
+    "mrz_checks_passed": 0,
+    "quality_status": "PASS",
+    "rule_status": "FAIL",
+    "consistency_status": "PASS",
+    "visual_forensics_status": "UNAVAILABLE",
+    "outcome": "INDETERMINATE",
+    "primary_reason": "A required deterministic document rule failed."
+  },
+  {
+    "sample_id": "esp_id_00",
+    "modality": "templates",
+    "document_type": "esp_id",
+    "raw_ocr_text_length": 132,
+    "ocr_average_confidence": 60.79,
+    "structured_fields": {},
+    "field_names": [],
+    "field_confidences": {},
+    "field_provenance": {},
+    "mrz_status": "NOT_APPLICABLE",
+    "mrz_checks_passed": 0,
+    "quality_status": "PASS",
+    "rule_status": "FAIL",
+    "consistency_status": "PASS",
+    "visual_forensics_status": "UNAVAILABLE",
+    "outcome": "INDETERMINATE",
+    "primary_reason": "A required deterministic document rule failed."
+  },
+  {
+    "sample_id": "est_id_00",
+    "modality": "templates",
+    "document_type": "est_id",
+    "raw_ocr_text_length": 98,
+    "ocr_average_confidence": 39.33,
+    "structured_fields": {
+      "document_number": "141194059"
+    },
+    "field_names": [
+      "document_number"
+    ],
+    "field_confidences": {},
+    "field_provenance": {
+      "document_number": {
+        "method": "generic_identifier_shape",
+        "source_line": 7
+      }
+    },
+    "mrz_status": "NOT_APPLICABLE",
+    "mrz_checks_passed": 0,
+    "quality_status": "PASS",
+    "rule_status": "FAIL",
+    "consistency_status": "PASS",
+    "visual_forensics_status": "UNAVAILABLE",
+    "outcome": "INDETERMINATE",
+    "primary_reason": "A required deterministic document rule failed."
+  },
+  {
+    "sample_id": "fin_id_00",
+    "modality": "templates",
+    "document_type": "fin_id",
+    "raw_ocr_text_length": 127,
+    "ocr_average_confidence": 35.02,
+    "structured_fields": {
+      "document_number": "806147449"
+    },
+    "field_names": [
+      "document_number"
+    ],
+    "field_confidences": {},
+    "field_provenance": {
+      "document_number": {
+        "method": "generic_identifier_shape",
+        "source_line": 2
+      }
+    },
+    "mrz_status": "NOT_APPLICABLE",
+    "mrz_checks_passed": 0,
+    "quality_status": "PASS",
+    "rule_status": "FAIL",
+    "consistency_status": "PASS",
+    "visual_forensics_status": "UNAVAILABLE",
+    "outcome": "INDETERMINATE",
+    "primary_reason": "A required deterministic document rule failed."
+  },
+  {
+    "sample_id": "alb_id_00",
+    "modality": "scan_upright",
+    "document_type": "alb_id",
+    "raw_ocr_text_length": 0,
+    "ocr_average_confidence": null,
+    "structured_fields": {},
+    "field_names": [],
+    "field_confidences": {},
+    "field_provenance": {},
+    "mrz_status": "NOT_APPLICABLE",
+    "mrz_checks_passed": 0,
+    "quality_status": "FAIL",
+    "rule_status": "UNAVAILABLE",
+    "consistency_status": "NOT_APPLICABLE",
+    "visual_forensics_status": "UNAVAILABLE",
+    "outcome": "INDETERMINATE",
+    "primary_reason": "Mandatory evidence is incomplete: document_data, document_rules, visual_forensics, threat_intelligence"
+  },
+  {
+    "sample_id": "aze_passport_00",
+    "modality": "scan_upright",
+    "document_type": "aze_passport",
+    "raw_ocr_text_length": 0,
+    "ocr_average_confidence": null,
+    "structured_fields": {},
+    "field_names": [],
+    "field_confidences": {},
+    "field_provenance": {},
+    "mrz_status": "UNAVAILABLE",
+    "mrz_checks_passed": 0,
+    "quality_status": "FAIL",
+    "rule_status": "UNAVAILABLE",
+    "consistency_status": "NOT_APPLICABLE",
+    "visual_forensics_status": "UNAVAILABLE",
+    "outcome": "INDETERMINATE",
+    "primary_reason": "Mandatory evidence is incomplete: document_data, mrz, document_rules, cross_source_consistency, visual_forensics, threat_intelligence"
+  },
+  {
+    "sample_id": "esp_id_00",
+    "modality": "scan_upright",
+    "document_type": "esp_id",
+    "raw_ocr_text_length": 0,
+    "ocr_average_confidence": null,
+    "structured_fields": {},
+    "field_names": [],
+    "field_confidences": {},
+    "field_provenance": {},
+    "mrz_status": "NOT_APPLICABLE",
+    "mrz_checks_passed": 0,
+    "quality_status": "FAIL",
+    "rule_status": "UNAVAILABLE",
+    "consistency_status": "NOT_APPLICABLE",
+    "visual_forensics_status": "UNAVAILABLE",
+    "outcome": "INDETERMINATE",
+    "primary_reason": "Mandatory evidence is incomplete: document_data, document_rules, visual_forensics, threat_intelligence"
+  },
+  {
+    "sample_id": "est_id_00",
+    "modality": "scan_upright",
+    "document_type": "est_id",
+    "raw_ocr_text_length": 0,
+    "ocr_average_confidence": null,
+    "structured_fields": {},
+    "field_names": [],
+    "field_confidences": {},
+    "field_provenance": {},
+    "mrz_status": "NOT_APPLICABLE",
+    "mrz_checks_passed": 0,
+    "quality_status": "FAIL",
+    "rule_status": "UNAVAILABLE",
+    "consistency_status": "NOT_APPLICABLE",
+    "visual_forensics_status": "UNAVAILABLE",
+    "outcome": "INDETERMINATE",
+    "primary_reason": "Mandatory evidence is incomplete: document_data, document_rules, visual_forensics, threat_intelligence"
+  },
+  {
+    "sample_id": "fin_id_00",
+    "modality": "scan_upright",
+    "document_type": "fin_id",
+    "raw_ocr_text_length": 0,
+    "ocr_average_confidence": null,
+    "structured_fields": {},
+    "field_names": [],
+    "field_confidences": {},
+    "field_provenance": {},
+    "mrz_status": "NOT_APPLICABLE",
+    "mrz_checks_passed": 0,
+    "quality_status": "FAIL",
+    "rule_status": "UNAVAILABLE",
+    "consistency_status": "NOT_APPLICABLE",
+    "visual_forensics_status": "UNAVAILABLE",
+    "outcome": "INDETERMINATE",
+    "primary_reason": "Mandatory evidence is incomplete: document_data, document_rules, visual_forensics, threat_intelligence"
+  },
+  {
+    "sample_id": "alb_id_00",
+    "modality": "scan_rotated",
+    "document_type": "alb_id",
+    "raw_ocr_text_length": 0,
+    "ocr_average_confidence": null,
+    "structured_fields": {},
+    "field_names": [],
+    "field_confidences": {},
+    "field_provenance": {},
+    "mrz_status": "NOT_APPLICABLE",
+    "mrz_checks_passed": 0,
+    "quality_status": "FAIL",
+    "rule_status": "UNAVAILABLE",
+    "consistency_status": "NOT_APPLICABLE",
+    "visual_forensics_status": "UNAVAILABLE",
+    "outcome": "INDETERMINATE",
+    "primary_reason": "Mandatory evidence is incomplete: document_data, document_rules, visual_forensics, threat_intelligence"
+  },
+  {
+    "sample_id": "aze_passport_00",
+    "modality": "scan_rotated",
+    "document_type": "aze_passport",
+    "raw_ocr_text_length": 0,
+    "ocr_average_confidence": null,
+    "structured_fields": {},
+    "field_names": [],
+    "field_confidences": {},
+    "field_provenance": {},
+    "mrz_status": "UNAVAILABLE",
+    "mrz_checks_passed": 0,
+    "quality_status": "FAIL",
+    "rule_status": "UNAVAILABLE",
+    "consistency_status": "NOT_APPLICABLE",
+    "visual_forensics_status": "UNAVAILABLE",
+    "outcome": "INDETERMINATE",
+    "primary_reason": "Mandatory evidence is incomplete: document_data, mrz, document_rules, cross_source_consistency, visual_forensics, threat_intelligence"
+  },
+  {
+    "sample_id": "esp_id_00",
+    "modality": "scan_rotated",
+    "document_type": "esp_id",
+    "raw_ocr_text_length": 0,
+    "ocr_average_confidence": null,
+    "structured_fields": {},
+    "field_names": [],
+    "field_confidences": {},
+    "field_provenance": {},
+    "mrz_status": "NOT_APPLICABLE",
+    "mrz_checks_passed": 0,
+    "quality_status": "FAIL",
+    "rule_status": "UNAVAILABLE",
+    "consistency_status": "NOT_APPLICABLE",
+    "visual_forensics_status": "UNAVAILABLE",
+    "outcome": "INDETERMINATE",
+    "primary_reason": "Mandatory evidence is incomplete: document_data, document_rules, visual_forensics, threat_intelligence"
+  },
+  {
+    "sample_id": "est_id_00",
+    "modality": "scan_rotated",
+    "document_type": "est_id",
+    "raw_ocr_text_length": 0,
+    "ocr_average_confidence": null,
+    "structured_fields": {},
+    "field_names": [],
+    "field_confidences": {},
+    "field_provenance": {},
+    "mrz_status": "NOT_APPLICABLE",
+    "mrz_checks_passed": 0,
+    "quality_status": "FAIL",
+    "rule_status": "UNAVAILABLE",
+    "consistency_status": "NOT_APPLICABLE",
+    "visual_forensics_status": "UNAVAILABLE",
+    "outcome": "INDETERMINATE",
+    "primary_reason": "Mandatory evidence is incomplete: document_data, document_rules, visual_forensics, threat_intelligence"
+  },
+  {
+    "sample_id": "fin_id_00",
+    "modality": "scan_rotated",
+    "document_type": "fin_id",
+    "raw_ocr_text_length": 0,
+    "ocr_average_confidence": null,
+    "structured_fields": {},
+    "field_names": [],
+    "field_confidences": {},
+    "field_provenance": {},
+    "mrz_status": "NOT_APPLICABLE",
+    "mrz_checks_passed": 0,
+    "quality_status": "FAIL",
+    "rule_status": "UNAVAILABLE",
+    "consistency_status": "NOT_APPLICABLE",
+    "visual_forensics_status": "UNAVAILABLE",
+    "outcome": "INDETERMINATE",
+    "primary_reason": "Mandatory evidence is incomplete: document_data, document_rules, visual_forensics, threat_intelligence"
+  },
+  {
+    "sample_id": "alb_id_00",
+    "modality": "photo",
+    "document_type": "alb_id",
+    "raw_ocr_text_length": 461,
+    "ocr_average_confidence": 32.68,
+    "structured_fields": {
+      "document_number": "367253746"
+    },
+    "field_names": [
+      "document_number"
+    ],
+    "field_confidences": {},
+    "field_provenance": {
+      "document_number": {
+        "method": "generic_identifier_shape",
+        "source_line": 9
+      }
+    },
+    "mrz_status": "NOT_APPLICABLE",
+    "mrz_checks_passed": 0,
+    "quality_status": "PASS",
+    "rule_status": "FAIL",
+    "consistency_status": "PASS",
+    "visual_forensics_status": "UNAVAILABLE",
+    "outcome": "INDETERMINATE",
+    "primary_reason": "A required deterministic document rule failed."
+  },
+  {
+    "sample_id": "aze_passport_00",
+    "modality": "photo",
+    "document_type": "aze_passport",
+    "raw_ocr_text_length": 415,
+    "ocr_average_confidence": 33.34,
+    "structured_fields": {
+      "document_number": "019389564"
+    },
+    "field_names": [
+      "document_number"
+    ],
+    "field_confidences": {},
+    "field_provenance": {
+      "document_number": {
+        "method": "generic_identifier_shape",
+        "source_line": 10
+      }
+    },
+    "mrz_status": "UNAVAILABLE",
+    "mrz_checks_passed": 0,
+    "quality_status": "PASS",
+    "rule_status": "FAIL",
+    "consistency_status": "PASS",
+    "visual_forensics_status": "UNAVAILABLE",
+    "outcome": "INDETERMINATE",
+    "primary_reason": "A required deterministic document rule failed."
+  },
+  {
+    "sample_id": "esp_id_00",
+    "modality": "photo",
+    "document_type": "esp_id",
+    "raw_ocr_text_length": 224,
+    "ocr_average_confidence": 39.71,
+    "structured_fields": {},
+    "field_names": [],
+    "field_confidences": {},
+    "field_provenance": {},
+    "mrz_status": "NOT_APPLICABLE",
+    "mrz_checks_passed": 0,
+    "quality_status": "PASS",
+    "rule_status": "FAIL",
+    "consistency_status": "PASS",
+    "visual_forensics_status": "UNAVAILABLE",
+    "outcome": "INDETERMINATE",
+    "primary_reason": "A required deterministic document rule failed."
+  },
+  {
+    "sample_id": "est_id_00",
+    "modality": "photo",
+    "document_type": "est_id",
+    "raw_ocr_text_length": 356,
+    "ocr_average_confidence": 22.3,
+    "structured_fields": {},
+    "field_names": [],
+    "field_confidences": {},
+    "field_provenance": {},
+    "mrz_status": "NOT_APPLICABLE",
+    "mrz_checks_passed": 0,
+    "quality_status": "PASS",
+    "rule_status": "FAIL",
+    "consistency_status": "PASS",
+    "visual_forensics_status": "UNAVAILABLE",
+    "outcome": "INDETERMINATE",
+    "primary_reason": "A required deterministic document rule failed."
+  },
+  {
+    "sample_id": "fin_id_00",
+    "modality": "photo",
+    "document_type": "fin_id",
+    "raw_ocr_text_length": 312,
+    "ocr_average_confidence": 30.09,
+    "structured_fields": {},
+    "field_names": [],
+    "field_confidences": {},
+    "field_provenance": {},
+    "mrz_status": "NOT_APPLICABLE",
+    "mrz_checks_passed": 0,
+    "quality_status": "PASS",
+    "rule_status": "FAIL",
+    "consistency_status": "PASS",
+    "visual_forensics_status": "UNAVAILABLE",
+    "outcome": "INDETERMINATE",
+    "primary_reason": "A required deterministic document rule failed."
+  }
+]

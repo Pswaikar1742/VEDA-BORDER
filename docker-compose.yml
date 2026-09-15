@@ -10,13 +10,17 @@ services:
       - "${API_PORT:-8000}:8000"
     volumes:
       - veda_case_data:/app/data/runtime
+      # External benchmark samples stay outside the image and are mounted read-only.
+      # The API serves only manifest-allowlisted files.
+      - ./data/external:/app/data/external:ro
+      - ~/.config/veda/fastrouter.env:/app/.config/veda/fastrouter.env:ro
     environment:
       - PYTHONPATH=/app/services/api
       - MOCK_BORDER_INTELLIGENCE_ENABLED=true
       - THREAT_INTELLIGENCE_MANDATORY=true
       - VISUAL_FORENSICS_ENABLED=true
       - BIOMETRICS_ENABLED=true
-      - FASTROUTER_ENABLED=false
+      - FASTROUTER_ENABLED=true
       - CASE_DATABASE_PATH=data/runtime/veda_border.db
     restart: unless-stopped
     healthcheck:

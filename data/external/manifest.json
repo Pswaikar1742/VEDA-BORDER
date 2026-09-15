@@ -1,0 +1,12 @@
+{
+  "mode": "external_dataset_sample_processing",
+  "notice": "Curated allowlist for local demo samples. No accuracy or authenticity claim is implied.",
+  "records": [
+    {"filename": "midv-2020/templates/images/grc_passport/00.jpg", "category": "MIDV-2020 Templates"},
+    {"filename": "midv-2020/templates/images/lva_passport/00.jpg", "category": "MIDV-2020 Templates"},
+    {"filename": "midv-2020/templates/images/esp_id/00.jpg", "category": "MIDV-2020 Templates"},
+    {"filename": "midv-2020/photo/images/alb_id/00.jpg", "category": "MIDV-2020 Smartphone Photos"},
+    {"filename": "sidtd/templates/Images/fakes/alb_id_00_fake_6_25.jpg", "category": "SIDTD Sample"},
+    {"filename": "fantasyid/FantasyID/examples/usa-NF-1004.jpg", "category": "FantasyID Sample"}
+  ]
+}

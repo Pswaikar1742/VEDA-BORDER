@@ -8,9 +8,17 @@ interface NavbarProps {
   activeTab: NavTab;
   onSelectTab: (tab: NavTab) => void;
   systemReady?: boolean;
+  activeCaseId?: string | null;
+  aiStatus?: string | null;
 }
 
-export function Navbar({ activeTab, onSelectTab, systemReady = true }: NavbarProps) {
+export function Navbar({
+  activeTab,
+  onSelectTab,
+  systemReady = true,
+  activeCaseId = null,
+  aiStatus = "ACTIVE",
+}: NavbarProps) {
   const tabs: Array<{ id: NavTab; label: string; icon: string }> = [
     { id: "dashboard", label: "Dashboard", icon: "📊" },
     { id: "screening", label: "New Screening", icon: "🔍" },
@@ -20,32 +28,68 @@ export function Navbar({ activeTab, onSelectTab, systemReady = true }: NavbarPro
     { id: "settings", label: "Policy & Settings", icon: "⚙️" },
   ];
 
+  const isAiActive = aiStatus === "ACTIVE" || aiStatus === "READY";
+
   return (
     <header style={headerStyle}>
       <div style={topBarStyle}>
         <div style={brandContainerStyle}>
           <div style={logoBadgeStyle}>VEDA</div>
           <div>
-            <div style={titleStyle}>VEDA-BORDER</div>
-            <div style={subtitleStyle}>Verification & Evidence-Driven Autopsy • Border Identity Forensics</div>
+            <div style={titleContainerStyle}>
+              <span style={titleStyle}>VEDA-BORDER</span>
+              <span style={engineTagStyle}>Identity Forensic Autopsy Engine</span>
+            </div>
+            <div style={subtitleStyle}>AI-Based Fake Identity & Document Screening • MHA / SSB PS 26188</div>
           </div>
         </div>
 
         <div style={badgeContainerStyle}>
-          <span style={prototypeBadgeStyle}>RESEARCH PROTOTYPE</span>
-          <span style={sihBadgeStyle}>SSB / MHA • PS 26188</span>
-          <div style={statusPillStyle}>
+          {activeCaseId && (
+            <div style={caseBadgeStyle}>
+              <span style={{ color: "#64748b", marginRight: 4 }}>CASE:</span>
+              <span style={{ fontFamily: "monospace", color: "#38bdf8", fontWeight: 700 }}>
+                {activeCaseId.length > 12 ? `${activeCaseId.slice(0, 8)}...` : activeCaseId}
+              </span>
+            </div>
+          )}
+
+          <div
+            style={{
+              ...statusPillStyle,
+              borderColor: isAiActive ? "#0284c7" : "#334155",
+              backgroundColor: isAiActive ? "rgba(2, 132, 199, 0.12)" : "#0f172a",
+            }}
+          >
             <span
               style={{
-                width: 8,
-                height: 8,
+                width: 7,
+                height: 7,
                 borderRadius: "50%",
-                backgroundColor: systemReady ? "#12b76a" : "#f79009",
+                backgroundColor: isAiActive ? "#38bdf8" : "#94a3b8",
                 display: "inline-block",
                 marginRight: 6,
               }}
             />
-            <span>{systemReady ? "SYSTEM READY" : "DEGRADED"}</span>
+            <span style={{ color: isAiActive ? "#7dd3fc" : "#94a3b8" }}>
+              {isAiActive ? "AI REASONING: ACTIVE" : "AI REASONING: OFF"}
+            </span>
+          </div>
+
+          <div style={statusPillStyle}>
+            <span
+              style={{
+                width: 7,
+                height: 7,
+                borderRadius: "50%",
+                backgroundColor: systemReady ? "#10b981" : "#f59e0b",
+                display: "inline-block",
+                marginRight: 6,
+              }}
+            />
+            <span style={{ color: systemReady ? "#6ee7b7" : "#fcd34d" }}>
+              {systemReady ? "SYSTEM READY" : "DEGRADED"}
+            </span>
           </div>
         </div>
       </div>
@@ -59,9 +103,9 @@ export function Navbar({ activeTab, onSelectTab, systemReady = true }: NavbarPro
               onClick={() => onSelectTab(tab.id)}
               style={{
                 ...navButtonStyle,
-                borderBottom: isActive ? "3px solid #0ba5ec" : "3px solid transparent",
+                borderBottom: isActive ? "3px solid #38bdf8" : "3px solid transparent",
                 color: isActive ? "#ffffff" : "#94a3b8",
-                backgroundColor: isActive ? "rgba(255, 255, 255, 0.06)" : "transparent",
+                backgroundColor: isActive ? "rgba(56, 189, 248, 0.08)" : "transparent",
               }}
             >
               <span style={{ marginRight: 6 }}>{tab.icon}</span>
@@ -75,20 +119,20 @@ export function Navbar({ activeTab, onSelectTab, systemReady = true }: NavbarPro
 }
 
 const headerStyle: React.CSSProperties = {
-  backgroundColor: "#0b1924",
-  borderBottom: "1px solid #1e3a4d",
+  backgroundColor: "#07111a",
+  borderBottom: "1px solid #162a3b",
   color: "#f8fafc",
   position: "sticky",
   top: 0,
   zIndex: 100,
+  boxShadow: "0 2px 8px rgba(0,0,0,0.4)",
 };
-
 const topBarStyle: React.CSSProperties = {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  padding: "12px 24px",
-  borderBottom: "1px solid #162b3a",
+  padding: "10px 24px",
+  borderBottom: "1px solid #102231",
 };
 
 const brandContainerStyle: React.CSSProperties = {
@@ -98,27 +142,45 @@ const brandContainerStyle: React.CSSProperties = {
 };
 
 const logoBadgeStyle: React.CSSProperties = {
-  backgroundColor: "#0284c7",
+  backgroundColor: "#0369a1",
   color: "#ffffff",
   fontWeight: 900,
-  fontSize: "14px",
+  fontSize: "13px",
   letterSpacing: "1.5px",
-  padding: "6px 10px",
-  borderRadius: "6px",
+  padding: "5px 9px",
+  borderRadius: "5px",
   border: "1px solid #38bdf8",
+  boxShadow: "0 0 10px rgba(56, 189, 248, 0.25)",
+};
+
+const titleContainerStyle: React.CSSProperties = {
+  display: "flex",
+  alignItems: "center",
+  gap: "8px",
 };
 
 const titleStyle: React.CSSProperties = {
-  fontSize: "18px",
+  fontSize: "17px",
   fontWeight: 800,
   letterSpacing: "0.5px",
-  color: "#f1f5f9",
+  color: "#f8fafc",
+};
+
+const engineTagStyle: React.CSSProperties = {
+  fontSize: "12px",
+  fontWeight: 600,
+  color: "#38bdf8",
+  backgroundColor: "rgba(56, 189, 248, 0.1)",
+  border: "1px solid rgba(56, 189, 248, 0.25)",
+  padding: "1px 6px",
+  borderRadius: "4px",
 };
 
 const subtitleStyle: React.CSSProperties = {
   fontSize: "11px",
-  color: "#94a3b8",
+  color: "#64748b",
   letterSpacing: "0.2px",
+  marginTop: "2px",
 };
 
 const badgeContainerStyle: React.CSSProperties = {
@@ -127,37 +189,26 @@ const badgeContainerStyle: React.CSSProperties = {
   gap: "10px",
 };
 
-const prototypeBadgeStyle: React.CSSProperties = {
-  backgroundColor: "#1e293b",
-  color: "#38bdf8",
-  border: "1px solid #0284c7",
+const caseBadgeStyle: React.CSSProperties = {
+  display: "flex",
+  alignItems: "center",
+  backgroundColor: "#0d1b26",
+  border: "1px solid #1e3a4d",
+  borderRadius: "6px",
+  padding: "4px 8px",
   fontSize: "11px",
-  fontWeight: 700,
-  padding: "3px 8px",
-  borderRadius: "4px",
-  letterSpacing: "0.5px",
-};
-
-const sihBadgeStyle: React.CSSProperties = {
-  backgroundColor: "#312e81",
-  color: "#c7d2fe",
-  border: "1px solid #4338ca",
-  fontSize: "11px",
-  fontWeight: 600,
-  padding: "3px 8px",
-  borderRadius: "4px",
 };
 
 const statusPillStyle: React.CSSProperties = {
   display: "flex",
   alignItems: "center",
-  backgroundColor: "#0f172a",
+  backgroundColor: "#0d1b26",
   color: "#e2e8f0",
   fontSize: "11px",
   fontWeight: 600,
   padding: "4px 10px",
   borderRadius: "12px",
-  border: "1px solid #334155",
+  border: "1px solid #1e3a4d",
 };
 
 const navBarStyle: React.CSSProperties = {
@@ -165,12 +216,13 @@ const navBarStyle: React.CSSProperties = {
   gap: "4px",
   padding: "0 20px",
   overflowX: "auto",
+  backgroundColor: "#091520",
 };
 
 const navButtonStyle: React.CSSProperties = {
   background: "none",
   border: "none",
-  padding: "10px 16px",
+  padding: "9px 16px",
   fontSize: "13px",
   fontWeight: 600,
   cursor: "pointer",

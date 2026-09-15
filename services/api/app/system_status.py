@@ -27,8 +27,8 @@ def module_status() -> dict[str, Any]:
         {"module": "Identity Linkage", "state": "READY" if database_parent_ready else "DEGRADED", "detail": "Local SQLite embedding linkage store."},
         {"module": "Evidence Graph", "state": "READY", "detail": "Policy-tiered evidence provenance graph."},
         {"module": "Coverage Governor", "state": "READY", "detail": "Mandatory evidence and hard-gate policy engine."},
-        {"module": "FastRouter", "state": "READY" if settings.fast_router_enabled and settings.fast_router_api_key else "UNAVAILABLE", "detail": "Optional provider is enabled." if settings.fast_router_enabled and settings.fast_router_api_key else "Optional provider disabled; core workflow remains local."},
+        {"module": "FastRouter AI Reasoning", "state": "READY" if settings.fast_router_enabled and settings.fast_router_api_key else "UNAVAILABLE", "detail": "Bounded explanation provider — not in primary evidence path" if settings.fast_router_enabled and settings.fast_router_api_key else "AI reasoning layer unconfigured or disabled; core workflow remains local."},
     ]
-    core = [item for item in modules if item["module"] != "FastRouter"]
+    core = [item for item in modules if "FastRouter" not in item["module"]]
     overall = "READY" if all(item["state"] == "READY" for item in core) else ("UNAVAILABLE" if any(item["state"] == "UNAVAILABLE" for item in core) else "DEGRADED")
     return {"status": overall, "research_prototype": True, "modules": modules}

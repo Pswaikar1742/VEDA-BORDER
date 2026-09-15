@@ -17,7 +17,7 @@ def assess_capture_quality(image_bytes: bytes, min_width: int = 700, min_height:
         with Image.open(BytesIO(image_bytes)) as opened:
             rgb = np.asarray(opened.convert("RGB"))
     except (UnidentifiedImageError, OSError, ValueError):
-        return {"status": "FAILED_TO_EXECUTE", "acceptable": False, "findings": [_finding("decode", "FAIL", None, "valid PNG/JPEG pixels", "Image pixels could not be decoded.")], "recommendation": "RECAPTURE_DOCUMENT"}
+        return {"status": "FAILED_TO_EXECUTE", "acceptable": False, "dimensions": {"width": None, "height": None}, "findings": [_finding("decode", "FAIL", None, "valid PNG/JPEG pixels", "Image pixels could not be decoded.")], "recommendation": "RECAPTURE_DOCUMENT"}
 
     gray = cv2.cvtColor(rgb, cv2.COLOR_RGB2GRAY)
     height, width = gray.shape
@@ -41,5 +41,6 @@ def assess_capture_quality(image_bytes: bytes, min_width: int = 700, min_height:
         "acceptable": not failed,
         "findings": findings,
         "recommendation": "RECAPTURE_DOCUMENT" if failed else None,
+        "dimensions": {"width": width, "height": height},
         "detector": {"name": "VEDA_LOCAL_CAPTURE_QUALITY", "version": "1.0", "probability": None},
     }

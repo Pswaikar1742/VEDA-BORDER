@@ -16,6 +16,7 @@ from app.contracts import IdentityForensicAutopsy
 from app.integrated_pipeline import analyze_integrated
 from app.linkage import LocalIdentityLinkageStore
 from app.persistence import CaseRepository
+from app.preprocessing import preprocess_specimen
 from app.reporting import render_printable_html
 from app.system_status import module_status
 
@@ -64,11 +65,19 @@ async def create_screening(
     case_id = str(uuid4())
     digest = hashlib.sha256(original).hexdigest()
     try:
-        analysis = analyze_integrated(pixels, selfie_bytes, document_family, case_id)
+        pixels, preprocessing = preprocess_specimen(pixels)
+        analysis = analyze_integrated(pixels, selfie_bytes, document_family, case_id, enrol_identity=False)
+        analysis["preprocessing"] = preprocessing
     except ValueError as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc
     autopsy = build_integrated_autopsy(case_id, file.filename or "unnamed", digest, analysis, bool(selfie_bytes))
     _repository().save(autopsy.model_dump(mode="json"))
+    if autopsy.outcome == "LOW_RISK":
+        biometric = analysis.get("biometric_verification", {})
+        LocalIdentityLinkageStore(settings.case_database_path, settings.identity_linkage_threshold).enrol(
+            case_id, analysis.get("extraction", {}).get("visible_fields", {}).get("holder_name"),
+            analysis.get("extraction", {}).get("visible_fields", {}).get("document_number"), biometric.get("_embedding"),
+            analysis.get("identity_linkage", {}).get("identity_reference"))
     return autopsy
 
 
@@ -123,10 +132,37 @@ def list_fixtures() -> dict:
     return {"manifest": manifest, "fixtures": files}
 
 
-@router.get("/fixtures/{filename}")
+@router.get("/fixtures/{filename:path}")
 def get_fixture_file(filename: str):
-    fixtures_dir = Path(resolve_repo_path("data/integrated_fixtures"))
-    file_path = fixtures_dir / filename
-    if not file_path.is_file():
+    roots = [Path(resolve_repo_path("data/integrated_fixtures")), Path(resolve_repo_path("data/external"))]
+    candidate = Path(filename)
+    if candidate.parts and candidate.parts[0] == "midv-demo":
+        roots = [Path(resolve_repo_path("data/external_demo/MIDV2020"))]
+        candidate = Path(*candidate.parts[1:])
+    if candidate.is_absolute():
         raise HTTPException(status_code=404, detail="Fixture file not found.")
-    return FileResponse(str(file_path), media_type="image/png")
+    for root in roots:
+        root = root.resolve()
+        try:
+            resolved = (root / candidate).resolve(strict=True)
+            resolved.relative_to(root)
+        except (FileNotFoundError, OSError, ValueError):
+            continue
+        if not resolved.is_file() or resolved.suffix.lower() not in {".png", ".jpg", ".jpeg"}:
+            continue
+        # Only serve files explicitly exposed by the integrated manifest or a
+        # future external-demo manifest; arbitrary filesystem paths are never valid.
+        manifest = root / "manifest.json"
+        allowed = set()
+        if manifest.is_file():
+            try:
+                payload = json.loads(manifest.read_text())
+                entries = payload.get("fixtures", payload.get("files", payload.get("records", []))) if isinstance(payload, dict) else payload
+                allowed = {str(entry.get("filename", entry.get("relative_path", entry))) if isinstance(entry, dict) else str(entry) for entry in entries if isinstance(entry, (dict, str))}
+            except (OSError, ValueError, TypeError):
+                allowed = set()
+        if str(resolved.relative_to(root)) not in allowed and resolved.name not in allowed:
+            continue
+        media_type = "image/jpeg" if resolved.suffix.lower() in {".jpg", ".jpeg"} else "image/png"
+        return FileResponse(str(resolved), media_type=media_type)
+    raise HTTPException(status_code=404, detail="Fixture file not found.")

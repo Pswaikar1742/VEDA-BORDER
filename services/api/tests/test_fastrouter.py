@@ -34,20 +34,46 @@ def test_fastrouter_error_handling():
 
 
 def test_fastrouter_connectivity_if_env_present():
-    env_path = os.path.expanduser("~/.config/veda/fastrouter.env")
-    api_key = ""
-    if os.path.isfile(env_path):
-        with open(env_path, "r", encoding="utf-8") as f:
-            for line in f:
-                if "FASTROUTER_API_KEY" in line and "=" in line:
-                    api_key = line.replace("export ", "").split("=", 1)[1].strip().strip('"').strip("'")
-
-    if not api_key:
+    client = FastRouterClient()
+    if not client.is_configured:
         pytest.skip("FastRouter credentials not configured in environment.")
 
-    client = FastRouterClient(api_key=api_key)
     res = client.test_connectivity()
     assert res["success"] is True
     assert res["status"] == "CONNECTED"
     assert res["http_status_class"] == "2xx"
     assert "latency_ms" in res
+
+
+def test_build_sanitized_ai_input():
+    from app.fastrouter_client import build_sanitized_ai_input
+
+    sample_analysis = {
+        "evidence_coverage": {"state": "COMPLETE"},
+        "capture_quality": {"status": "PASS"},
+        "mrz": {"mrz_detected": True, "checks": {"composite": "PASS", "dob": "PASS"}},
+        "cross_source_consistency": [{"field": "date_of_birth", "status": "FAIL"}],
+        "biometric_verification": {"status": "PASS", "decision": "MATCH"},
+        "visual_forensics": {"status": "PASS"},
+        "threat_intelligence": {"status": "PASS", "result": "CLEAR"},
+        "identity_linkage": {"matches": []},
+        "hard_gates": [{"gate": "CRITICAL_CROSS_SOURCE_CONTRADICTION", "reason": "DOB mismatch"}],
+        "outcome": "HIGH_RISK",
+        "outcome_reasons": ["Visible DOB does not match MRZ DOB"],
+    }
+    sanitized = build_sanitized_ai_input(sample_analysis, "TRAVEL_DOCUMENT")
+    assert sanitized["case_context"]["document_family"] == "TRAVEL_DOCUMENT"
+    assert sanitized["evidence"]["cross_source_consistency"]["status"] == "CRITICAL_CONTRADICTION"
+    assert "date_of_birth" in sanitized["evidence"]["cross_source_consistency"]["contradicting_fields"]
+    assert sanitized["policy"]["outcome"] == "HIGH_RISK"
+    # Ensure no raw pixel arrays, base64 images, or embeddings exist
+    assert "_embedding" not in str(sanitized)
+    assert "specimen_bytes" not in str(sanitized)
+
+
+def test_bounded_autopsy_explanation_degraded():
+    client = FastRouterClient(api_key="dummy_key", base_url="https://invalid.domain.test/v1")
+    with patch.object(settings, "fast_router_enabled", True):
+        res = client.generate_bounded_autopsy_explanation({"case_context": {}, "evidence": {}, "policy": {}})
+        assert res["status"] == "DEGRADED"
+        assert res["summary"] is None

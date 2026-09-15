@@ -70,6 +70,34 @@ def build_integrated_autopsy(case_id: str, filename: str, digest: str, analysis:
         risk_index = None
         risk_label = "INDETERMINATE (MANDATORY EVIDENCE INCOMPLETE)"
 
+    from app.config import settings
+    from app.fastrouter_client import FastRouterClient, build_sanitized_ai_input
+    from app.status_contract import build_module_statuses
+
+    reasons = analysis.get("outcome_reasons", [])
+    fallback_ai = {
+        "status": "DEGRADED",
+        "summary": f"Screening outcome: {analysis['outcome']}. Deterministic evidence and policy remain authoritative.",
+        "why_outcome": "; ".join(reasons) if reasons else "No configured policy trigger was found among sufficient evidence.",
+        "key_evidence": [{"evidence_id": gate.get("evidence", "evidence_coverage"), "statement": gate.get("reason", "Policy evidence") } for gate in analysis.get("hard_gates", [])],
+        "contradictions": reasons if analysis["outcome"] in {"REFER", "HIGH_RISK"} else [],
+        "recommended_actions": [item.get("reason", item.get("action", "Follow officer procedure.")) for item in analysis.get("next_best_actions", [])[:5]],
+        "limitations": ["Local deterministic fallback; FastRouter output was unavailable or failed validation."],
+        "model_used": None,
+    }
+    ai_explanation = None
+    if settings.fast_router_enabled and settings.fast_router_api_key:
+        try:
+            client = FastRouterClient()
+            sanitized = build_sanitized_ai_input(analysis, family)
+            ai_explanation = client.generate_bounded_autopsy_explanation(sanitized)
+        except Exception:
+            ai_explanation = fallback_ai
+    else:
+        ai_explanation = {**fallback_ai, "status": "DISABLED" if not settings.fast_router_enabled else "UNAVAILABLE", "limitations": ["FastRouter AI reasoning layer is unconfigured or disabled; core forensic rules remain fully active."]}
+
+    dimensions = capture.get("dimensions") or {}
+    module_statuses = build_module_statuses(analysis, family, selfie_supplied)
     return IdentityForensicAutopsy(
         scan_id=case_id,
         case_id=case_id,
@@ -100,6 +128,18 @@ def build_integrated_autopsy(case_id: str, filename: str, digest: str, analysis:
         hard_gates=hard_gates,
         triage_risk_index=risk_index,
         triage_risk_label=risk_label,
+        ai_explanation=ai_explanation,
+        module_statuses=module_statuses,
+        artifact_metadata={
+            "original_specimen_retained": False,
+            "document_preview_available": False,
+            "portrait_crop_available": False,
+            "comparison_face_retained": False,
+            "analysis_image_width": dimensions.get("width"),
+            "analysis_image_height": dimensions.get("height"),
+            "overlay_coordinate_system": "pixel_coordinates_origin_top_left",
+            "preprocessing": analysis.get("preprocessing", {"operations": []}),
+        },
         audit_trail=[
             {"timestamp": created_at, "event": "CASE_CREATED", "actor": "LOCAL_OFFICER_WORKSTATION"},
             {"timestamp": created_at, "event": "ANALYSIS_COMPLETED", "actor": "IDENTITY_FORENSIC_AUTOPSY_ENGINE", "outcome": analysis["outcome"]},

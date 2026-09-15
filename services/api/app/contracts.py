@@ -59,6 +59,23 @@ class EvidenceCoverage(BaseModel):
     missing_mandatory: list[str] = Field(default_factory=list)
     state: str
     lanes: list[dict[str, Any]] = Field(default_factory=list)
+    adequate_mandatory: int = 0
+    failed_mandatory: list[str] = Field(default_factory=list)
+    evidence_sufficient: bool = False
+
+
+class ModuleStatus(BaseModel):
+    module: str
+    status: EvidenceState
+    summary: str
+    severity: str = "INFO"
+    evidence_ids: list[str] = Field(default_factory=list)
+    details: dict[str, Any] = Field(default_factory=dict)
+
+
+class AIKeyEvidence(BaseModel):
+    evidence_id: str
+    statement: str
 
 
 class IdentityForensicAutopsy(BaseModel):
@@ -93,6 +110,9 @@ class IdentityForensicAutopsy(BaseModel):
     hard_gates: list[dict[str, Any]] = Field(default_factory=list)
     triage_risk_index: float | None = None
     triage_risk_label: str | None = None
+    ai_explanation: dict[str, Any] | None = None
+    module_statuses: list[ModuleStatus] = Field(default_factory=list)
+    artifact_metadata: dict[str, Any] = Field(default_factory=dict)
     audit_trail: list[dict[str, Any]] = Field(default_factory=list)
     limitations: list[str] = Field(default_factory=list)
     disclaimer: str = "Research-prototype decision support. Human review is required; triage outcomes are policy-driven and are not fraud probabilities."

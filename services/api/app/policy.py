@@ -6,30 +6,64 @@ from typing import Any
 CRITICAL_CONSISTENCY_FIELDS = {"holder_name", "document_number", "date_of_birth"}
 
 
-def build_coverage(analysis: dict[str, Any], family_supports_mrz: bool, selfie_supplied: bool, intelligence_mandatory: bool) -> dict[str, Any]:
-    extraction = analysis.get("extraction", {})
+def _lane(lane: str, execution: str, evidence: str, mandatory: bool) -> dict[str, Any]:
+    return {"lane": lane, "execution_status": execution, "evidence_status": evidence,
+            "state": execution, "mandatory": mandatory}
+
+
+def build_coverage(analysis: dict[str, Any], family_supports_mrz: bool, selfie_supplied: bool,
+                   intelligence_mandatory: bool) -> dict[str, Any]:
+    """Report execution and evidence sufficiency separately.
+
+    A completed lane is not automatically sufficient evidence.  In particular,
+    failed checks remain visible to policy and unavailable mandatory evidence
+    makes the result indeterminate.
+    """
+    extraction = analysis.get("extraction", {}) or {}
+    extraction_ok = bool(extraction) and not extraction.get("ocr_metadata", {}).get("error") and not extraction.get("missing_fields")
+    mrz = analysis.get("mrz", {}) or {}
+    if not family_supports_mrz:
+        mrz_lane = _lane("mrz", "NOT_APPLICABLE", "NOT_APPLICABLE", False)
+        consistency_lane = _lane("cross_source_consistency", "NOT_APPLICABLE", "NOT_APPLICABLE", False)
+    elif mrz.get("mrz_detected"):
+        mrz_failed = any(value == "FAIL" for value in (mrz.get("checks") or {}).values())
+        mrz_lane = _lane("mrz", "COMPLETED", "FAIL" if mrz_failed else "PASS", True)
+        comparisons = analysis.get("cross_source_consistency") or []
+        consistency_status = "FAIL" if any(i.get("status") == "FAIL" for i in comparisons) else ("PASS" if comparisons and all(i.get("status") == "PASS" for i in comparisons) else "UNAVAILABLE")
+        consistency_lane = _lane("cross_source_consistency", "COMPLETED", consistency_status, True)
+    else:
+        mrz_lane = _lane("mrz", "COMPLETED", "UNAVAILABLE", True)
+        consistency_lane = _lane("cross_source_consistency", "COMPLETED", "UNAVAILABLE", True)
+    rules = analysis.get("document_rules") or []
+    rules_status = "FAIL" if any(r.get("status") == "FAIL" for r in rules) else ("PASS" if rules and all(r.get("status") == "PASS" for r in rules) else "UNAVAILABLE")
+    visual_status = (analysis.get("visual_forensics") or {}).get("status")
+    visual_status = visual_status if visual_status in {"PASS", "FAIL", "SUSPICIOUS"} else "UNAVAILABLE"
+    bio = analysis.get("biometric_verification") or {}
+    bio_status = bio.get("status") if bio.get("status") in {"PASS", "FAIL", "SUSPICIOUS"} else "UNAVAILABLE"
+    intel = analysis.get("threat_intelligence") or {}
+    intel_status = intel.get("status") if intel.get("status") in {"PASS", "FAIL", "SUSPICIOUS"} else "UNAVAILABLE"
+    link = analysis.get("identity_linkage") or {}
+    link_status = link.get("status") if link.get("status") in {"PASS", "FAIL", "SUSPICIOUS"} else "UNAVAILABLE"
     lanes = [
-        {"lane": "document_data", "state": "COMPLETED" if extraction and not extraction.get("ocr_metadata", {}).get("error") else "FAILED_TO_EXECUTE", "mandatory": True},
-        {"lane": "mrz", "state": ("COMPLETED" if analysis.get("mrz", {}).get("mrz_detected") else "FAILED_TO_EXECUTE") if family_supports_mrz else "NOT_APPLICABLE", "mandatory": family_supports_mrz},
-        {"lane": "document_rules", "state": "COMPLETED" if analysis.get("document_rules") else "FAILED_TO_EXECUTE", "mandatory": True},
-        {"lane": "cross_source_consistency", "state": ("COMPLETED" if analysis.get("cross_source_consistency") else "FAILED_TO_EXECUTE") if family_supports_mrz else "NOT_APPLICABLE", "mandatory": family_supports_mrz},
-        {"lane": "visual_forensics", "state": "COMPLETED" if analysis.get("visual_forensics", {}).get("status") in {"PASS", "SUSPICIOUS", "FAIL"} else "FAILED_TO_EXECUTE", "mandatory": True},
-        {"lane": "biometrics", "state": "COMPLETED" if analysis.get("biometric_verification", {}).get("status") in {"PASS", "FAIL"} else "UNAVAILABLE", "mandatory": selfie_supplied},
-        {"lane": "threat_intelligence", "state": "COMPLETED" if analysis.get("threat_intelligence", {}).get("status") in {"PASS", "FAIL"} else "UNAVAILABLE", "mandatory": intelligence_mandatory},
-        {"lane": "identity_linkage", "state": "COMPLETED" if analysis.get("identity_linkage", {}).get("status") in {"PASS", "SUSPICIOUS"} else "UNAVAILABLE", "mandatory": False},
-        {"lane": "electronic_credential", "state": "UNAVAILABLE" if family_supports_mrz else "NOT_APPLICABLE", "mandatory": False},
+        _lane("document_data", "COMPLETED" if extraction else "FAILED_TO_EXECUTE", "PASS" if extraction_ok else "UNAVAILABLE", True),
+        mrz_lane,
+        _lane("document_rules", "COMPLETED" if rules else "FAILED_TO_EXECUTE", rules_status, True),
+        consistency_lane,
+        _lane("visual_forensics", "COMPLETED" if visual_status != "UNAVAILABLE" else "FAILED_TO_EXECUTE", visual_status, True),
+        _lane("biometrics", "NOT_APPLICABLE" if not selfie_supplied else "COMPLETED", "NOT_APPLICABLE" if not selfie_supplied else bio_status, selfie_supplied),
+        _lane("threat_intelligence", "COMPLETED" if intel_status != "UNAVAILABLE" else "UNAVAILABLE", intel_status, intelligence_mandatory),
+        _lane("identity_linkage", "COMPLETED" if link_status != "UNAVAILABLE" else "UNAVAILABLE", link_status, False),
+        _lane("electronic_credential", "UNAVAILABLE" if family_supports_mrz else "NOT_APPLICABLE", "UNAVAILABLE" if family_supports_mrz else "NOT_APPLICABLE", False),
     ]
     mandatory = [lane for lane in lanes if lane["mandatory"]]
-    completed = [lane for lane in mandatory if lane["state"] == "COMPLETED"]
-    missing = [lane["lane"] for lane in mandatory if lane["state"] != "COMPLETED"]
-    return {
-        "mandatory_total": len(mandatory),
-        "mandatory_completed": len(completed),
-        "coverage_ratio": round(len(completed) / len(mandatory), 4) if mandatory else 1.0,
-        "missing_mandatory": missing,
-        "state": "COMPLETE" if not missing else "INCOMPLETE",
-        "lanes": lanes,
-    }
+    adequate = [lane for lane in mandatory if lane["evidence_status"] == "PASS"]
+    missing = [lane["lane"] for lane in mandatory if lane["evidence_status"] == "UNAVAILABLE"]
+    failed = [lane["lane"] for lane in mandatory if lane["evidence_status"] in {"FAIL", "SUSPICIOUS"}]
+    return {"mandatory_total": len(mandatory), "mandatory_completed": len(adequate),
+            "adequate_mandatory": len(adequate), "coverage_ratio": round(len(adequate) / len(mandatory), 4) if mandatory else 1.0,
+            "missing_mandatory": missing, "failed_mandatory": failed,
+            "evidence_sufficient": not missing and not failed,
+            "state": "COMPLETE" if not missing else "INCOMPLETE", "lanes": lanes}
 
 
 def evaluate_hard_gates(analysis: dict[str, Any], coverage: dict[str, Any], biometric_required: bool) -> list[dict[str, Any]]:
@@ -37,6 +71,11 @@ def evaluate_hard_gates(analysis: dict[str, Any], coverage: dict[str, Any], biom
     for item in analysis.get("cross_source_consistency", []):
         if item.get("status") == "FAIL" and item.get("field") in CRITICAL_CONSISTENCY_FIELDS:
             gates.append({"gate": "CRITICAL_CROSS_SOURCE_CONTRADICTION", "triggered": True, "severity": "CRITICAL", "evidence": f"cross_source.{item['field']}", "reason": item["reason"]})
+        elif item.get("status") == "FAIL":
+            gates.append({"gate": "CROSS_SOURCE_CONTRADICTION", "triggered": True, "severity": "HIGH", "evidence": f"cross_source.{item.get('field')}", "reason": item.get("reason", "Visible and machine-readable fields disagree.")})
+    mrz_checks = (analysis.get("mrz") or {}).get("checks") or {}
+    if any(value == "FAIL" for value in mrz_checks.values()):
+        gates.append({"gate": "MRZ_CHECKSUM_FAILURE", "triggered": True, "severity": "CRITICAL", "evidence": "document.mrz.checks", "reason": "One or more required MRZ check digits failed."})
     intelligence = analysis.get("threat_intelligence", {})
     if intelligence.get("result") in {"DOCUMENT_BLACKLISTED", "IDENTITY_WATCHLIST_MATCH"}:
         gates.append({"gate": "LOCAL_PROTOTYPE_WATCHLIST_HIT", "triggered": True, "severity": "CRITICAL", "evidence": "threat_intelligence.local_lookup", "reason": intelligence.get("reason")})
@@ -46,6 +85,8 @@ def evaluate_hard_gates(analysis: dict[str, Any], coverage: dict[str, Any], biom
     expired = next((rule for rule in analysis.get("document_rules", []) if rule.get("rule_id") == "date.expiry.current" and rule.get("status") == "FAIL"), None)
     if expired:
         gates.append({"gate": "EXPIRED_DOCUMENT", "triggered": True, "severity": "HIGH", "evidence": "document.validation.date.expiry.current", "reason": expired["reason"]})
+    if any(rule.get("status") == "FAIL" for rule in analysis.get("document_rules", [])) and not expired:
+        gates.append({"gate": "DOCUMENT_VALIDATION_FAILURE", "triggered": True, "severity": "HIGH", "evidence": "document.validation", "reason": "A required deterministic document rule failed."})
     if coverage.get("missing_mandatory"):
         gates.append({"gate": "MANDATORY_EVIDENCE_INCOMPLETE", "triggered": True, "severity": "HIGH", "evidence": "evidence_coverage", "reason": "Mandatory evidence is incomplete: " + ", ".join(coverage["missing_mandatory"])})
     return gates

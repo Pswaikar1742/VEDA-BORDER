@@ -1,0 +1,206 @@
+{
+  "dataset": "MIDV-2020",
+  "purpose": "curated local demo subset",
+  "records": [
+    {
+      "dataset": "MIDV-2020",
+      "modality": "templates",
+      "sample_id": "alb_id_00",
+      "relative_path": "templates/alb_id/00.jpg",
+      "document_type": "alb_id",
+      "annotation_available": false,
+      "source_relative_path": "templates/images/alb_id/00.jpg",
+      "presentation_demo": true
+    },
+    {
+      "dataset": "MIDV-2020",
+      "modality": "templates",
+      "sample_id": "aze_passport_00",
+      "relative_path": "templates/aze_passport/00.jpg",
+      "document_type": "aze_passport",
+      "annotation_available": false,
+      "source_relative_path": "templates/images/aze_passport/00.jpg",
+      "presentation_demo": true
+    },
+    {
+      "dataset": "MIDV-2020",
+      "modality": "templates",
+      "sample_id": "esp_id_00",
+      "relative_path": "templates/esp_id/00.jpg",
+      "document_type": "esp_id",
+      "annotation_available": false,
+      "source_relative_path": "templates/images/esp_id/00.jpg",
+      "presentation_demo": false
+    },
+    {
+      "dataset": "MIDV-2020",
+      "modality": "templates",
+      "sample_id": "est_id_00",
+      "relative_path": "templates/est_id/00.jpg",
+      "document_type": "est_id",
+      "annotation_available": false,
+      "source_relative_path": "templates/images/est_id/00.jpg",
+      "presentation_demo": false
+    },
+    {
+      "dataset": "MIDV-2020",
+      "modality": "templates",
+      "sample_id": "fin_id_00",
+      "relative_path": "templates/fin_id/00.jpg",
+      "document_type": "fin_id",
+      "annotation_available": false,
+      "source_relative_path": "templates/images/fin_id/00.jpg",
+      "presentation_demo": false
+    },
+    {
+      "dataset": "MIDV-2020",
+      "modality": "scan_upright",
+      "sample_id": "alb_id_00",
+      "relative_path": "scan_upright/alb_id/00.jpg",
+      "document_type": "alb_id",
+      "annotation_available": false,
+      "source_relative_path": "scan_upright/images/alb_id/00.jpg",
+      "presentation_demo": false
+    },
+    {
+      "dataset": "MIDV-2020",
+      "modality": "scan_upright",
+      "sample_id": "aze_passport_00",
+      "relative_path": "scan_upright/aze_passport/00.jpg",
+      "document_type": "aze_passport",
+      "annotation_available": false,
+      "source_relative_path": "scan_upright/images/aze_passport/00.jpg",
+      "presentation_demo": false
+    },
+    {
+      "dataset": "MIDV-2020",
+      "modality": "scan_upright",
+      "sample_id": "esp_id_00",
+      "relative_path": "scan_upright/esp_id/00.jpg",
+      "document_type": "esp_id",
+      "annotation_available": false,
+      "source_relative_path": "scan_upright/images/esp_id/00.jpg",
+      "presentation_demo": false
+    },
+    {
+      "dataset": "MIDV-2020",
+      "modality": "scan_upright",
+      "sample_id": "est_id_00",
+      "relative_path": "scan_upright/est_id/00.jpg",
+      "document_type": "est_id",
+      "annotation_available": false,
+      "source_relative_path": "scan_upright/images/est_id/00.jpg",
+      "presentation_demo": false
+    },
+    {
+      "dataset": "MIDV-2020",
+      "modality": "scan_upright",
+      "sample_id": "fin_id_00",
+      "relative_path": "scan_upright/fin_id/00.jpg",
+      "document_type": "fin_id",
+      "annotation_available": false,
+      "source_relative_path": "scan_upright/images/fin_id/00.jpg",
+      "presentation_demo": false
+    },
+    {
+      "dataset": "MIDV-2020",
+      "modality": "scan_rotated",
+      "sample_id": "alb_id_00",
+      "relative_path": "scan_rotated/alb_id/00.jpg",
+      "document_type": "alb_id",
+      "annotation_available": false,
+      "source_relative_path": "scan_rotated/images/alb_id/00.jpg",
+      "presentation_demo": false
+    },
+    {
+      "dataset": "MIDV-2020",
+      "modality": "scan_rotated",
+      "sample_id": "aze_passport_00",
+      "relative_path": "scan_rotated/aze_passport/00.jpg",
+      "document_type": "aze_passport",
+      "annotation_available": false,
+      "source_relative_path": "scan_rotated/images/aze_passport/00.jpg",
+      "presentation_demo": false
+    },
+    {
+      "dataset": "MIDV-2020",
+      "modality": "scan_rotated",
+      "sample_id": "esp_id_00",
+      "relative_path": "scan_rotated/esp_id/00.jpg",
+      "document_type": "esp_id",
+      "annotation_available": false,
+      "source_relative_path": "scan_rotated/images/esp_id/00.jpg",
+      "presentation_demo": false
+    },
+    {
+      "dataset": "MIDV-2020",
+      "modality": "scan_rotated",
+      "sample_id": "est_id_00",
+      "relative_path": "scan_rotated/est_id/00.jpg",
+      "document_type": "est_id",
+      "annotation_available": false,
+      "source_relative_path": "scan_rotated/images/est_id/00.jpg",
+      "presentation_demo": false
+    },
+    {
+      "dataset": "MIDV-2020",
+      "modality": "scan_rotated",
+      "sample_id": "fin_id_00",
+      "relative_path": "scan_rotated/fin_id/00.jpg",
+      "document_type": "fin_id",
+      "annotation_available": false,
+      "source_relative_path": "scan_rotated/images/fin_id/00.jpg",
+      "presentation_demo": false
+    },
+    {
+      "dataset": "MIDV-2020",
+      "modality": "photo",
+      "sample_id": "alb_id_00",
+      "relative_path": "photo/alb_id/00.jpg",
+      "document_type": "alb_id",
+      "annotation_available": false,
+      "source_relative_path": "photo/images/alb_id/00.jpg",
+      "presentation_demo": true
+    },
+    {
+      "dataset": "MIDV-2020",
+      "modality": "photo",
+      "sample_id": "aze_passport_00",
+      "relative_path": "photo/aze_passport/00.jpg",
+      "document_type": "aze_passport",
+      "annotation_available": false,
+      "source_relative_path": "photo/images/aze_passport/00.jpg",
+      "presentation_demo": false
+    },
+    {
+      "dataset": "MIDV-2020",
+      "modality": "photo",
+      "sample_id": "esp_id_00",
+      "relative_path": "photo/esp_id/00.jpg",
+      "document_type": "esp_id",
+      "annotation_available": false,
+      "source_relative_path": "photo/images/esp_id/00.jpg",
+      "presentation_demo": false
+    },
+    {
+      "dataset": "MIDV-2020",
+      "modality": "photo",
+      "sample_id": "est_id_00",
+      "relative_path": "photo/est_id/00.jpg",
+      "document_type": "est_id",
+      "annotation_available": false,
+      "source_relative_path": "photo/images/est_id/00.jpg",
+      "presentation_demo": false
+    },
+    {
+      "dataset": "MIDV-2020",
+      "modality": "photo",
+      "sample_id": "fin_id_00",
+      "relative_path": "photo/fin_id/00.jpg",
+      "document_type": "fin_id",
+      "annotation_available": false,
+      "source_relative_path": "photo/images/fin_id/00.jpg",
+      "presentation_demo": false
+    }
+  ]
+}

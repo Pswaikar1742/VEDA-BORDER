@@ -16,6 +16,8 @@
 
 ## 1. Executive Summary
 
+> **Teammate starting here?** Read [`docs/TEAMMATE_ONBOARDING.md`](docs/TEAMMATE_ONBOARDING.md) for the current setup, architecture walkthrough, endpoints, validation commands, limitations, and prioritized next steps.
+
 Border identity inspection requires verifiable, multi-modal forensic evidence rather than opaque "black-box" classifiers. Real-world fraud ranges from subtle visual tampering and portrait substitution to synthetic identity fabrication and multi-identity face reuse across jurisdictions.
 
 **VEDA-BORDER** (*Verification & Evidence-Driven Autopsy for Border Identity Forensics*) is a modular, evidence-first screening workstation and decision-support engine designed to meet the rigorous operational standards of border control authorities.
@@ -73,7 +75,7 @@ Evidence sources are strictly stratified so that lower-tier PASS scores cannot c
 - **Tier 4:** 1:1 Live Face Biometric Verification, Identity Linkage Graph.
 
 ### 2. Deterministic Integrity & Cross-Source Consistency
-- **ICAO 9303 Parser:** Validates TD1, TD2, and TD3 formats with weighted modulo-10 (7-3-1 weighting) check digits across document number, birth date, expiry date, and composite lines.
+- **ICAO 9303 Parser:** The current runtime implements TD3-style parsing with deterministic 7-3-1 check-digit validation. TD1/TD2 support is not implemented.
 - **VIZ-MRZ Reconciler:** Field-by-field cross-comparison between the visible visual zone and machine-readable zone. Critical discrepancies (name, DOB, document number) trigger immediate hard gates.
 - **Document Rules Engine:** Verifies date formats, future expiry dates, valid birth dates, and issuance intervals deterministically.
 

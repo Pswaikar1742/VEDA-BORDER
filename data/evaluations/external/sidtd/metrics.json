@@ -3,7 +3,7 @@
   "official_source": "TC-11 / Computer Vision Center (CVC)",
   "split": "test",
   "split_protocol": "split_normal",
-  "evaluated_at": "2026-08-30T11:58:16.514776+00:00",
+  "evaluated_at": "2026-08-31T14:48:51.678491+00:00",
   "detector_evaluated": {
     "name": "VEDA_LOCAL_IMAGE_FORENSICS",
     "version": "1.0",
@@ -29,8 +29,8 @@
       "tn": 77,
       "fn": 83
     },
-    "evaluation_duration_seconds": 27.42,
-    "throughput_samples_per_sec": 8.1
+    "evaluation_duration_seconds": 28.4,
+    "throughput_samples_per_sec": 7.82
   },
   "per_class_metrics": {
     "lva": {

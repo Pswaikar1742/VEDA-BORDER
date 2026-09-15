@@ -1,0 +1,262 @@
+[
+  {
+    "sample_id": "alb_id_00",
+    "modality": "templates",
+    "quality_status": "PASS",
+    "localized": false,
+    "processed_dimensions": {
+      "width": 2167,
+      "height": 1360
+    },
+    "operations": [],
+    "rotation": 0
+  },
+  {
+    "sample_id": "aze_passport_00",
+    "modality": "templates",
+    "quality_status": "PASS",
+    "localized": false,
+    "processed_dimensions": {
+      "width": 2167,
+      "height": 1525
+    },
+    "operations": [],
+    "rotation": 0
+  },
+  {
+    "sample_id": "esp_id_00",
+    "modality": "templates",
+    "quality_status": "PASS",
+    "localized": false,
+    "processed_dimensions": {
+      "width": 1327,
+      "height": 827
+    },
+    "operations": [],
+    "rotation": 0
+  },
+  {
+    "sample_id": "est_id_00",
+    "modality": "templates",
+    "quality_status": "PASS",
+    "localized": false,
+    "processed_dimensions": {
+      "width": 929,
+      "height": 580
+    },
+    "operations": [],
+    "rotation": 0
+  },
+  {
+    "sample_id": "fin_id_00",
+    "modality": "templates",
+    "quality_status": "PASS",
+    "localized": false,
+    "processed_dimensions": {
+      "width": 931,
+      "height": 584
+    },
+    "operations": [],
+    "rotation": 0
+  },
+  {
+    "sample_id": "alb_id_00",
+    "modality": "scan_upright",
+    "quality_status": "FAIL",
+    "localized": false,
+    "processed_dimensions": {
+      "width": 2480,
+      "height": 3507
+    },
+    "operations": [
+      "AUTOCONTRAST"
+    ],
+    "rotation": 0
+  },
+  {
+    "sample_id": "aze_passport_00",
+    "modality": "scan_upright",
+    "quality_status": "FAIL",
+    "localized": false,
+    "processed_dimensions": {
+      "width": 2480,
+      "height": 3507
+    },
+    "operations": [
+      "AUTOCONTRAST"
+    ],
+    "rotation": 0
+  },
+  {
+    "sample_id": "esp_id_00",
+    "modality": "scan_upright",
+    "quality_status": "FAIL",
+    "localized": false,
+    "processed_dimensions": {
+      "width": 2480,
+      "height": 3507
+    },
+    "operations": [
+      "AUTOCONTRAST"
+    ],
+    "rotation": 0
+  },
+  {
+    "sample_id": "est_id_00",
+    "modality": "scan_upright",
+    "quality_status": "FAIL",
+    "localized": false,
+    "processed_dimensions": {
+      "width": 2480,
+      "height": 3507
+    },
+    "operations": [
+      "AUTOCONTRAST"
+    ],
+    "rotation": 0
+  },
+  {
+    "sample_id": "fin_id_00",
+    "modality": "scan_upright",
+    "quality_status": "FAIL",
+    "localized": false,
+    "processed_dimensions": {
+      "width": 2480,
+      "height": 3507
+    },
+    "operations": [
+      "AUTOCONTRAST"
+    ],
+    "rotation": 0
+  },
+  {
+    "sample_id": "alb_id_00",
+    "modality": "scan_rotated",
+    "quality_status": "PASS",
+    "localized": true,
+    "processed_dimensions": {
+      "width": 966,
+      "height": 1153
+    },
+    "operations": [
+      "DOCUMENT_REGION_CROP"
+    ],
+    "rotation": 0
+  },
+  {
+    "sample_id": "aze_passport_00",
+    "modality": "scan_rotated",
+    "quality_status": "FAIL",
+    "localized": false,
+    "processed_dimensions": {
+      "width": 2480,
+      "height": 3507
+    },
+    "operations": [
+      "AUTOCONTRAST"
+    ],
+    "rotation": 0
+  },
+  {
+    "sample_id": "esp_id_00",
+    "modality": "scan_rotated",
+    "quality_status": "PASS",
+    "localized": true,
+    "processed_dimensions": {
+      "width": 1295,
+      "height": 1285
+    },
+    "operations": [
+      "DOCUMENT_REGION_CROP"
+    ],
+    "rotation": 0
+  },
+  {
+    "sample_id": "est_id_00",
+    "modality": "scan_rotated",
+    "quality_status": "FAIL",
+    "localized": false,
+    "processed_dimensions": {
+      "width": 2480,
+      "height": 3507
+    },
+    "operations": [
+      "AUTOCONTRAST"
+    ],
+    "rotation": 0
+  },
+  {
+    "sample_id": "fin_id_00",
+    "modality": "scan_rotated",
+    "quality_status": "PASS",
+    "localized": true,
+    "processed_dimensions": {
+      "width": 1048,
+      "height": 1276
+    },
+    "operations": [
+      "DOCUMENT_REGION_CROP"
+    ],
+    "rotation": 0
+  },
+  {
+    "sample_id": "alb_id_00",
+    "modality": "photo",
+    "quality_status": "PASS",
+    "localized": false,
+    "processed_dimensions": {
+      "width": 2268,
+      "height": 4032
+    },
+    "operations": [],
+    "rotation": 0
+  },
+  {
+    "sample_id": "aze_passport_00",
+    "modality": "photo",
+    "quality_status": "PASS",
+    "localized": false,
+    "processed_dimensions": {
+      "width": 2268,
+      "height": 4032
+    },
+    "operations": [],
+    "rotation": 0
+  },
+  {
+    "sample_id": "esp_id_00",
+    "modality": "photo",
+    "quality_status": "PASS",
+    "localized": false,
+    "processed_dimensions": {
+      "width": 2268,
+      "height": 4032
+    },
+    "operations": [],
+    "rotation": 0
+  },
+  {
+    "sample_id": "est_id_00",
+    "modality": "photo",
+    "quality_status": "PASS",
+    "localized": false,
+    "processed_dimensions": {
+      "width": 2268,
+      "height": 4032
+    },
+    "operations": [],
+    "rotation": 0
+  },
+  {
+    "sample_id": "fin_id_00",
+    "modality": "photo",
+    "quality_status": "PASS",
+    "localized": false,
+    "processed_dimensions": {
+      "width": 2268,
+      "height": 4032
+    },
+    "operations": [],
+    "rotation": 0
+  }
+]

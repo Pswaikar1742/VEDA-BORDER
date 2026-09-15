@@ -43,7 +43,7 @@ class LocalIdentityLinkageStore:
         norm = lambda value: "".join((value or "").upper().split())
         return bool((norm(document_a) and norm(document_b) and norm(document_a) != norm(document_b)) or (norm(name_a) and norm(name_b) and norm(name_a) != norm(name_b)))
 
-    def search_and_enrol(self, case_id: str, name: str | None, document_number: str | None, embedding: list[float] | None) -> dict[str, Any]:
+    def search(self, case_id: str, name: str | None, document_number: str | None, embedding: list[float] | None) -> dict[str, Any]:
         if not embedding:
             return {"status": "UNAVAILABLE", "source": self.source, "reason": "No usable local biometric embedding was available.", "matches": [], "enrolled": False}
         vector = np.asarray(embedding, dtype=np.float32)
@@ -61,21 +61,37 @@ class LocalIdentityLinkageStore:
                         "similarity": round(similarity, 6),
                         "finding": "POSSIBLE_MULTI_IDENTITY_LINKAGE",
                     })
-            identity_reference = matches[0]["identity_reference"] if matches else f"Biometric Cluster {self._next_cluster_number(connection):03d}"
-            connection.execute(
-                "INSERT OR REPLACE INTO biometric_enrolments VALUES (?, ?, ?, ?, ?, ?)",
-                (case_id, identity_reference, name, document_number, json.dumps(vector.tolist()), datetime.now(timezone.utc).isoformat()),
-            )
         return {
             "status": "SUSPICIOUS" if matches else "PASS",
             "source": self.source,
             "reason": "A similar local biometric embedding is linked to substantially different claimed identity data." if matches else "No conflicting claimed identity was linked above the prototype threshold.",
             "matches": matches,
-            "identity_reference": identity_reference,
+            "identity_reference": matches[0]["identity_reference"] if matches else None,
             "configured_prototype_threshold": self.threshold,
-            "enrolled": True,
+            "enrolled": False,
             "legal_conclusion": None,
         }
+
+    def enrol(self, case_id: str, name: str | None, document_number: str | None, embedding: list[float] | None, identity_reference: str | None = None) -> bool:
+        if not embedding:
+            return False
+        vector = np.asarray(embedding, dtype=np.float32)
+        with self._connect() as connection:
+            reference = identity_reference or f"Biometric Cluster {self._next_cluster_number(connection):03d}"
+            connection.execute("INSERT OR REPLACE INTO biometric_enrolments VALUES (?, ?, ?, ?, ?, ?)",
+                (case_id, reference, name, document_number, json.dumps(vector.tolist()), datetime.now(timezone.utc).isoformat()))
+        return True
+
+    def search_and_enrol(self, case_id: str, name: str | None, document_number: str | None, embedding: list[float] | None) -> dict[str, Any]:
+        result = self.search(case_id, name, document_number, embedding)
+        if result.get("identity_reference"):
+            reference = result["identity_reference"]
+        else:
+            with self._connect() as connection:
+                reference = f"Biometric Cluster {self._next_cluster_number(connection):03d}"
+        result["identity_reference"] = reference
+        result["enrolled"] = self.enrol(case_id, name, document_number, embedding, reference)
+        return result
 
     @staticmethod
     def _next_cluster_number(connection: sqlite3.Connection) -> int:

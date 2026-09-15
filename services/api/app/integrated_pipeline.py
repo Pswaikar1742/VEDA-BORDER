@@ -30,6 +30,7 @@ def analyze_integrated(
     case_id: str | None = None,
     intelligence_adapter: ThreatIntelligenceAdapter | None = None,
     database_path: str | None = None,
+    enrol_identity: bool = True,
 ) -> dict[str, Any]:
     case_id = case_id or str(uuid4())
     capture = assess_capture_quality(specimen_bytes, settings.minimum_image_width, settings.minimum_image_height)
@@ -93,7 +94,8 @@ def analyze_integrated(
 
     try:
         linkage = LocalIdentityLinkageStore(database_path or settings.case_database_path, settings.identity_linkage_threshold)
-        analysis["identity_linkage"] = linkage.search_and_enrol(case_id, extracted["visible_fields"].get("holder_name"), extracted["visible_fields"].get("document_number"), biometric.get("_embedding"))
+        operation = linkage.search_and_enrol if enrol_identity else linkage.search
+        analysis["identity_linkage"] = operation(case_id, extracted["visible_fields"].get("holder_name"), extracted["visible_fields"].get("document_number"), biometric.get("_embedding"))
     except Exception as exc:
         analysis["identity_linkage"] = _unavailable(f"Identity-linkage lane failed: {type(exc).__name__}.", "LOCAL_PROTOTYPE_IDENTITY_LINKAGE")
 

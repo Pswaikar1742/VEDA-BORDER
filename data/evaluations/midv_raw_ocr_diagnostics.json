@@ -1,0 +1,344 @@
+[
+  {
+    "sample": "photo/alb_id/00.jpg",
+    "dimensions": [
+      2268,
+      4032
+    ],
+    "raw_text_length": 461,
+    "non_whitespace_characters": 318,
+    "average_ocr_confidence": 32.68,
+    "structured_fields": {
+      "document_number": "367253746"
+    },
+    "field_provenance": {
+      "document_number": {
+        "method": "generic_identifier_shape",
+        "source_line": 9
+      }
+    },
+    "recognition_failure": false,
+    "parser_failure": false
+  },
+  {
+    "sample": "photo/aze_passport/00.jpg",
+    "dimensions": [
+      2268,
+      4032
+    ],
+    "raw_text_length": 415,
+    "non_whitespace_characters": 325,
+    "average_ocr_confidence": 33.34,
+    "structured_fields": {
+      "document_number": "019389564"
+    },
+    "field_provenance": {
+      "document_number": {
+        "method": "generic_identifier_shape",
+        "source_line": 10
+      }
+    },
+    "recognition_failure": false,
+    "parser_failure": false
+  },
+  {
+    "sample": "photo/esp_id/00.jpg",
+    "dimensions": [
+      2268,
+      4032
+    ],
+    "raw_text_length": 224,
+    "non_whitespace_characters": 158,
+    "average_ocr_confidence": 39.71,
+    "structured_fields": {},
+    "field_provenance": {},
+    "recognition_failure": false,
+    "parser_failure": true
+  },
+  {
+    "sample": "photo/est_id/00.jpg",
+    "dimensions": [
+      2268,
+      4032
+    ],
+    "raw_text_length": 356,
+    "non_whitespace_characters": 235,
+    "average_ocr_confidence": 22.3,
+    "structured_fields": {},
+    "field_provenance": {},
+    "recognition_failure": false,
+    "parser_failure": true
+  },
+  {
+    "sample": "photo/fin_id/00.jpg",
+    "dimensions": [
+      2268,
+      4032
+    ],
+    "raw_text_length": 312,
+    "non_whitespace_characters": 205,
+    "average_ocr_confidence": 30.09,
+    "structured_fields": {},
+    "field_provenance": {},
+    "recognition_failure": false,
+    "parser_failure": true
+  },
+  {
+    "sample": "scan_rotated/alb_id/00.jpg",
+    "dimensions": [
+      2480,
+      3507
+    ],
+    "raw_text_length": 212,
+    "non_whitespace_characters": 124,
+    "average_ocr_confidence": 30.17,
+    "structured_fields": {},
+    "field_provenance": {},
+    "recognition_failure": false,
+    "parser_failure": true
+  },
+  {
+    "sample": "scan_rotated/aze_passport/00.jpg",
+    "dimensions": [
+      2480,
+      3507
+    ],
+    "raw_text_length": 439,
+    "non_whitespace_characters": 317,
+    "average_ocr_confidence": 26.15,
+    "structured_fields": {},
+    "field_provenance": {},
+    "recognition_failure": false,
+    "parser_failure": true
+  },
+  {
+    "sample": "scan_rotated/esp_id/00.jpg",
+    "dimensions": [
+      2480,
+      3507
+    ],
+    "raw_text_length": 267,
+    "non_whitespace_characters": 165,
+    "average_ocr_confidence": 21.58,
+    "structured_fields": {},
+    "field_provenance": {},
+    "recognition_failure": false,
+    "parser_failure": true
+  },
+  {
+    "sample": "scan_rotated/est_id/00.jpg",
+    "dimensions": [
+      2480,
+      3507
+    ],
+    "raw_text_length": 2188,
+    "non_whitespace_characters": 1575,
+    "average_ocr_confidence": 17.56,
+    "structured_fields": {},
+    "field_provenance": {},
+    "recognition_failure": false,
+    "parser_failure": true
+  },
+  {
+    "sample": "scan_rotated/fin_id/00.jpg",
+    "dimensions": [
+      2480,
+      3507
+    ],
+    "raw_text_length": 214,
+    "non_whitespace_characters": 120,
+    "average_ocr_confidence": 44.12,
+    "structured_fields": {},
+    "field_provenance": {},
+    "recognition_failure": false,
+    "parser_failure": true
+  },
+  {
+    "sample": "scan_upright/alb_id/00.jpg",
+    "dimensions": [
+      2480,
+      3507
+    ],
+    "raw_text_length": 277,
+    "non_whitespace_characters": 172,
+    "average_ocr_confidence": 29.4,
+    "structured_fields": {},
+    "field_provenance": {},
+    "recognition_failure": false,
+    "parser_failure": true
+  },
+  {
+    "sample": "scan_upright/aze_passport/00.jpg",
+    "dimensions": [
+      2480,
+      3507
+    ],
+    "raw_text_length": 219,
+    "non_whitespace_characters": 137,
+    "average_ocr_confidence": 27.45,
+    "structured_fields": {},
+    "field_provenance": {},
+    "recognition_failure": false,
+    "parser_failure": true
+  },
+  {
+    "sample": "scan_upright/esp_id/00.jpg",
+    "dimensions": [
+      2480,
+      3507
+    ],
+    "raw_text_length": 261,
+    "non_whitespace_characters": 182,
+    "average_ocr_confidence": null,
+    "structured_fields": {},
+    "field_provenance": {},
+    "recognition_failure": false,
+    "parser_failure": true
+  },
+  {
+    "sample": "scan_upright/est_id/00.jpg",
+    "dimensions": [
+      2480,
+      3507
+    ],
+    "raw_text_length": 157,
+    "non_whitespace_characters": 88,
+    "average_ocr_confidence": 33.67,
+    "structured_fields": {},
+    "field_provenance": {},
+    "recognition_failure": false,
+    "parser_failure": true
+  },
+  {
+    "sample": "scan_upright/fin_id/00.jpg",
+    "dimensions": [
+      2480,
+      3507
+    ],
+    "raw_text_length": 270,
+    "non_whitespace_characters": 171,
+    "average_ocr_confidence": 31.34,
+    "structured_fields": {},
+    "field_provenance": {},
+    "recognition_failure": false,
+    "parser_failure": true
+  },
+  {
+    "sample": "templates/alb_id/00.jpg",
+    "dimensions": [
+      2167,
+      1360
+    ],
+    "raw_text_length": 429,
+    "non_whitespace_characters": 334,
+    "average_ocr_confidence": 34.4,
+    "structured_fields": {
+      "expiry_date": "13-04-2019",
+      "document_number": "367253746"
+    },
+    "field_provenance": {
+      "expiry_date": {
+        "method": "generic_nearby_label_date",
+        "source_line": 6
+      },
+      "document_number": {
+        "method": "generic_identifier_shape",
+        "source_line": 2
+      }
+    },
+    "recognition_failure": false,
+    "parser_failure": false
+  },
+  {
+    "sample": "templates/aze_passport/00.jpg",
+    "dimensions": [
+      2167,
+      1525
+    ],
+    "raw_text_length": 573,
+    "non_whitespace_characters": 512,
+    "average_ocr_confidence": 72.2,
+    "structured_fields": {
+      "date_of_birth": "14-08-1994",
+      "expiry_date": "16-08-2018",
+      "document_number": "5188L2V",
+      "holder_name": "ABDULLAYEV AHA"
+    },
+    "field_provenance": {
+      "date_of_birth": {
+        "method": "generic_nearby_label_date",
+        "source_line": 7
+      },
+      "expiry_date": {
+        "method": "generic_nearby_label_date",
+        "source_line": 11
+      },
+      "document_number": {
+        "method": "generic_identifier_shape",
+        "source_line": 7
+      },
+      "holder_name": {
+        "method": "generic_nearby_name_label",
+        "source_line": 0
+      }
+    },
+    "recognition_failure": false,
+    "parser_failure": false
+  },
+  {
+    "sample": "templates/esp_id/00.jpg",
+    "dimensions": [
+      1327,
+      827
+    ],
+    "raw_text_length": 132,
+    "non_whitespace_characters": 106,
+    "average_ocr_confidence": 60.79,
+    "structured_fields": {},
+    "field_provenance": {},
+    "recognition_failure": false,
+    "parser_failure": true
+  },
+  {
+    "sample": "templates/est_id/00.jpg",
+    "dimensions": [
+      929,
+      580
+    ],
+    "raw_text_length": 98,
+    "non_whitespace_characters": 80,
+    "average_ocr_confidence": 39.33,
+    "structured_fields": {
+      "document_number": "141194059"
+    },
+    "field_provenance": {
+      "document_number": {
+        "method": "generic_identifier_shape",
+        "source_line": 7
+      }
+    },
+    "recognition_failure": false,
+    "parser_failure": false
+  },
+  {
+    "sample": "templates/fin_id/00.jpg",
+    "dimensions": [
+      931,
+      584
+    ],
+    "raw_text_length": 127,
+    "non_whitespace_characters": 102,
+    "average_ocr_confidence": 35.02,
+    "structured_fields": {
+      "document_number": "806147449"
+    },
+    "field_provenance": {
+      "document_number": {
+        "method": "generic_identifier_shape",
+        "source_line": 2
+      }
+    },
+    "recognition_failure": false,
+    "parser_failure": false
+  }
+]

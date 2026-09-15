@@ -33,6 +33,9 @@ export interface EvidenceCoverage {
   coverage_ratio: number;
   missing_mandatory: string[];
   state: string;
+  adequate_mandatory?: number;
+  failed_mandatory?: string[];
+  evidence_sufficient?: boolean;
   lanes?: EvidenceCoverageLane[];
 }
 
@@ -227,6 +230,19 @@ export interface HardGate {
   reason: string;
 }
 
+export interface AIExplanation {
+  status: 'ACTIVE' | 'AVAILABLE' | 'UNAVAILABLE' | 'DEGRADED' | 'DISABLED';
+  summary?: string | null;
+  why_outcome?: string | null;
+  key_evidence?: Array<string | { evidence_id: string; statement: string }>;
+  contradictions?: string[];
+  recommended_actions?: string[];
+  limitations?: string[];
+  model_used?: string | null;
+  latency_ms?: number;
+  error?: string | null;
+}
+
 export interface IdentityForensicAutopsy {
   scan_id: string;
   case_id?: string | null;
@@ -257,6 +273,9 @@ export interface IdentityForensicAutopsy {
   hard_gates?: HardGate[];
   triage_risk_index?: number | null;
   triage_risk_label?: string | null;
+  ai_explanation?: AIExplanation | null;
+  module_statuses?: Array<{ module: string; status: EvidenceState; summary: string; severity?: string; evidence_ids?: string[]; details?: Record<string, unknown> }>;
+  artifact_metadata?: { original_specimen_retained?: boolean; document_preview_available?: boolean; portrait_crop_available?: boolean; comparison_face_retained?: boolean; analysis_image_width?: number | null; analysis_image_height?: number | null; overlay_coordinate_system?: string };
   audit_trail?: Array<{ timestamp: string; event: string; actor: string; outcome?: string }>;
   limitations?: string[];
   disclaimer: string;

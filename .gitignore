@@ -51,3 +51,9 @@ data/external/**/scan_upright/
 data/external/**/scan_rotated/
 data/external/**/scans/
 
+# Optional MIDV-2020 demo media is intentionally kept out of Git.
+# Keep the lightweight manifest; obtain the sample images locally when needed.
+data/external_demo/MIDV2020/**/*.jpg
+data/external_demo/MIDV2020/**/*.jpeg
+data/external_demo/MIDV2020/**/*.png
+data/evaluations/external/midv2020/baseline_v1/prediction_manifest.json
