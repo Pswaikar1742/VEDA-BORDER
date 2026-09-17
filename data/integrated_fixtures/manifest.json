@@ -7,7 +7,7 @@
       "expected_outcome": "LOW_RISK",
       "filename": "travel_clean.png",
       "scenario": "A_CLEAN_CONSISTENT",
-      "sha256": "80338ca2ed49538fc44cc27b816a968464c3fb5cd89da1b367ac41e27244af68"
+      "sha256": "9729b2b0bc6ac9807f63c69409c488c3e1e8f5de9c1bb38039284c388826aa4e"
     },
     {
       "affected_region": [
@@ -20,7 +20,7 @@
       "expected_gate": "CRITICAL_CROSS_SOURCE_CONTRADICTION",
       "filename": "travel_dob_altered.png",
       "scenario": "B_DOB_ALTERED",
-      "sha256": "6f53eb75d9b4d25fb5b63406172fbc998a3b5088629d54c77cce126a4b871f7e"
+      "sha256": "403b8bcd0d862cf0b2d2db60c10c5217e7ba4ebd34c97dd16bb02b038ff3a38b"
     },
     {
       "affected_region": [
@@ -33,49 +33,49 @@
       "expected_biometric": "MISMATCH",
       "filename": "travel_portrait_replaced.png",
       "scenario": "C_PORTRAIT_REPLACED",
-      "sha256": "777c7f63c0df123692c4ec0b4a86e21eb21a5ac236bdafd86980910c43820f75"
+      "sha256": "59fb2fa04592a2b85bb9cbd9e783c6a58815a6a7a4f579ab20f00dd72ac017c3"
     },
     {
       "document_family": "TRAVEL_DOCUMENT",
       "expected_gate": "EXPIRED_DOCUMENT",
       "filename": "travel_expired.png",
       "scenario": "D_EXPIRED",
-      "sha256": "a94703efec3c44e204c123d27fa47c8364c66e0aa03fee1cbefaae6b68fc979e"
+      "sha256": "5b96479b3b33acfe8f23ebac6847102427ce89a3e06aa70dd8bd9c2d487144e7"
     },
     {
       "document_family": "TRAVEL_DOCUMENT",
       "expected_intelligence": "DOCUMENT_BLACKLISTED",
       "filename": "travel_blacklisted.png",
       "scenario": "E_LOCAL_WATCHLIST_HIT",
-      "sha256": "8b469c126778c82e0e09b3b1665b58828027ba66ab041591f827e648c5a26561"
+      "sha256": "02a6dfa31f513a85b2dc71f9b6183a715bbd62365b09c248a03bfd79542e2575"
     },
     {
       "document_family": "TRAVEL_DOCUMENT",
       "expected_quality": "FAIL",
       "filename": "travel_poor_capture.png",
       "scenario": "I_POOR_CAPTURE",
-      "sha256": "0d70e135a585ffe7b090532cafbb72cd9d84d16cca6174c1e0e949faeb3a6e43"
+      "sha256": "b94e790487fd30ce1271450de38a822dfb31fb14674017ee3e5c7d7d9e40c1d3"
     },
     {
       "document_family": "VISA_OR_PERMIT",
       "expected_mrz": "NOT_APPLICABLE",
       "filename": "visa_or_permit.png",
       "scenario": "FAMILY_VISA_OR_PERMIT",
-      "sha256": "66b680670eb63d52eeb4d6e8761e990bbae94f4bcc79a16583064b41d5b594b2"
+      "sha256": "1486d975a6f11abfb1075fa9d5929da1f6d3b0e1cdfc3bd953773839de4d4320"
     },
     {
       "document_family": "NATIONAL_ID",
       "expected_mrz": "NOT_APPLICABLE",
       "filename": "national_id.png",
       "scenario": "FAMILY_NATIONAL_ID",
-      "sha256": "8da4c78c2b548e97dc57817d466c3f29000faa9f464bc28ac194b857b1113c83"
+      "sha256": "80c9e5aee07ddb856a4adaa3d754e822683cf0816cc3eb857e6ae72c2393416b"
     },
     {
       "document_family": "DRIVING_LICENCE",
       "expected_mrz": "NOT_APPLICABLE",
       "filename": "driving_licence.png",
       "scenario": "FAMILY_DRIVING_LICENCE",
-      "sha256": "764e50abda8600d940bd58c8de29b3252b60f16fc1ef3c36d004315b2c4c33dc"
+      "sha256": "b2920bfd89121eaa504eb38ab620a4ac87a5dbd0b87bd33e659ea60da62efe1b"
     },
     {
       "document_family": "FACE_IMAGE",

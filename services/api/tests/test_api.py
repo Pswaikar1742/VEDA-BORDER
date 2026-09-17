@@ -17,7 +17,14 @@ class FakeUpload:
 
 def test_health_endpoint():
     assert health()["status"] == "ok"
-    assert "/health" in {route.path for route in app.routes}
+    paths = {r.path for r in app.routes if hasattr(r, "path")} | {
+        sr.path
+        for r in app.routes
+        if hasattr(r, "original_router")
+        for sr in r.original_router.routes
+        if hasattr(sr, "path")
+    }
+    assert "/health" in paths
 
 
 def test_scan_returns_typed_indeterminate_autopsy():

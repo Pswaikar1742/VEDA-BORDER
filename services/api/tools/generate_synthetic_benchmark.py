@@ -33,9 +33,24 @@ FIELD_BOXES = {
 }
 FULL_BOX = (0, 0, CANVAS[0], CANVAS[1])
 FONT_CANDIDATES = {
-    "sans": ("/usr/share/fonts/dejavu-sans-fonts/DejaVuSans.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"),
-    "bold": ("/usr/share/fonts/dejavu-sans-fonts/DejaVuSans-Bold.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"),
-    "mono": ("/usr/share/fonts/google-noto/NotoSansMono-Regular.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"),
+    "sans": (
+        "C:/Windows/Fonts/arial.ttf",
+        "C:/Windows/Fonts/segoeui.ttf",
+        "/usr/share/fonts/dejavu-sans-fonts/DejaVuSans.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+    ),
+    "bold": (
+        "C:/Windows/Fonts/arialbd.ttf",
+        "C:/Windows/Fonts/segoeuib.ttf",
+        "/usr/share/fonts/dejavu-sans-fonts/DejaVuSans-Bold.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+    ),
+    "mono": (
+        "C:/Windows/Fonts/consola.ttf",
+        "C:/Windows/Fonts/cour.ttf",
+        "/usr/share/fonts/google-noto/NotoSansMono-Regular.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",
+    ),
 }
 
 
@@ -47,11 +62,17 @@ def sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
-def font(kind: str, size: int) -> ImageFont.FreeTypeFont:
-    for candidate in FONT_CANDIDATES[kind]:
+def font(kind: str, size: int):
+    for candidate in FONT_CANDIDATES.get(kind, ()):
         if Path(candidate).is_file():
-            return ImageFont.truetype(candidate, size=size)
-    raise RuntimeError(f"Required local {kind} font was not found")
+            try:
+                return ImageFont.truetype(candidate, size=size)
+            except Exception:
+                pass
+    try:
+        return ImageFont.load_default()
+    except Exception:
+        raise RuntimeError(f"Required local {kind} font was not found")
 
 
 def display_date(value: str) -> str:

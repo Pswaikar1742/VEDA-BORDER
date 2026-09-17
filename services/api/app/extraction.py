@@ -51,13 +51,30 @@ def _parse_tsv(tsv: str) -> tuple[str, dict[str, float], float | None, list[dict
 
 
 def _tesseract(image: Image.Image, *, psm: int, whitelist: str | None = None) -> tuple[str, dict[str, float], float | None, str | None, list[dict[str, Any]]]:
+    tesseract_cmd = shutil.which("tesseract")
+    if not tesseract_cmd:
+        win_candidates = [
+            r"C:\Program Files\Tesseract-OCR\tesseract.exe",
+            r"C:\Program Files (x86)\Tesseract-OCR\tesseract.exe",
+            os.path.expandvars(r"%LOCALAPPDATA%\Programs\Tesseract-OCR\tesseract.exe"),
+        ]
+        for cand in win_candidates:
+            if os.path.isfile(cand):
+                tesseract_cmd = cand
+                break
+    if not tesseract_cmd:
+        return "", {}, None, "Tesseract executable not found", []
+
     with tempfile.TemporaryDirectory() as directory:
         input_path = Path(directory) / "pixels.png"
         image.save(input_path, format="PNG")
-        command = ["tesseract", str(input_path), "stdout", "--psm", str(psm), "-l", "eng", "tsv"]
+        command = [tesseract_cmd, str(input_path), "stdout", "--psm", str(psm), "-l", "eng", "tsv"]
         if whitelist:
             command[command.index("tsv"):command.index("tsv")] = ["-c", f"tessedit_char_whitelist={whitelist}"]
-        result = subprocess.run(command, capture_output=True, text=True, check=False)
+        try:
+            result = subprocess.run(command, capture_output=True, text=True, check=False)
+        except Exception as e:
+            return "", {}, None, str(e), []
     if result.returncode != 0:
         return "", {}, None, result.stderr.strip() or "Tesseract failed", []
     text, line_confidences, overall, tokens = _parse_tsv(result.stdout)
