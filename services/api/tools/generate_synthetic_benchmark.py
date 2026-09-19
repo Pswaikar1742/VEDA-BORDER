@@ -46,8 +46,9 @@ FONT_CANDIDATES = {
         "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
     ),
     "mono": (
-        "C:/Windows/Fonts/consola.ttf",
+        "C:/Windows/Fonts/courbd.ttf",
         "C:/Windows/Fonts/cour.ttf",
+        "C:/Windows/Fonts/consola.ttf",
         "/usr/share/fonts/google-noto/NotoSansMono-Regular.ttf",
         "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",
     ),
@@ -129,8 +130,8 @@ def render_credential(payload: dict[str, str]) -> Image.Image:
         draw.text((x1 + 18, y1 + 14), f"{labels[field_name]}: {raw[field_name]}", font=font("bold", 34), fill=(18, 32, 42))
     draw.rectangle((62, 790, 1738, 1040), fill=(232, 239, 241), outline=(39, 61, 78), width=4)
     draw.text((90, 808), "MACHINE READABLE ZONE - FICTIONAL", font=font("bold", 25), fill=(25, 45, 56))
-    draw.text((90, 868), payload["mrz_line_1"], font=font("mono", 37), fill=(0, 0, 0), stroke_width=1)
-    draw.text((90, 934), payload["mrz_line_2"], font=font("mono", 37), fill=(0, 0, 0), stroke_width=1)
+    draw.text((90, 868), payload["mrz_line_1"], font=font("mono", 37), fill=(0, 0, 0))
+    draw.text((90, 934), payload["mrz_line_2"], font=font("mono", 37), fill=(0, 0, 0))
     draw.text((75, 1048), "DEMO DATA / FICTIONAL STATE / NO GOVERNMENT CONNECTION", font=font("bold", 20), fill=(120, 38, 38))
     return image
 

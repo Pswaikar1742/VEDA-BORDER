@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import csv
+import os
 import re
+import shutil
 import subprocess
 import tempfile
 from datetime import datetime
@@ -50,20 +52,36 @@ def _parse_tsv(tsv: str) -> tuple[str, dict[str, float], float | None, list[dict
     return "\n".join(rendered), confidences, overall, tokens
 
 
+def find_tesseract() -> str | None:
+    env_cmd = os.environ.get("TESSERACT_CMD")
+    if env_cmd and os.path.isfile(env_cmd):
+        return env_cmd
+    cmd = shutil.which("tesseract")
+    if cmd:
+        return cmd
+    win_candidates = [
+        r"D:\Tr-OCR\tesseract.exe",
+        r"C:\Program Files\Tesseract-OCR\tesseract.exe",
+        r"C:\Program Files (x86)\Tesseract-OCR\tesseract.exe",
+        r"C:\Tesseract-OCR\tesseract.exe",
+        r"D:\Tesseract-OCR\tesseract.exe",
+        os.path.expandvars(r"%LOCALAPPDATA%\Programs\Tesseract-OCR\tesseract.exe"),
+    ]
+    for cand in win_candidates:
+        if os.path.isfile(cand):
+            return cand
+    return None
+
+
 def _tesseract(image: Image.Image, *, psm: int, whitelist: str | None = None) -> tuple[str, dict[str, float], float | None, str | None, list[dict[str, Any]]]:
-    tesseract_cmd = shutil.which("tesseract")
-    if not tesseract_cmd:
-        win_candidates = [
-            r"C:\Program Files\Tesseract-OCR\tesseract.exe",
-            r"C:\Program Files (x86)\Tesseract-OCR\tesseract.exe",
-            os.path.expandvars(r"%LOCALAPPDATA%\Programs\Tesseract-OCR\tesseract.exe"),
-        ]
-        for cand in win_candidates:
-            if os.path.isfile(cand):
-                tesseract_cmd = cand
-                break
+    tesseract_cmd = find_tesseract()
     if not tesseract_cmd:
         return "", {}, None, "Tesseract executable not found", []
+
+    tessdata_dir = Path(tesseract_cmd).parent / "tessdata"
+    env = os.environ.copy()
+    if tessdata_dir.is_dir():
+        env["TESSDATA_PREFIX"] = str(tessdata_dir)
 
     with tempfile.TemporaryDirectory() as directory:
         input_path = Path(directory) / "pixels.png"
@@ -72,7 +90,7 @@ def _tesseract(image: Image.Image, *, psm: int, whitelist: str | None = None) ->
         if whitelist:
             command[command.index("tsv"):command.index("tsv")] = ["-c", f"tessedit_char_whitelist={whitelist}"]
         try:
-            result = subprocess.run(command, capture_output=True, text=True, check=False)
+            result = subprocess.run(command, capture_output=True, text=True, check=False, env=env)
         except Exception as e:
             return "", {}, None, str(e), []
     if result.returncode != 0:

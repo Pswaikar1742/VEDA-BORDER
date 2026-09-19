@@ -7,10 +7,11 @@ from typing import Any
 import cv2
 
 from app.config import resolve_repo_path, settings
+from app.extraction import find_tesseract
 
 
 def module_status() -> dict[str, Any]:
-    tesseract_ready = shutil.which("tesseract") is not None
+    tesseract_ready = find_tesseract() is not None
     detector_file = Path(resolve_repo_path(settings.face_detector_model))
     recognizer_file = Path(resolve_repo_path(settings.face_recognizer_model))
     models_ready = detector_file.is_file() and recognizer_file.is_file() and hasattr(cv2, "FaceRecognizerSF")

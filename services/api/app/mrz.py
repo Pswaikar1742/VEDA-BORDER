@@ -51,10 +51,14 @@ def parse_mrz(raw_text: str) -> MrzResult:
     if len(candidates) < 2:
         return MrzResult(False, {}, {}, [], "two MRZ lines not detected")
     line1, line2 = candidates[-2:]
-    # OCR commonly drops one or two trailing filler glyphs from the name line.
-    # Padding only this non-data suffix is deterministic MRZ format normalization.
-    if line1.startswith("X<") and 40 <= len(line1) < 44:
+    if len(line1) > 44:
+        line1 = line1[:44]
+    if len(line2) > 44:
+        line2 = line2[:44]
+    if 40 <= len(line1) < 44:
         line1 = line1.ljust(44, FILLER)
+    if 40 <= len(line2) < 44:
+        line2 = line2.ljust(44, FILLER)
     if len(line1) != 44 or len(line2) != 44:
         return MrzResult(False, {}, {}, [line1, line2], "MRZ lines must be exactly 44 characters")
     try:
@@ -63,9 +67,12 @@ def parse_mrz(raw_text: str) -> MrzResult:
         optional = line2[28:42]
         composite_value = line2[0:10] + line2[13:20] + line2[21:28] + line2[28:43]
         surname, given = line1[5:].split(FILLER + FILLER, 1)
+        import re
+        surname_clean = re.split(r"<+", surname)[0].strip() if surname else ""
+        given_clean = re.split(r"<+", given)[0].strip() if given else ""
         fields = {
             "document_type": line1[0], "issuing_state": line1[2:5],
-            "surname": surname.replace(FILLER, " ").strip(), "given_names": given.replace(FILLER, " ").strip(),
+            "surname": surname_clean, "given_names": given_clean,
             "document_number": document_number.rstrip(FILLER), "nationality": line2[10:13],
             "date_of_birth": decode_date(dob_value), "sex": line2[20], "expiry_date": decode_date(expiry_value),
             "optional_data": optional.rstrip(FILLER),
